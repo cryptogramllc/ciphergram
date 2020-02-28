@@ -1,0 +1,16 @@
+{
+  "name": "ciphergram",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jibran Khan",
+  "license": "Ciphergram",
+  "private": false,
+  "dependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "jade": "^1.11.0",
+    "sass": "^1.25.0"
+  }
+}
