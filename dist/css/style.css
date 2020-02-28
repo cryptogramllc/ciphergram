@@ -2158,8 +2158,9 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   will-change: background-position;
   margin: 0;
   padding: 0;
-  background: #2c2c2c url(../images/work-proc-bg.jpg) fixed;
+  background: #2c2c2c url(../images/5.jpg) fixed;
   color:#f1f1f1;
+  background-size: 100%;
 }
 .work-proc-1-bg h3, .work-proc-1-bg .icon  {
   color:#f1f1f1;
@@ -11061,4 +11062,9 @@ a.close-modal {
   margin-top: 0px;
   margin-bottom: 50px;
   /* text-align: center; */
+}
+
+.learn-more {
+  display: block;
+  margin-top: 20px;
 }
