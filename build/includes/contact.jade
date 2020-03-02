@@ -1,0 +1,59 @@
+.page-section.p-80-cont(id="contact-link")
+        .container
+            .row
+                .col-md-4.col-sm-6
+                    .cis-cont
+                        .cis-icon
+                            .icon.icon-basic-map
+                        .cis-text
+                            h3
+                                span.bold ADDRESS
+                            p  220 N Green St, Chicago, IL 60607
+                .col-md-4.col-sm-6
+                    .cis-cont
+                        .cis-icon
+                            .icon.icon-basic-mail
+                        .cis-text
+                            h3
+                                span.bold EMAIL
+                            p
+                                a(href='mailto:info@ciphergram.io') INFO@CIPHERGRAM.IO
+                .col-md-4.col-sm-6
+                    .cis-cont
+                        .cis-icon
+                            .icon.icon-basic-smartphone
+                        .cis-text
+                            h3
+                                span.bold CALL US
+                            p 1-708-517-9987
+.page-section.gray-bg
+    .container-fluid
+        .row
+            .col-md-12
+                .contact-form-cont
+                    // TITLE
+                    .mb-40
+                        h2.section-title
+                            span.bold CONTACT US
+                    // CONTACT FORM
+                    div
+                        form#contact-form(action='php/contact-form.php', method='POST')
+                            .row
+                                .col-md-12.mb-30
+                                    // <label>Your name *</label>
+                                    input#name.controled(type='text', value='', data-msg-required='Please enter your name', maxlength='100', name='name', placeholder='NAME', required='')
+                            .row
+                                .col-md-12.mb-30
+                                    // <label>Your email address *</label>
+                                    input#email.controled(type='email', value='', data-msg-required='Please enter your email address', data-msg-email='Please enter a valid email address', maxlength='100', name='email', placeholder='EMAIL', required='')
+                            .row
+                                .col-md-12.mb-40
+                                    // <label>Message *</label>
+                                    textarea#message.controled(maxlength='5000', data-msg-required='Please enter your message', rows='3', name='message', placeholder='MESSAGE', required='')
+                            .row
+                                .col-md-12.text-center-xxs
+                                    input.button.medium.gray(type='submit', value='SEND MESSAGE', data-loading-text='Loading...')
+                        #contactSuccess.alert.alert-success.hidden.animated.fadeIn
+                            strong Success!
+                        #contactError.alert.alert-danger.hidden.animated.shake
+                            strong Error!       

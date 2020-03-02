@@ -2161,6 +2161,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   background: #2c2c2c url(../images/5.jpg) fixed;
   color:#f1f1f1;
   background-size: 100%;
+  max-height: 350px;
 }
 .work-proc-1-bg h3, .work-proc-1-bg .icon  {
   color:#f1f1f1;
@@ -2953,7 +2954,6 @@ ul.contact-list li{
 =====================================================*/
 .contact-form-cont {
 	position: relative;
-  max-width:550px;
   padding:80px 50px 30px 60px;
 }
 .contact-form-container-left {
