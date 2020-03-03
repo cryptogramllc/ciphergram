@@ -37,7 +37,7 @@
                             span.bold CONTACT US
                     // CONTACT FORM
                     div
-                        form#contact-form(action='php/contact-form.php', method='POST')
+                        form#contact-form
                             .row
                                 .col-md-12.mb-30
                                     // <label>Your name *</label>
@@ -52,7 +52,7 @@
                                     textarea#message.controled(maxlength='5000', data-msg-required='Please enter your message', rows='3', name='message', placeholder='MESSAGE', required='')
                             .row
                                 .col-md-12.text-center-xxs
-                                    input.button.medium.gray(type='submit', value='SEND MESSAGE', data-loading-text='Loading...')
+                                    input.button.medium.gray(id="submit", type='submit', value='SEND MESSAGE', data-loading-text='Loading...')
                         #contactSuccess.alert.alert-success.hidden.animated.fadeIn
                             strong Success!
                         #contactError.alert.alert-danger.hidden.animated.shake

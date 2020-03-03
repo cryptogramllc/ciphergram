@@ -43,104 +43,105 @@ head
         script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     // Modernizr
     // <script src="js/modernizr.js"></script>
-// LOADER
-#loader-overflow
-    #loader3 Please enable JS
-#wrap.boxed
-    .grey-bg
-        // Grey BG
-        //if lte IE 8
-            #ie-container
-                #ie-cont-close
-                    a(href='#', onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;')
-                        img(src='images/ie-warn/ie-warning-close.jpg', style='border: none;', alt='Close')
-                #ie-cont-content
-                    #ie-cont-warning
-                        img(src='images/ie-warn/ie-warning.jpg', alt='Warning!')
-                    #ie-cont-text
-                        #ie-text-bold
-                        #ie-text
-                    #ie-cont-brows
-                        a(href='http://www.firefox.com', target='_blank')
-                            img(src='images/ie-warn/ie-warning-firefox.jpg', alt='Download Firefox')
-                        a(href='http://www.opera.com/download/', target='_blank')
-                            img(src='images/ie-warn/ie-warning-opera.jpg', alt='Download Opera')
-                        a(href='http://www.apple.com/safari/download/', target='_blank')
-                            img(src='images/ie-warn/ie-warning-safari.jpg', alt='Download Safari')
-                        a(href='http://www.google.com/chrome', target='_blank')
-                            img(src='images/ie-warn/ie-warning-chrome.jpg', alt='Download Google Chrome')
-        // HEADER 1 BLACK MOBILE-NO-TRANSPARENT
-        include ./includes/header.jade
-        // REVO SLIDER FULLSCREEN 1
-        include ./includes/slider.jade
-        // ABOUT US
-        include ./includes/about.jade
-        // FEATURES 7
-        //- .page-section.grey-light-bg.clearfix
-            .fes7-img-cont.col-md-5
-                .fes7-img(style='background-image: url(images/fes7.jpg)')
-            .container
-                .row
-                    .col-md-6.col-md-offset-6.fes7-text-cont.p-80-cont
-                        h1
-                            span.font-light Nulla varius faucibus vestibulum. Sed imperdiet, tellus at iaculis
-                        p.mb-60
-                        .row
-                            .col-md-6.col-sm-6
-                                .fes7-box.wow.fadeIn
-                                    .fes7-box-icon
-                                        .icon.icon-ecommerce-graph-increase
-                                    h3 SEO Friendly
-                                    p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
-                            .col-md-6.col-sm-6
-                                .fes7-box.wow.fadeIn(data-wow-delay='200ms')
-                                    .fes7-box-icon
-                                        .icon.icon-software-font-smallcaps
-                                    h3 Google Fonts
-                                    p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
-                        .row
-                            .col-md-6.col-sm-6
-                                .fes7-box.wow.fadeIn(data-wow-delay='400ms')
-                                    .fes7-box-icon
-                                        .icon.icon-basic-mixer2
-                                    h3 Tons of Shortcodes
-                                    p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
-                            .col-md-6.col-sm-6
-                                .fes7-box.wow.fadeIn(data-wow-delay='600ms')
-                                    .fes7-box-icon
-                                        .icon.icon-basic-bolt
-                                    h3 1500+ Icons
-                                    p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
-                // end of row
-        // DIVIDER
-        hr.mt-0.mb-0
-        // FEATURES 4
-        include ./includes/services.jade
-        // PORTFOLIO SECTION 1 GALLERY
-        include ./includes/ourwork.jade
-        // END PORTFOLIO SECTION 1
-        // DIVIDER
-        hr.mt-0.mb-0
-        // CLIENTS 1 & TESTIMONIALS 1
-        include ./includes/clients.jade
-        // WORK PROCESS 1
-        include ./includes/process.jade
-        // DIVIDER
-        hr.mt-0.mb-0
-        // CONTACT INFO
-        include ./includes/contact.jade
-        // FOOTER 1
-        include ./includes/footer.jade
-        // BACK TO TOP
-        p#back-top
-            a(href='#top', title='Back to Top')
-                span.icon.icon-arrows-up
-        
-        include ./includes/modal.jade
+body
+    // LOADER
+    #loader-overflow
+        #loader3 Please enable JS
+    #wrap.boxed
+        .grey-bg
+            // Grey BG
+            //if lte IE 8
+                #ie-container
+                    #ie-cont-close
+                        a(href='#', onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;')
+                            img(src='images/ie-warn/ie-warning-close.jpg', style='border: none;', alt='Close')
+                    #ie-cont-content
+                        #ie-cont-warning
+                            img(src='images/ie-warn/ie-warning.jpg', alt='Warning!')
+                        #ie-cont-text
+                            #ie-text-bold
+                            #ie-text
+                        #ie-cont-brows
+                            a(href='http://www.firefox.com', target='_blank')
+                                img(src='images/ie-warn/ie-warning-firefox.jpg', alt='Download Firefox')
+                            a(href='http://www.opera.com/download/', target='_blank')
+                                img(src='images/ie-warn/ie-warning-opera.jpg', alt='Download Opera')
+                            a(href='http://www.apple.com/safari/download/', target='_blank')
+                                img(src='images/ie-warn/ie-warning-safari.jpg', alt='Download Safari')
+                            a(href='http://www.google.com/chrome', target='_blank')
+                                img(src='images/ie-warn/ie-warning-chrome.jpg', alt='Download Google Chrome')
+            // HEADER 1 BLACK MOBILE-NO-TRANSPARENT
+            include ./includes/header.jade
+            // REVO SLIDER FULLSCREEN 1
+            include ./includes/slider.jade
+            // ABOUT US
+            include ./includes/about.jade
+            // FEATURES 7
+            //- .page-section.grey-light-bg.clearfix
+                .fes7-img-cont.col-md-5
+                    .fes7-img(style='background-image: url(images/fes7.jpg)')
+                .container
+                    .row
+                        .col-md-6.col-md-offset-6.fes7-text-cont.p-80-cont
+                            h1
+                                span.font-light Nulla varius faucibus vestibulum. Sed imperdiet, tellus at iaculis
+                            p.mb-60
+                            .row
+                                .col-md-6.col-sm-6
+                                    .fes7-box.wow.fadeIn
+                                        .fes7-box-icon
+                                            .icon.icon-ecommerce-graph-increase
+                                        h3 SEO Friendly
+                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
+                                .col-md-6.col-sm-6
+                                    .fes7-box.wow.fadeIn(data-wow-delay='200ms')
+                                        .fes7-box-icon
+                                            .icon.icon-software-font-smallcaps
+                                        h3 Google Fonts
+                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
+                            .row
+                                .col-md-6.col-sm-6
+                                    .fes7-box.wow.fadeIn(data-wow-delay='400ms')
+                                        .fes7-box-icon
+                                            .icon.icon-basic-mixer2
+                                        h3 Tons of Shortcodes
+                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
+                                .col-md-6.col-sm-6
+                                    .fes7-box.wow.fadeIn(data-wow-delay='600ms')
+                                        .fes7-box-icon
+                                            .icon.icon-basic-bolt
+                                        h3 1500+ Icons
+                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
+                    // end of row
+            // DIVIDER
+            hr.mt-0.mb-0
+            // FEATURES 4
+            include ./includes/services.jade
+            // PORTFOLIO SECTION 1 GALLERY
+            include ./includes/ourwork.jade
+            // END PORTFOLIO SECTION 1
+            // DIVIDER
+            hr.mt-0.mb-0
+            // CLIENTS 1 & TESTIMONIALS 1
+            include ./includes/clients.jade
+            // WORK PROCESS 1
+            include ./includes/process.jade
+            // DIVIDER
+            hr.mt-0.mb-0
+            // CONTACT INFO
+            include ./includes/contact.jade
+            // FOOTER 1
+            include ./includes/footer.jade
+            // BACK TO TOP
+            p#back-top
+                a(href='#top', title='Back to Top')
+                    span.icon.icon-arrows-up
+            
+            include ./includes/modal.jade
 
-        
-    // End BG
-// End wrap
+            
+        // End BG
+    // End wrap
 // JS begin
 // jQuery
 script(src='js/jquery-1.11.2.min.js')
@@ -320,5 +321,42 @@ script.
         });
 
     });//END document.ready 
+script.
+    $(document).ready(function(){
+        $('#contact-form').submit(function(event){
+            event.preventDefault();
+            let $data = $(this).serializeArray();
+            let $name = $data[0].value;
+            let $email = $data[1].value;
+            let $message = $data[2].value;
+            
+            let incomplete = ($name.length == 0 || $email.length == 0 || $message.length == 0)
+            if(!incomplete){ 
+                console.log('processing')
+                let  payload = { 
+                    name : $name,
+                    email : $email,
+                    message: $message
+                }
+                const API_URL =
+                    "https://8syk5uud37.execute-api.us-east-1.amazonaws.com/prod/contact";
+                $.ajax({
+                    contentType: 'application/json',
+                    data: JSON.stringify(payload),
+                    dataType: 'json',
+                    type: 'POST',
+                    url: API_URL,
+                })
+                .done((data) => {
+                    console.log(data)
+                })
+                .fail(() => {});
+
+
+            }
+        });
+    });
+|<script id="__bs_script__">//<![CDATA[
+|document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.12.5.js'><\/script>".replace("HOST", location.hostname));
+|//]]></script>
 // JS end
-  
