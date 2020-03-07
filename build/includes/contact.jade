@@ -1,33 +1,5 @@
-.page-section.p-80-cont(id="contact-link")
-        .container
-            .row
-                .col-md-4.col-sm-6
-                    .cis-cont
-                        .cis-icon
-                            .icon.icon-basic-map
-                        .cis-text
-                            h3
-                                span.bold ADDRESS
-                            p  220 N Green St, Chicago, IL 60607
-                .col-md-4.col-sm-6
-                    .cis-cont
-                        .cis-icon
-                            .icon.icon-basic-mail
-                        .cis-text
-                            h3
-                                span.bold EMAIL
-                            p
-                                a(href='mailto:info@ciphergram.io') INFO@CIPHERGRAM.IO
-                .col-md-4.col-sm-6
-                    .cis-cont
-                        .cis-icon
-                            .icon.icon-basic-smartphone
-                        .cis-text
-                            h3
-                                span.bold CALL US
-                            p 1-708-517-9987
-.page-section.gray-bg
-    .container-fluid
+.page-section.gray-bg(id="contact-link")
+    .container
         .row
             .col-md-12
                 .contact-form-cont
@@ -51,9 +23,36 @@
                                     // <label>Message *</label>
                                     textarea#message.controled(maxlength='5000', data-msg-required='Please enter your message', rows='3', name='message', placeholder='MESSAGE', required='')
                             .row
-                                .col-md-12.text-center-xxs
+                                .col-md-12.text-center
                                     input.button.medium.gray(id="submit", type='submit', value='SEND MESSAGE', data-loading-text='Loading...')
-                        #contactSuccess.alert.alert-success.hidden.animated.fadeIn
+                        .alert.alert-success.hidden.animated.fadeIn
                             strong Success!
-                        #contactError.alert.alert-danger.hidden.animated.shake
+                        .alert.alert-danger.hidden.animated.shake
                             strong Error!       
+
+                        .row.p-60-cont
+                            .col-md-4.col-sm-6
+                                .cis-cont
+                                    .cis-icon
+                                        .icon.icon-basic-map
+                                    .cis-text
+                                        h3
+                                            span.bold ADDRESS
+                                        p  220 N Green St, Chicago, IL 60607
+                            .col-md-4.col-sm-6
+                                .cis-cont
+                                    .cis-icon
+                                        .icon.icon-basic-mail
+                                    .cis-text
+                                        h3
+                                            span.bold EMAIL
+                                        p
+                                            a(href='mailto:info@ciphergram.io') INFO@CIPHERGRAM.IO
+                            .col-md-4.col-sm-6
+                                .cis-cont
+                                    .cis-icon
+                                        .icon.icon-basic-smartphone
+                                    .cis-text
+                                        h3
+                                            span.bold CALL US
+                                        p 1-708-517-9987

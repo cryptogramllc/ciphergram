@@ -118,14 +118,14 @@ body
             // FEATURES 4
             include ./includes/services.jade
             // PORTFOLIO SECTION 1 GALLERY
-            include ./includes/ourwork.jade
+            include ./includes/clients.jade
             // END PORTFOLIO SECTION 1
             // DIVIDER
             hr.mt-0.mb-0
             // CLIENTS 1 & TESTIMONIALS 1
-            include ./includes/clients.jade
+            include ./includes/ourwork.jade
             // WORK PROCESS 1
-            include ./includes/process.jade
+            //- include ./includes/process.jade
             // DIVIDER
             hr.mt-0.mb-0
             // CONTACT INFO
@@ -329,8 +329,13 @@ script.
             let $name = $data[0].value;
             let $email = $data[1].value;
             let $message = $data[2].value;
-            
-            let incomplete = ($name.length == 0 || $email.length == 0 || $message.length == 0)
+            let incomplete = ($name.length == 0 || $email.length == 0 || $message.length == 0);
+            if (!$email.match(/^[^@]+@[^@]+$/)) {
+                console.log('Not sending: invalid email address');
+                $('.alert').addClass('hidden');
+                $('.alert-danger').removeClass('hidden');
+                incomplete = true;
+            }
             if(!incomplete){ 
                 console.log('processing')
                 let  payload = { 
@@ -348,7 +353,9 @@ script.
                     url: API_URL,
                 })
                 .done((data) => {
-                    console.log(data)
+                    console.log(data);
+                    $('.alert').addClass('hidden');
+                    $('.alert-success').removeClass('hidden');
                 })
                 .fail(() => {});
 
