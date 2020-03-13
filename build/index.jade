@@ -1,13 +1,13 @@
 
 doctype html
 head
-    title Ciphergram - Design. Develop. Scale
+    title Ciphergram - Design. Develop. Scale | IT Architecture and Fullstack Solutions Company
     meta(charset='utf-8')
     //if IE
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='robots', content='index, follow')
-    meta(name='keywords', content='Chicago, London, IT Consultancy, Amazon Web Services, Web Development, Cloud Services')
-    meta(name='description', content='Ciphergram - Fullstack software and IT solutions company based in Chicago, IL utilising AWS, IoT, and Web/Mobile Applications.')
+    meta(name='keywords', content='Amazon Web Services, Web Development, Cloud Services, IoT, and Solutions Architecture.')
+    meta(name='description', content='International consultancy specialized IT solutions concentrating around Fullstack Application developement, Cloud Computing, and Emerging Technologies. Having assisted dozens of prestigous companies around the world, we combine our years of experience to deliver the most effective solutions tailored to ensure successful business outcome and growth. From ideation to launch, we design, strategize and create high performing, digitally transformative applications with stunning interfaces, seamless user experience and dynamic functionalities.')
     meta(name='author', content='Ciphergram.io')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     // FAVICONS
@@ -113,21 +113,17 @@ body
                                         h3 1500+ Icons
                                         p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
                     // end of row
-            // DIVIDER
-            hr.mt-0.mb-0
+   
             // FEATURES 4
             include ./includes/services.jade
             // PORTFOLIO SECTION 1 GALLERY
             include ./includes/clients.jade
-            // END PORTFOLIO SECTION 1
-            // DIVIDER
-            hr.mt-0.mb-0
+
             // CLIENTS 1 & TESTIMONIALS 1
             include ./includes/ourwork.jade
             // WORK PROCESS 1
             //- include ./includes/process.jade
-            // DIVIDER
-            hr.mt-0.mb-0
+
             // CONTACT INFO
             include ./includes/contact.jade
             // FOOTER 1
@@ -136,10 +132,15 @@ body
             p#back-top
                 a(href='#top', title='Back to Top')
                     span.icon.icon-arrows-up
-            
             include ./includes/modal.jade
-
-            
+            include ./includes/lightbox.jade
+    .mfp-more-info
+        strong
+            i i
+    .mfp-text
+        .mfp-text-inner
+        .mfp-text-close 
+            button(title="Close (Esc)", type="button", class="mfp-text-close-button") ×
         // End BG
     // End wrap
 // JS begin
@@ -361,6 +362,34 @@ script.
 
 
             }
+        });
+    });
+script.
+    $(document).ready(function(){
+        $('.lightbox-item .icon_search').click(function(event){
+            const $this = $(event.target);
+            const $html = $this.closest('.port-item').find('.gallery-content').html();
+            $('.mfp-more-info').fadeIn();
+            $('.mfp-text').fadeIn();
+            $('.mfp-text-inner').html($html); 
+        });
+        $('.mfp-more-info').click(function(event){
+            $('.mfp-text').fadeIn();
+            $('.mfp-more-info').fadeOut();
+        });
+        $('body').on('click', function(event){
+            $this = $(event.target);
+            $className = $this.context.className;
+            console.log($className);
+            if($className.includes("mfp-container") || $className.includes("mfp-close")) {
+                $('.mfp-more-info').fadeOut();
+                $('.mfp-text').fadeOut();
+            }
+           
+        });
+        $('.mfp-text-close').click(function(){
+            $('.mfp-more-info').fadeIn();
+            $('.mfp-text').fadeOut();
         });
     });
 |<script id="__bs_script__">//<![CDATA[
