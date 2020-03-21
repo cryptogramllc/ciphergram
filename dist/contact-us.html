@@ -100,126 +100,80 @@
       </div>
     </header>
   </div>
-  <div id="services-link" class="page-section p-60-cont grey-light-bg clearfix">
+  <div id="contact-link" class="page-section gray-bg">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-          <div class="fes4-box wow fadeIn">
-            <h2 class="section-title"><span class="bold">FULL STACK DEVELOPMENT SERVICES </span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="600ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-basic-smartphone"></div>
-              </div>
-              <h3><span class="bold">APP DEVELOPMENT</span></h3>
-              <p>We provide custom, out-of-the-box mobile app development solutions for various platforms such as Android and IOS.<a href="#application" class="open-modal learn-more">LEARN MORE</a></p>
+        <div class="col-md-12">
+          <div class="contact-form-cont">
+            <!-- TITLE-->
+            <div class="mb-40">
+              <h2 class="section-title"><span class="bold">CONTACT US</span></h2>
             </div>
-            <div></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="800ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-basic-globe"></div>
+            <!-- CONTACT FORM-->
+            <div>
+              <form id="contact-form">
+                <div class="row">
+                  <div class="col-md-12 mb-30">
+                    <!-- <label>Your name *</label>-->
+                    <input id="name" type="text" value="" data-msg-required="Please enter your name" maxlength="100" name="name" placeholder="NAME" required="" class="controled">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 mb-30">
+                    <!-- <label>Your email address *</label>-->
+                    <input id="email" type="email" value="" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address" maxlength="100" name="email" placeholder="EMAIL" required="" class="controled">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 mb-40">
+                    <!-- <label>Message *</label>-->
+                    <textarea id="message" maxlength="5000" data-msg-required="Please enter your message" rows="3" name="message" placeholder="MESSAGE" required="" class="controled"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <input id="submit" type="submit" value="SEND MESSAGE" data-loading-text="Loading..." class="button medium gray">
+                  </div>
+                </div>
+              </form>
+              <div class="alert alert-success hidden animated fadeIn"><strong>Success!</strong></div>
+              <div class="alert alert-danger hidden animated shake"><strong>Error!       </strong></div>
+              <div class="row p-60-cont">
+                <div class="col-md-4 col-sm-6">
+                  <div class="cis-cont">
+                    <div class="cis-icon">
+                      <div class="icon icon-basic-map"></div>
+                    </div>
+                    <div class="cis-text">
+                      <h3><span class="bold">ADDRESS</span></h3>
+                      <p> 220 N Green St, Chicago, IL 60607</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="cis-cont">
+                    <div class="cis-icon">
+                      <div class="icon icon-basic-mail"></div>
+                    </div>
+                    <div class="cis-text">
+                      <h3><span class="bold">EMAIL</span></h3>
+                      <p><a href="mailto:info@ciphergram.io">INFO@CIPHERGRAM.IO</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="cis-cont">
+                    <div class="cis-icon">
+                      <div class="icon icon-basic-smartphone"></div>
+                    </div>
+                    <div class="cis-text">
+                      <h3><span class="bold">CALL US</span></h3>
+                      <p>1-708-517-9987</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3><span class="bold">WEB DEVELOPMENT</span></h3>
-              <p>Driven by innovation and passion, we create responsive web applications with robust features and functionalities.<a href="#website" class="open-modal learn-more">LEARN MORE</a></p>
             </div>
-            <div></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="1000ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-basic-laptop"></div>
-              </div>
-              <h3><span class="bold">SOFTWARE DEVELOPMENT</span></h3>
-              <p>We solve clients’ business challenges by implementing fully customized enterprise software solutions that are high in performance and security.<a href="#software" class="open-modal learn-more">LEARN MORE</a></p>
-            </div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="600ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-basic-webpage-multiple"></div>
-              </div>
-              <h3><span class="bold">UX & UI DEVELOPMENT</span></h3>
-              <p>Employing best practices of UI/UX, we create intuitive, flexible & engaging designs that emotionally connect with your audience and solve user challenges.<a href="#ux_ui" class="open-modal learn-more">LEARN MORE</a></p>
-            </div>
-            <div></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="800ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-basic-cloud"></div>
-              </div>
-              <h3><span class="bold">CLOUD SOLUTIONS</span></h3>
-              <p>We offer diagnosis, analysis, design, deployment and integration of cloud services, allowing applications to operate on high performance and exceptional availability.<a href="#cloud" class="open-modal learn-more">LEARN MORE</a></p>
-            </div>
-            <div></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="1000ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-ecommerce-graph1"></div>
-              </div>
-              <h3><span class="bold">DATA ANALYTICS</span></h3>
-              <p>We help you drive better business outcomes by turning unused data into actionable insights, empowering customers to make informed business decisions.<a href="#data" class="open-modal learn-more">LEARN MORE</a></p>
-            </div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="600ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-basic-case"></div>
-              </div>
-              <h3><span class="bold">IT CONSULTING</span></h3>
-              <p>We provide strategic insights and tactical know how to help you improve the availability, security and performance of your business. <a href="#it_consulting" class="open-modal learn-more">LEARN MORE</a></p>
-            </div>
-            <div></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="800ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-basic-lock"></div>
-              </div>
-              <h3><span class="bold">CYBERSECURITY</span></h3>
-              <p>We act as your IT department to protect your data from being compromised and optimize efficiency with 24x7 Monitoring and support.<a href="#cybersecurity" class="open-modal learn-more">LEARN MORE</a></p>
-            </div>
-            <div></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <div data-wow-delay="1000ms" class="fes4-box wow fadeIn">
-            <div class="fes4-title-cont">
-              <div class="fes4-box-icon">
-                <div class="icon icon-basic-key"></div>
-              </div>
-              <h3><span class="bold">USER IDENTITY MANAGEMENT</span></h3>
-              <p>We offer a complete identity management system to view and execute identity policy across all users, devices and applications. <a href="#id_management" class="open-modal learn-more">LEARN MORE</a></p>
-            </div>
-            <div></div>
           </div>
         </div>
       </div>
