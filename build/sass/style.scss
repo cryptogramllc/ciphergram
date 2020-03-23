@@ -14812,3 +14812,13 @@ button.mfp-text-close-button {
    top: 10px;
    right: 10px;
 }
+
+.grid-container {
+  display: inline-grid;
+  grid-column-gap: 50px;
+}
+
+.grid-item {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}   

@@ -36,24 +36,24 @@ module.exports = function (grunt) {
                 tasks: "jade"
             },
             sass: {
-				files: "build/**/*.scss",
-				tasks: 'sass'
-			}
+                files: "build/**/*.scss",
+                tasks: 'sass'
+            }
         },
         browserSync: {
             dev: {
-              bsFiles: {
-                src: [
-                  "dist/css/*.css",
-                  "dist/*.html"
-                ]
-              },
-              options: {
-                watchTask: true,
-                server: {
-                  baseDir: "./dist"
+                bsFiles: {
+                    src: [
+                        "dist/css/*.css",
+                        "dist/*.html"
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: {
+                        baseDir: "./dist"
+                    }
                 }
-              }
             }
         }
     });

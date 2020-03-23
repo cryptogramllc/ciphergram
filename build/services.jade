@@ -1,6 +1,6 @@
 doctype html
 head
-  title Ciphergram - About Us
+  title Ciphergram - Services
   meta(charset='utf-8')
   //if IE
       meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -13,6 +13,28 @@ head
   include ./includes/tags/css.jade
 body
   include ./includes/header.jade
+  .page-section.p-60-cont.grey-light-bg.clearfix(id="services-link")
+      .container
+        h2.section-title 
+          span.bold Services
+        h3 Complete IT Solutions in One Place
+        p Enhance business operations, optimize system performance and advance measurable ROI with our array of scalable IT outsourcing solutions and software expertise.
+         
+        .grid-container
+          .grid-item
+            .grid-item
+            h4 Scalable Design, High performance
+            p Leverage on the power of full stack development solutions to get applications specifically designed to make your business more efficient and help your customers become more engaged.
+          .grid-item
+            h4 Front-End Development
+            p We use the latest tools and technologies to build beautiful GUI and responsive cross browser websites and application
+        .grid-container
+          .grid-item
+            h4 Back-End Server Solutions & Architecture
+            p We use the most advanced cutting-edge back-end technologies like Node.js to build and deploy scalable enterprise applications
+          .grid-item
+            h4 Managed IT Services
+            p We assess, design, execute and manage your IT needs to keep your business operating safely and efficiently – regardless of size or industry.
   include ./includes/services.jade
   include ./includes/footer.jade
 script(src='js/jquery-1.11.2.min.js')
@@ -21,5 +43,4 @@ script.
      $('#nav').addClass('dark-bg');
      $("nav").remove();
      $('header').css('position', 'relative');
-     $('.learn-more').attr('href', './index.html')
   });
