@@ -841,8 +841,9 @@
 <!-- JS end-->
 <script>
   $(document).ready(function(){
-     const $url = window.location.pathname.split('/')[1].replace('.html', '');
-      if($url.length > 0){ 
+     let $url = window.location.pathname.split('/')[1].replace('.html', '');
+     $url === 'index' ? $url = '' : $url = $url;
+      if($url.length > 0 ){ 
         $('#nav').addClass('dark-bg');
         $('header').css('position', 'relative');
       }
