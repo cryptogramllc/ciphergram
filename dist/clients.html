@@ -142,12 +142,268 @@
     </div>
   </footer>
 </body>
+<!-- JS begin-->
+<!-- jQuery-->
 <script src="js/jquery-1.11.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed-->
+<script src="js/bootstrap.min.js"></script>
+<!-- MAGNIFIC POPUP-->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- PORTFOLIO SCRIPTS-->
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<!-- COUNTER-->
+<script src="js/jquery.countTo.js"></script>
+<!-- APPEAR-->
+<script src="js/jquery.appear.js"></script>
+<!-- GOOLE MAP-->
+<script src="https://maps.google.com/maps/api/js?key=INSERT-YOUR-API-KEY-HERE"></script>
+<script src="js/gmap3.min.js"></script>
+<!--if lt IE 10script(src='js/jquery.placeholder.js')
+-->
+<!-- FORMS VALIDATION-->
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/contact-form-validation.min.js"></script>
+<!-- OWL CAROUSEL-->
+<script src="js/owl.carousel.min.js"></script>
+<!-- MAIN SCRIPT-->
+<script src="js/main.js"></script>
+<!-- REVOSLIDER SCRIPTS-->
+<!-- SLIDER REVOLUTION 4.x SCRIPTS-->
+<script src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="rs-plugin/js/jquery.themepunch.revolution-parallax.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<!-- SLIDER REVOLUTION INIT-->
+<script>
+  jQuery(document).ready(function() {
+  if ( (navigator.appVersion.indexOf("Win")!=-1) && ( ieDetect == false ) ) {
+  jQuery('#rs-fullwidth').revolution(
+  {
+  dottedOverlay:"none",
+  delay:16000,
+  startwidth:1170,
+  startheight:665,
+  hideThumbs:200,
+  thumbWidth:100,
+  thumbHeight:50,
+  thumbAmount:5,
+  //fullScreenAlignForce: "off",
+  navigationType:"none",
+  navigationArrows:"solo",
+  navigationStyle:"preview4",
+  hideTimerBar:"on",
+  touchenabled:"on",
+  onHoverStop:"on",
+  swipe_velocity: 0.7,
+  swipe_min_touches: 1,
+  swipe_max_touches: 1,
+  drag_block_vertical: false,
+  parallax:"scroll",
+  parallaxBgFreeze:"on",
+  parallaxLevels:[45,40,35,50],
+  parallaxDisableOnMobile:"on",
+  keyboardNavigation:"off",
+  navigationHAlign:"center",
+  navigationVAlign:"bottom",
+  navigationHOffset:0,
+  navigationVOffset:20,
+  soloArrowLeftHalign:"left",
+  soloArrowLeftValign:"center",
+  soloArrowLeftHOffset:20,
+  soloArrowLeftVOffset:0,
+  soloArrowRightHalign:"right",
+  soloArrowRightValign:"center",
+  soloArrowRightHOffset:20,
+  soloArrowRightVOffset:0,
+  shadow:0,
+  fullWidth:"on",
+  fullScreen:"off",
+  spinner:"spinner4",
+  stopLoop:"off",
+  stopAfterLoops:-1,
+  stopAtSlide:-1,
+  shuffle:"off",
+  autoHeight:"off",
+  forceFullWidth:"off",
+  hideThumbsOnMobile:"off",
+  hideNavDelayOnMobile:1500,
+  hideBulletsOnMobile:"off",
+  hideArrowsOnMobile:"off",
+  hideThumbsUnderResolution:0,
+  hideSliderAtLimit:0,
+  hideCaptionAtLimit:0,
+  hideAllCaptionAtLilmit:0,
+  startWithSlide:0,
+  //fullScreenOffsetContainer: ""
+  });
+  } else {
+  jQuery('#rs-fullwidth').revolution(
+  {
+  dottedOverlay:"none",
+  delay:16000,
+  startwidth:1170,
+  startheight:760,
+  hideThumbs:200,
+  thumbWidth:100,
+  thumbHeight:50,
+  thumbAmount:5,
+  navigationType:"none",
+  navigationArrows:"solo",
+  navigationStyle:"preview4",
+  hideTimerBar:"on",
+  touchenabled:"on",
+  onHoverStop:"on",
+  swipe_velocity: 0.7,
+  swipe_min_touches: 1,
+  swipe_max_touches: 1,
+  drag_block_vertical: false,
+  parallax:"mouse",
+  parallaxBgFreeze:"on",
+  parallaxLevels:[0],
+  parallaxDisableOnMobile:"on",
+  keyboardNavigation:"off",
+  navigationHAlign:"center",
+  navigationVAlign:"bottom",
+  navigationHOffset:0,
+  navigationVOffset:20,
+  soloArrowLeftHalign:"left",
+  soloArrowLeftValign:"center",
+  soloArrowLeftHOffset:20,
+  soloArrowLeftVOffset:0,
+  soloArrowRightHalign:"right",
+  soloArrowRightValign:"center",
+  soloArrowRightHOffset:20,
+  soloArrowRightVOffset:0,
+  shadow:0,
+  fullWidth:"on",
+  fullScreen:"off",
+  spinner:"spinner4",
+  stopLoop:"off",
+  stopAfterLoops:-1,
+  stopAtSlide:-1,
+  shuffle:"off",
+  autoHeight:"off",
+  forceFullWidth:"off",
+  hideThumbsOnMobile:"off",
+  hideNavDelayOnMobile:1500,
+  hideBulletsOnMobile:"off",
+  hideArrowsOnMobile:"off",
+  hideThumbsUnderResolution:0,
+  hideSliderAtLimit:0,
+  hideCaptionAtLimit:0,
+  hideAllCaptionAtLilmit:0,
+  startWithSlide:0,
+  });
+  }
+  });	//ready
+</script>
+<script>
+  $(document).ready(function() {
+  //ONE PAGE NAV	---------------------------------------------------------------------------
+      var top_offset = $('header').height() - 1;  // get height of fixed navbar
+      $('#nav-onepage').onePageNav({
+          currentClass: 'current',
+          changeHash: false,
+          scrollSpeed: 700,
+          scrollOffset: top_offset,
+          scrollThreshold: 0.5,
+          filter: '',
+          easing: 'swing',
+          begin: function() {
+              //I get fired when the animation is starting
+          },
+          end: function() {
+              //I get fired when the animation is ending
+          },
+          scrollChange: function($currentListItem) {
+              //I get fired when you enter a section and I pass the list item of the section
+          }
+      });
+  
+  });//END document.ready 
+</script>
 <script>
   $(document).ready(function(){
-     $('#nav').addClass('dark-bg');
-     $("nav").remove();
-     $('header').css('position', 'relative');
-     $('.learn-more').attr('href', './index.html')
+      $('#contact-form').submit(function(event){
+          event.preventDefault();
+          let $data = $(this).serializeArray();
+          let $name = $data[0].value;
+          let $email = $data[1].value;
+          let $message = $data[2].value;
+          let incomplete = ($name.length == 0 || $email.length == 0 || $message.length == 0);
+          if (!$email.match(/^[^@]+@[^@]+$/)) {
+              console.log('Not sending: invalid email address');
+              $('.alert').addClass('hidden');
+              $('.alert-danger').removeClass('hidden');
+              incomplete = true;
+          }
+          if(!incomplete){ 
+              console.log('processing')
+              let  payload = { 
+                  name : $name,
+                  email : $email,
+                  message: $message
+              }
+              const API_URL =
+                  "https://8syk5uud37.execute-api.us-east-1.amazonaws.com/prod/contact";
+              $.ajax({
+                  contentType: 'application/json',
+                  data: JSON.stringify(payload),
+                  dataType: 'json',
+                  type: 'POST',
+                  url: API_URL,
+              })
+              .done((data) => {
+                  console.log(data);
+                  $('.alert').addClass('hidden');
+                  $('.alert-success').removeClass('hidden');
+              })
+              .fail(() => {});
+  
+  
+          }
+      });
   });
 </script>
+<script>
+  $(document).ready(function(){
+      $('.lightbox-item .icon_search').click(function(event){
+          const $this = $(event.target);
+          const $html = $this.closest('.port-item').find('.gallery-content').html();
+          $('.mfp-more-info').fadeIn();
+          $('.mfp-text').fadeIn();
+          $('.mfp-text-inner').html($html); 
+      });
+      $('.mfp-more-info').click(function(event){
+          $('.mfp-text').fadeIn();
+          $('.mfp-more-info').fadeOut();
+      });
+      $('body').on('click', function(event){
+          $this = $(event.target);
+          $className = $this.context.className;
+          console.log($className);
+          if($className.includes("mfp-container") || $className.includes("mfp-close")) {
+              $('.mfp-more-info').fadeOut();
+              $('.mfp-text').fadeOut();
+          }
+         
+      });
+      $('.mfp-text-close').click(function(){
+          $('.mfp-more-info').fadeIn();
+          $('.mfp-text').fadeOut();
+      });
+  });
+</script>
+<!-- JS end-->
+<script>
+  $(document).ready(function(){
+     const $url = window.location.pathname.split('/')[1].replace('.html', '');
+      if($url.length > 0){ 
+        $('#nav').addClass('dark-bg');
+        $('header').css('position', 'relative');
+      }
+  });
+</script><script id="__bs_script__">//<![CDATA[
+document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.12.5.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>

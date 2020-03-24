@@ -252,7 +252,7 @@
                     <div class="icon icon-basic-globe"></div>
                   </div>
                   <h3><span class="bold">WEB DEVELOPMENT</span></h3>
-                  <p>Driven by innovation and passion, we create responsive web applications with robust features and functionalities.<a href="#website" class="learn-more">LEARN MORE</a></p>
+                  <p>Driven by innovation and passion, we create responsive web applications with robust features and functionalities.<a href="/website.html" class="learn-more">LEARN MORE</a></p>
                 </div>
                 <div></div>
               </div>
@@ -264,7 +264,7 @@
                     <div class="icon icon-basic-laptop"></div>
                   </div>
                   <h3><span class="bold">SOFTWARE DEVELOPMENT</span></h3>
-                  <p>We solve clients’ business challenges by implementing fully customized enterprise software solutions that are high in performance and security.<a href="#software" class="learn-more">LEARN MORE</a></p>
+                  <p>We solve clients’ business challenges by implementing fully customized enterprise software solutions that are high in performance and security.<a href="/software.html" class="learn-more">LEARN MORE</a></p>
                 </div>
                 <div></div>
               </div>
@@ -278,7 +278,7 @@
                     <div class="icon icon-basic-webpage-multiple"></div>
                   </div>
                   <h3><span class="bold">UX & UI DEVELOPMENT</span></h3>
-                  <p>Employing best practices of UI/UX, we create intuitive, flexible & engaging designs that emotionally connect with your audience and solve user challenges.<a href="#ux_ui" class="learn-more">LEARN MORE</a></p>
+                  <p>Employing best practices of UI/UX, we create intuitive, flexible & engaging designs that emotionally connect with your audience and solve user challenges.<a href="/ux_ui.html" class="learn-more">LEARN MORE</a></p>
                 </div>
                 <div></div>
               </div>
@@ -290,7 +290,7 @@
                     <div class="icon icon-basic-cloud"></div>
                   </div>
                   <h3><span class="bold">CLOUD SOLUTIONS</span></h3>
-                  <p>We offer diagnosis, analysis, design, deployment and integration of cloud services, allowing applications to operate on high performance and exceptional availability.<a href="#cloud" class="learn-more">LEARN MORE</a></p>
+                  <p>We offer diagnosis, analysis, design, deployment and integration of cloud services, allowing applications to operate on high performance and exceptional availability.<a href="/cloud.html" class="learn-more">LEARN MORE</a></p>
                 </div>
                 <div></div>
               </div>
@@ -302,7 +302,7 @@
                     <div class="icon icon-ecommerce-graph1"></div>
                   </div>
                   <h3><span class="bold">DATA ANALYTICS</span></h3>
-                  <p>We help you drive better business outcomes by turning unused data into actionable insights, empowering customers to make informed business decisions.<a href="#data" class="learn-more">LEARN MORE</a></p>
+                  <p>We help you drive better business outcomes by turning unused data into actionable insights, empowering customers to make informed business decisions.<a href="/data.html" class="learn-more">LEARN MORE</a></p>
                 </div>
                 <div></div>
               </div>
@@ -316,7 +316,7 @@
                     <div class="icon icon-basic-case"></div>
                   </div>
                   <h3><span class="bold">IT CONSULTING</span></h3>
-                  <p>We provide strategic insights and tactical know how to help you improve the availability, security and performance of your business. <a href="#it_consulting" class="learn-more">LEARN MORE</a></p>
+                  <p>We provide strategic insights and tactical know how to help you improve the availability, security and performance of your business. <a href="/it_consulting.html" class="learn-more">LEARN MORE</a></p>
                 </div>
                 <div></div>
               </div>
@@ -328,7 +328,7 @@
                     <div class="icon icon-basic-lock"></div>
                   </div>
                   <h3><span class="bold">CYBERSECURITY</span></h3>
-                  <p>We act as your IT department to protect your data from being compromised and optimize efficiency with 24x7 Monitoring and support.<a href="#cybersecurity" class="learn-more">LEARN MORE</a></p>
+                  <p>We act as your IT department to protect your data from being compromised and optimize efficiency with 24x7 Monitoring and support.<a href="/cybersecurity,html" class="learn-more">LEARN MORE</a></p>
                 </div>
                 <div></div>
               </div>
@@ -340,7 +340,7 @@
                     <div class="icon icon-basic-key"></div>
                   </div>
                   <h3><span class="bold">USER IDENTITY MANAGEMENT</span></h3>
-                  <p>We offer a complete identity management system to view and execute identity policy across all users, devices and applications. <a href="#id_management" class="learn-more">LEARN MORE</a></p>
+                  <p>We offer a complete identity management system to view and execute identity policy across all users, devices and applications. <a href="/id_management.html" class="learn-more">LEARN MORE</a></p>
                 </div>
                 <div></div>
               </div>
@@ -837,7 +837,16 @@
           $('.mfp-text').fadeOut();
       });
   });
+</script>
+<!-- JS end-->
+<script>
+  $(document).ready(function(){
+     const $url = window.location.pathname.split('/')[1].replace('.html', '');
+      if($url.length > 0){ 
+        $('#nav').addClass('dark-bg');
+        $('header').css('position', 'relative');
+      }
+  });
 </script><script id="__bs_script__">//<![CDATA[
 document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.12.5.js'><\/script>".replace("HOST", location.hostname));
 //]]></script>
-<!-- JS end-->

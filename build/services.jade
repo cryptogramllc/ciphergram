@@ -37,10 +37,4 @@ body
             p We assess, design, execute and manage your IT needs to keep your business operating safely and efficiently – regardless of size or industry.
   include ./includes/services.jade
   include ./includes/footer.jade
-script(src='js/jquery-1.11.2.min.js')
-script.
-  $(document).ready(function(){
-     $('#nav').addClass('dark-bg');
-     $("nav").remove();
-     $('header').css('position', 'relative');
-  });
+include ./includes/scripts/js.jade

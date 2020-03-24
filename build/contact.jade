@@ -15,11 +15,4 @@ body
   include ./includes/header.jade
   include ./includes/contact.jade
   include ./includes/footer.jade
-script(src='js/jquery-1.11.2.min.js')
-script.
-  $(document).ready(function(){
-     $('#nav').addClass('dark-bg');
-     $("nav").remove();
-     $('header').css('position', 'relative');
-     $('.learn-more').attr('href', './index.html')
-  });
+include ./includes/scripts/js.jade
