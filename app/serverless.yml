@@ -57,11 +57,11 @@ functions:
     role: arn:aws:iam::514188170070:role/aws-nodejs-prod-us-east-1-lambdaRole
     timeout: 900
     environment:
-      TABLE_NAME: blog_posts
-      OPENAI_URL: https://api.openai.com/v1/chat/completions
-      OPENAI_API_KEY: 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
-      UNSPLASH_ACCESS_KEY: WgwitiB3gelWNKfcMl4UbPGxlnm7ScPg2WktrGiuM04
-      S3_BUCKET: ciphergram.io
+      TABLE_NAME:
+      OPENAI_URL:
+      OPENAI_API_KEY: 
+      UNSPLASH_ACCESS_KEY: 
+      S3_BUCKET: 
     events:
       - http:
           path: create-blog
