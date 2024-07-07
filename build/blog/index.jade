@@ -1,0 +1,123 @@
+doctype html
+head
+    title Ciphergram - Blog
+    meta(charset='utf-8')
+    //
+        if IEmeta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='robots' content='blog, follow')
+    meta(name='keywords' content='Ciphergram, Blog, Chicago IoT, London IoT, Amazon Web Services, Web Development, Cloud Services, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Cybersecurity.')
+    meta(name='description' content='Blog - International consultancy based in Chicago, IL specializing in IT Business Solutions and Fullstack Application developement, Cloud Computing, and Emerging Technologies. Having assisted dozens of prestigous companies around the world, we combine our years of experience to deliver the most effective solutions tailored to ensure successful business outcome and growth. From ideation to launch, we design, strategize and create high performing, digitally transformative applications with stunning interfaces, seamless user experience and dynamic functionalities.')
+    meta(name='author' content='Ciphergram.io')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+    // FAVICONS
+    include ../includes/tags/css.jade
+body
+    // LOADER
+    #loader-overflow
+        #loader3 Please enable JS
+    #wrap.boxed
+        .grey-bg
+            // Grey BG
+            //if lte IE 8
+                #ie-container
+                    #ie-cont-close
+                        a(href='#', onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;')
+                            img(src='images/ie-warn/ie-warning-close.jpg', style='border: none;', alt='Close')
+                    #ie-cont-content
+                        #ie-cont-warning
+                            img(src='images/ie-warn/ie-warning.jpg', alt='Warning!')
+                        #ie-cont-text
+                            #ie-text-bold
+                            #ie-text
+                        #ie-cont-brows
+                            a(href='http://www.firefox.com', target='_blank')
+                                img(src='images/ie-warn/ie-warning-firefox.jpg', alt='Download Firefox')
+                            a(href='http://www.opera.com/download/', target='_blank')
+                                img(src='images/ie-warn/ie-warning-opera.jpg', alt='Download Opera')
+                            a(href='http://www.apple.com/safari/download/', target='_blank')
+                                img(src='images/ie-warn/ie-warning-safari.jpg', alt='Download Safari')
+                            a(href='http://www.google.com/chrome', target='_blank')
+                                img(src='images/ie-warn/ie-warning-chrome.jpg', alt='Download Google Chrome')
+            // HEADER 1 BLACK MOBILE-NO-TRANSPARENT
+            include ../includes/header.jade
+    #blog.page-section.p-140-cont
+      .container
+        .row
+          .col-md-12
+            .row
+              .col-md-12.col-sm-12
+                .fes4-box.wow.fadeIn(data-wow-delay='200ms')
+                  h2.section-title
+                    span.bold.title
+                    span.bold.right.small.date
+            .row
+              .col-md-12.col-sm-12.pb-10
+                .fes5-box.wow.fadeIn(data-wow-delay='200ms')
+                  .main-content
+    include ../includes/footer.jade
+include ../includes/scripts/js.jade
+script.
+    $(document).ready(function() {
+        function snippet(text, wordLimit) {
+            const words = text.split(' ');
+            if (wordLimit >= words.length) { return text; }
+            const truncatedText = words.slice(0, wordLimit).join(' ');
+            return truncatedText;
+        }
+
+        function getUUIDFromURL() {
+            const fullURL = window.location.href;
+            const urlParts = fullURL.split('?');
+            if (urlParts.length > 0) {
+                return urlParts[1];
+            }
+            return null;
+        }
+        
+        function fetchContent(uuid) { 
+           try {
+                const id = uuid || '';
+                const url = `https://h38fikktw7.execute-api.us-east-1.amazonaws.com/prod/items/${id}`;
+                const response = $.ajax({
+                    url, 
+                    method: 'GET',
+                    async: false, // Set async to false for synchronous request
+                }).responseText;
+                return response;
+            } catch (error) {
+            console.error('An error occurred:', error);
+            }
+        }
+
+        (async function () {
+            const uuid = getUUIDFromURL();
+            const response = await fetchContent(uuid);
+            if (response) {
+                const parsedJson = JSON.parse(response);
+                if(Array.isArray(parsedJson)) { 
+                        $('h2.section-title span.title').html('Blog');
+                        $('h2.section-title span.date').html('');
+                        $('.main-content').html('<ul class="blog-list"></ul>');
+                        let blogContent = ''
+
+                        $.each(parsedJson, function(index, item) {
+                            const { uuid, title, image, content, date, link } = item;
+                            const snip = snippet(content, 50);
+                            blogContent += `<li class="blog-item">
+                                                <a href="/${link}">
+                                                    <div class="blog-item-image" style="background-image: url(${image})"></div>
+                                                    <div class="blog-item-content">
+                                                        <span class="title"><h1>${title}</h1></span>
+                                                        <span class="date right">${date}</span>
+                                                        <div class="snippet">${snip}...</div>
+                                                    </div>
+                                                </a>
+                                            </li>`;
+                        });
+                        $('.blog-list').html(blogContent);
+                }
+            } else {
+                console.error('API request failed or returned an empty response');
+            }
+        })();
+    });

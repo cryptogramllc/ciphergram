@@ -14,7 +14,10 @@ module.exports = function (grunt) {
             all: {
                 expand: true,
                 cwd: "build/",
-                src: ["*.jade"],
+                src: [
+                    '**/*.jade',          // Include all .jade files
+                    '!includes/**'      // Exclude the "exclude-me" folder and its contents
+                ],
                 dest: "dist/",
                 ext: '.html'
             }

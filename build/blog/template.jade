@@ -1,0 +1,59 @@
+doctype html
+head
+    title Ciphergram - Blog
+    meta(charset='utf-8')
+    //
+        if IEmeta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='robots' content='blog, follow')
+    meta(name='keywords' content='Ciphergram, Blog, Chicago IoT, London IoT, Amazon Web Services, Web Development, Cloud Services, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Cybersecurity.')
+    meta(name='description' content='Blog - International consultancy based in Chicago, IL specializing in IT Business Solutions and Fullstack Application developement, Cloud Computing, and Emerging Technologies. Having assisted dozens of prestigous companies around the world, we combine our years of experience to deliver the most effective solutions tailored to ensure successful business outcome and growth. From ideation to launch, we design, strategize and create high performing, digitally transformative applications with stunning interfaces, seamless user experience and dynamic functionalities.')
+    meta(name='author' content='Ciphergram.io')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+    // FAVICONS
+    include ../includes/tags/css.jade
+body
+    // LOADER
+    #loader-overflow
+        #loader3 Please enable JS
+    #wrap.boxed
+        .grey-bg
+            // Grey BG
+            //if lte IE 8
+                #ie-container
+                    #ie-cont-close
+                        a(href='#', onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;')
+                            img(src='images/ie-warn/ie-warning-close.jpg', style='border: none;', alt='Close')
+                    #ie-cont-content
+                        #ie-cont-warning
+                            img(src='images/ie-warn/ie-warning.jpg', alt='Warning!')
+                        #ie-cont-text
+                            #ie-text-bold
+                            #ie-text
+                        #ie-cont-brows
+                            a(href='http://www.firefox.com', target='_blank')
+                                img(src='images/ie-warn/ie-warning-firefox.jpg', alt='Download Firefox')
+                            a(href='http://www.opera.com/download/', target='_blank')
+                                img(src='images/ie-warn/ie-warning-opera.jpg', alt='Download Opera')
+                            a(href='http://www.apple.com/safari/download/', target='_blank')
+                                img(src='images/ie-warn/ie-warning-safari.jpg', alt='Download Safari')
+                            a(href='http://www.google.com/chrome', target='_blank')
+                                img(src='images/ie-warn/ie-warning-chrome.jpg', alt='Download Google Chrome')
+            // HEADER 1 BLACK MOBILE-NO-TRANSPARENT
+            include ../includes/header.jade
+    #blog.page-section.p-140-cont
+      .container
+        .row
+          .col-md-12
+            .row
+              .col-md-12.col-sm-12
+                .fes4-box.wow.fadeIn(data-wow-delay='200ms')
+                  {{ image }}
+                  h2.section-title
+                    span.bold.title {{ title }}
+                    span.bold.right.small.date  {{ date }}
+            .row
+              .col-md-12.col-sm-12.pb-10
+                .fes5-box.wow.fadeIn(data-wow-delay='200ms')
+                  .main-content {{ content }}
+    include ../includes/footer.jade
+include ../includes/scripts/js.jade
