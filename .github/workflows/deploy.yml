@@ -38,6 +38,8 @@ jobs:
         aws s3 sync dist/ s3://ciphergrm.io --delete
         
     - name: Invalidate CloudFront cache (optional)
+      env:
+        CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+      if: env.CLOUDFRONT_DISTRIBUTION_ID != ''
       run: |
-        aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
-      if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID != '' }} 
+        aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*" 
