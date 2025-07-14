@@ -53,7 +53,6 @@ exports.getBlogPost = async (event) => {
         };
         console.log("🚀 ~ file: index.js:49 ~ exports.getBlogPost= ~ formattedItem:", formattedItem)
 
-
         return {
             statusCode: 200,
             body: JSON.stringify(formattedItem),

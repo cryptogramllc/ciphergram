@@ -5,6 +5,11 @@
   "author": "Jibran Khan",
   "license": "Ciphergram",
   "private": false,
+  "scripts": {
+    "build": "grunt jade && grunt sass",
+    "dev": "grunt",
+    "deploy": "npm run build"
+  },
   "dependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-jade": "^1.0.0",
