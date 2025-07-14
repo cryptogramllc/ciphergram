@@ -35,7 +35,7 @@ jobs:
         
     - name: Deploy to S3
       run: |
-        aws s3 sync dist/ s3://ciphergrm.io --delete
+        aws s3 sync dist/ s3://ciphergram.io --delete
         
     - name: Invalidate CloudFront cache (optional)
       env:
