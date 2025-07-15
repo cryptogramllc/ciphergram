@@ -22,28 +22,28 @@ div(id="home-link")
                             nav.collapse.navbar-collapse.right-1024
                                 ul.nav.navbar-nav(id="nav-onepage")
                                     // MENU ITEM
-                                    li.current
+                                    li(class=typeof currentPage !== 'undefined' && currentPage === 'home' ? 'current' : '')
                                         a(href='https://ciphergram.io/index.html#home-link')
                                             .main-menu-title HOME
-                                    li
+                                    li(class=typeof currentPage !== 'undefined' && currentPage === 'about' ? 'current' : '')
                                         a(href='https://ciphergram.io/index.html#about-us-link')
                                             .main-menu-title ABOUT
-                                    li
+                                    li(class=typeof currentPage !== 'undefined' && currentPage === 'services' ? 'current' : '')
                                         a(href='https://ciphergram.io/index.html#services-link')
                                             .main-menu-title SERVICES
-                                    li
+                                    li(class=typeof currentPage !== 'undefined' && currentPage === 'pricing' ? 'current' : '')
                                         a(href='/pricing.html')
                                             .main-menu-title PRICING
-                                    li
+                                    li(class=typeof currentPage !== 'undefined' && currentPage === 'clients' ? 'current' : '')
                                         a(href='https://ciphergram.io/index.html#our-clients')
                                             .main-menu-title OUR CLIENTS
-                                    li
+                                    li(class=typeof currentPage !== 'undefined' && currentPage === 'work' ? 'current' : '')
                                         a(href='https://ciphergram.io/index.html#our-work-link')
                                             .main-menu-title OUR WORK
-                                    li
+                                    li(class=typeof currentPage !== 'undefined' && currentPage === 'contact' ? 'current' : '')
                                         a(href='https://ciphergram.io/index.html#contact-link')
                                             .main-menu-title CONTACT
-                                    li
+                                    li(class=typeof currentPage !== 'undefined' && currentPage === 'blog' ? 'current' : '')
                                         a(href='/blog')
                                             .main-menu-title BLOG
                     // END main-menu
