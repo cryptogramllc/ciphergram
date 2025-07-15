@@ -3,7 +3,7 @@ include ./includes/head.jade
 - var pageTitle = "Home | Ciphergram - Cybersecurity & IT Consulting"
 - var pageDescription = "Leading cybersecurity, software development, and IT consulting for businesses in Orlando, London, and worldwide. Secure your future with Ciphergram."
 - var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What services does Ciphergram offer?","acceptedAnswer":{"@type":"Answer","text":"We provide cybersecurity, software development, IT consulting, and more."}},{"@type":"Question","name":"Where is Ciphergram located?","acceptedAnswer":{"@type":"Answer","text":"We serve clients in Orlando, London, and worldwide."}}]}'
-- var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","address":{"@type":"PostalAddress","streetAddress":"123 Main St","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"+1-555-555-5555","url":"https://ciphergrm.io"}'
+- var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","address":{"@type":"PostalAddress","streetAddress":"123 Main St","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"708-517-9987","url":"https://ciphergrm.io"}'
 body
     // LOADER
     #loader-overflow
@@ -86,7 +86,7 @@ body
             //- include ./includes/process.jade
 
             // FAQ SECTION
-            .page-section.p-140-cont.grey-light-bg.clearfix
+            .page-section.p-140-cont.clearfix
                 .container
                     .row
                         .col-md-12.text-center
@@ -94,43 +94,25 @@ body
                                 span.font-light Frequently Asked 
                                 span Questions
                     .row
-                        .col-md-12
+                        .col-md-6
                             .fes7-box.wow.fadeIn.mb-30
                                 h3.mb-20 What services does Ciphergram offer?
                                 p.mb-0 We provide comprehensive cybersecurity, software development, IT consulting, cloud architecture, data analytics, and identity management solutions for businesses of all sizes.
-                        .col-md-12
+                        .col-md-6
                             .fes7-box.wow.fadeIn.mb-30
                                 h3.mb-20 Where is Ciphergram located?
                                 p.mb-0 We serve clients in Orlando, London, and worldwide. Our team works remotely and on-site to deliver the best solutions for your business needs.
-                        .col-md-12
+                    .row
+                        .col-md-6
                             .fes7-box.wow.fadeIn.mb-30
                                 h3.mb-20 How can I get started with Ciphergram?
                                 p.mb-0 Contact us through our website or call us directly. We'll schedule a consultation to understand your needs and provide a tailored solution.
-                        .col-md-12
+                        .col-md-6
                             .fes7-box.wow.fadeIn.mb-30
                                 h3.mb-20 What industries do you serve?
                                 p.mb-0 We work with businesses across all industries, from startups to Fortune 500 companies, providing customized IT solutions that drive growth and security.
             // CONTACT INFO
             include ./includes/contact.jade
-            // BUSINESS INFO SECTION
-            .page-section.p-80-cont.clearfix
-                .container
-                    .row
-                        .col-md-12.text-center
-                            h2.mb-50 Our Business Information
-                    .row
-                        .col-md-4.text-center
-                            .business-info-item.mb-30
-                                h3 Address
-                                p 123 Main St<br>Orlando, FL 32801<br>United States
-                        .col-md-4.text-center
-                            .business-info-item.mb-30
-                                h3 Contact
-                                p Phone: +1-555-555-5555<br>Email: info@ciphergrm.io<br>Website: ciphergrm.io
-                        .col-md-4.text-center
-                            .business-info-item.mb-30
-                                h3 Service Areas
-                                p Orlando, FL<br>London, UK<br>Worldwide Services
             // FOOTER 1
             include ./includes/footer.jade
             // BACK TO TOP
