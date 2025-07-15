@@ -1,8 +1,8 @@
 doctype html
 include ./includes/head.jade
 - var pageTitle = "Home | Ciphergram - Cybersecurity & IT Consulting"
-- var pageDescription = "Leading cybersecurity, software development, and IT consulting for businesses in Orlando, London, and worldwide. Secure your future with Ciphergram."
-- var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What services does Ciphergram offer?","acceptedAnswer":{"@type":"Answer","text":"We provide cybersecurity, software development, IT consulting, and more."}},{"@type":"Question","name":"Where is Ciphergram located?","acceptedAnswer":{"@type":"Answer","text":"We serve clients in Orlando, London, and worldwide."}}]}'
+- var pageDescription = "Leading cybersecurity, software development, IT consulting, and AI services for businesses in Orlando, London, and worldwide. We leverage generative AI for rapid prototyping and intelligent solutions. Secure your future with Ciphergram."
+- var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What services does Ciphergram offer?","acceptedAnswer":{"@type":"Answer","text":"We provide comprehensive cybersecurity, software development, IT consulting, cloud architecture, data analytics, AI services, and identity management solutions for businesses of all sizes."}},{"@type":"Question","name":"Where is Ciphergram located?","acceptedAnswer":{"@type":"Answer","text":"We serve clients in Orlando, London, and worldwide. Our team works remotely and on-site to deliver the best solutions for your business needs."}},{"@type":"Question","name":"How can I get started with Ciphergram?","acceptedAnswer":{"@type":"Answer","text":"Contact us through our website or call us directly. We will schedule a consultation to understand your needs and provide a tailored solution."}},{"@type":"Question","name":"What industries do you serve?","acceptedAnswer":{"@type":"Answer","text":"We work with businesses across all industries, from startups to Fortune 500 companies, providing customized IT solutions that drive growth and security."}},{"@type":"Question","name":"Do you offer AI and rapid prototyping services?","acceptedAnswer":{"@type":"Answer","text":"Yes! We leverage cutting-edge generative AI technologies to accelerate development cycles, create intelligent applications, and deliver rapid prototypes that transform ideas into working solutions in days, not months."}}]}'
 - var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","address":{"@type":"PostalAddress","streetAddress":"123 Main St","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"708-517-9987","url":"https://ciphergrm.io"}'
 body
     // LOADER
@@ -111,6 +111,11 @@ body
                             .fes7-box.wow.fadeIn.mb-30
                                 h3.mb-20 What industries do you serve?
                                 p.mb-0 We work with businesses across all industries, from startups to Fortune 500 companies, providing customized IT solutions that drive growth and security.
+                    .row
+                        .col-md-6.col-md-offset-3
+                            .fes7-box.wow.fadeIn.mb-30
+                                h3.mb-20 Do you offer AI and rapid prototyping services?
+                                p.mb-0 Yes! We leverage cutting-edge generative AI technologies to accelerate development cycles, create intelligent applications, and deliver rapid prototypes that transform ideas into working solutions in days, not months.
             // CONTACT INFO
             include ./includes/contact.jade
             // FOOTER 1
