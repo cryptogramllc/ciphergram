@@ -1,22 +1,22 @@
 // SEO & Social Meta Tags
 head
-  title Ciphergram | Cybersecurity & Software Solutions
+  title #{typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions'}
   meta(charset="utf-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
   meta(name="robots" content="index, follow")
   meta(name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management")
-  meta(name="description" content="Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.")
+  meta(name="description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(name="author" content="Ciphergram.io")
   // Open Graph
-  meta(property="og:title" content="Ciphergram | Cybersecurity & Software Solutions")
-  meta(property="og:description" content="Expert cybersecurity, software, and IT consulting.")
+  meta(property="og:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
+  meta(property="og:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(property="og:type" content="website")
   meta(property="og:url" content="https://ciphergrm.io")
   meta(property="og:image" content="https://ciphergrm.io/images/og-image.jpg")
   // Twitter Card
   meta(name="twitter:card" content="summary_large_image")
-  meta(name="twitter:title" content="Ciphergram | Cybersecurity & Software Solutions")
-  meta(name="twitter:description" content="Expert cybersecurity, software, and IT consulting.")
+  meta(name="twitter:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
+  meta(name="twitter:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(name="twitter:image" content="https://ciphergrm.io/images/og-image.jpg")
   // Structured Data (JSON-LD)
   script(type="application/ld+json").
@@ -34,6 +34,14 @@ head
     }
   // Favicon
   link(rel="icon" href="/images/favicon.ico" type="image/x-icon")
+  // Page-specific FAQ JSON-LD
+  if typeof faqJsonLd !== 'undefined'
+    script(type="application/ld+json").
+      !{faqJsonLd}
+  // Page-specific LocalBusiness JSON-LD
+  if typeof localBusinessJsonLd !== 'undefined'
+    script(type="application/ld+json").
+      !{localBusinessJsonLd}
   include ../includes/tags/css.jade
 
 
