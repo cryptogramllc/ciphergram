@@ -13520,4 +13520,138 @@ li.blog-item {
   margin-bottom: 80px;
 }
 
+/* Custom Pricing Styles */
+.pricing-box {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.pricing-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.pricing-box.featured {
+  border-color: #4b4e53;
+  transform: scale(1.05);
+}
+.pricing-box.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-box-header {
+  margin-bottom: 30px;
+}
+.pricing-box-header h3 {
+  color: #4b4e53;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.price .currency {
+  font-size: 36px;
+  font-weight: 700;
+  color: #4b4e53;
+}
+.price .period {
+  font-size: 16px;
+  color: #696c6f;
+}
+
+.pricing-box-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+.pricing-box-content ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #696c6f;
+}
+.pricing-box-content ul li:last-child {
+  border-bottom: none;
+}
+
+.rate-card {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  height: 100%;
+}
+.rate-card h4 {
+  color: #4b4e53;
+  font-size: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.rate-item:last-child {
+  border-bottom: none;
+}
+.rate-item .service {
+  color: #696c6f;
+  font-weight: 500;
+}
+.rate-item .rate {
+  color: #4b4e53;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.project-package {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  height: 100%;
+}
+.project-package h4 {
+  color: #4b4e53;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.project-package .price-range {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4b4e53;
+  margin-bottom: 15px;
+}
+.project-package p {
+  color: #696c6f;
+  margin-bottom: 20px;
+}
+.project-package ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.project-package ul li {
+  padding: 8px 0;
+  color: #696c6f;
+  position: relative;
+  padding-left: 20px;
+}
+.project-package ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4b4e53;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -15301,3 +15301,158 @@ li.blog-item {
   padding: 20px 0;
   margin-bottom: 80px;
 }
+
+/* Custom Pricing Styles */
+.pricing-box {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  &.featured {
+    border-color: #4b4e53;
+    transform: scale(1.05);
+    
+    &:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+  }
+}
+
+.pricing-box-header {
+  margin-bottom: 30px;
+  
+  h3 {
+    color: #4b4e53;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+}
+
+.price {
+  .currency {
+    font-size: 36px;
+    font-weight: 700;
+    color: #4b4e53;
+  }
+  
+  .period {
+    font-size: 16px;
+    color: #696c6f;
+  }
+}
+
+.pricing-box-content {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      color: #696c6f;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.rate-card {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  height: 100%;
+  
+  h4 {
+    color: #4b4e53;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  .service {
+    color: #696c6f;
+    font-weight: 500;
+  }
+  
+  .rate {
+    color: #4b4e53;
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+
+.project-package {
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  height: 100%;
+  
+  h4 {
+    color: #4b4e53;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .price-range {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4b4e53;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    color: #696c6f;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    
+    li {
+      padding: 8px 0;
+      color: #696c6f;
+      position: relative;
+      padding-left: 20px;
+      
+      &:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #4b4e53;
+        font-weight: bold;
+      }
+    }
+  }
+}
