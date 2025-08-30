@@ -10,7 +10,7 @@ provider:
 
 functions:
   emailSubmission:
-    handler: index.email
+    handler: email-simple.handler
     role: arn:aws:iam::514188170070:role/aws-nodejs-prod-us-east-1-lambdaRole
     description: Submit candidate information and starts interview process.
     events:

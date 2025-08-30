@@ -1,11 +1,32 @@
-const AWS = require("aws-sdk");
-const docClient = new AWS.DynamoDB.DocumentClient();
+// Use built-in AWS SDK v3 for Lambda
+const { SNSClient, PublishCommand } = require('@aws-sdk/client-sns');
+const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
+const { DynamoDBDocumentClient } = require('@aws-sdk/lib-dynamodb');
+const { S3Client } = require('@aws-sdk/client-s3');
 const { extractTitleAndFormatText, dateStamp, formattedDate } = require("./helpers");
 const axios = require('axios');
 const { v4: uuidv4 } = require('uuid');
-const s3 = new AWS.S3();
+
+// Initialize clients
+const snsClient = new SNSClient({ region: 'us-east-1' });
+const docClient = DynamoDBDocumentClient.from(new DynamoDBClient({ region: 'us-east-1' }));
+const s3Client = new S3Client({ region: 'us-east-1' });
 
 exports.email = async function (event, context) {
+    // Handle CORS preflight OPTIONS request
+    if (event.httpMethod === 'OPTIONS') {
+        return {
+            statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                'Access-Control-Allow-Methods': 'POST, OPTIONS',
+                'Access-Control-Max-Age': '86400'
+            },
+            body: ''
+        };
+    }
+    
     try {
         // Parse the event body if it's a string
         let body = event;
@@ -24,23 +45,21 @@ exports.email = async function (event, context) {
                 }),
                 headers: {
                     'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
                     'Access-Control-Allow-Methods': 'POST, OPTIONS'
                 }
             };
         }
         
-        // Set region
-        AWS.config.update({ region: 'us-east-1' });
-        
         // Create publish parameters
-        var params = {
+        const params = {
             Message: `New Message from ${name} <${email}>: 
                 "${message}"`,
             TopicArn: 'arn:aws:sns:us-east-1:514188170070:Contact-Us'
         };
         
-        const response = await new AWS.SNS({ apiVersion: '2010-03-31' }).publish(params).promise();
+        const command = new PublishCommand(params);
+        const response = await snsClient.send(command);
         
         return {
             statusCode: 200,
@@ -51,7 +70,7 @@ exports.email = async function (event, context) {
             }),
             headers: {
                 'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
                 'Access-Control-Allow-Methods': 'POST, OPTIONS'
             }
         };
@@ -66,7 +85,7 @@ exports.email = async function (event, context) {
             }),
             headers: {
                 'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
                 'Access-Control-Allow-Methods': 'POST, OPTIONS'
             }
         };
