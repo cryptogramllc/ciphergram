@@ -1,3 +1,16 @@
 User-agent: *
 Allow: /
-Sitemap: https://ciphergrm.io/sitemap.xml 
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+Disallow: /*.json$
+Disallow: /*.xml$
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://ciphergram.io/sitemap.xml 

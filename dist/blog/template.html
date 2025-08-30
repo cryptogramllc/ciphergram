@@ -159,7 +159,7 @@
   </div>
   <footer id="footer1" class="page-section text-center pt-100-b-80-cont">
     <div class="container">
-      <!-- Social Links-->
+      <!-- Social Links--><a href="https://linkedin.com/company/ciphergram" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a><a href="https://twitter.com/ciphergram" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://github.com/ciphergram" title="GitHub" target="_blank"><i class="fa fa-github"></i></a><a href="https://youtube.com/ciphergram" title="YouTube" target="_blank"><i class="fa fa-youtube"></i></a><a href="https://medium.com/ciphergram" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
       <!-- Copyright-->
       <div class="footer-copy"><a href="http://themeforest.net/user/abcgomel/portfolio" target="_blank">&copy; CIPHERGRAM LIMITED 2019</a></div>
     </div>
@@ -181,13 +181,80 @@
 <!-- APPEAR-->
 <script src="/js/jquery.appear.js"></script>
 <!-- GOOLE MAP-->
-<script src="https://maps.google.com/maps/api/js?key=INSERT-YOUR-API-KEY-HERE"></script>
 <script src="/js/gmap3.min.js"></script>
 <!--if lt IE 10script(src='/js/jquery.placeholder.js')
 -->
 <!-- FORMS VALIDATION-->
 <script src="/js/jquery.validate.min.js"></script>
-<script src="/js/contact-form-validation.min.js"></script>
+<script>
+  // Simple Contact Form Handler
+  jQuery(document).ready(function($) {
+      'use strict';
+  
+      $('#contact-form').on('submit', function(e) {
+          e.preventDefault();
+          
+          var $form = $(this);
+          var $submitButton = $form.find('button[type="submit"]');
+          var $successMessage = $('#contactSuccess');
+          var $errorMessage = $('#contactError');
+          
+          // Hide previous messages
+          $successMessage.addClass('hidden');
+          $errorMessage.addClass('hidden');
+          
+          // Disable submit button and show loading state
+          $submitButton.prop('disabled', true).text('SENDING...');
+          
+          // Get form data
+          var formData = {
+              name: $('#name').val(),
+              email: $('#email').val(),
+              message: $('#message').val()
+          };
+          
+          // Simple validation
+          if (!formData.name || !formData.email || !formData.message) {
+              $errorMessage.removeClass('hidden');
+              $submitButton.prop('disabled', false).text('SEND MESSAGE');
+              return;
+          }
+          
+          // Submit form using Formspree
+          $.ajax({
+              type: 'POST',
+              url: $form.attr('action'),
+              data: formData,
+              dataType: 'json',
+              success: function(response) {
+                  $successMessage.removeClass('hidden');
+                  $form[0].reset();
+                  
+                  // Scroll to success message
+                  $('html, body').animate({
+                      scrollTop: $successMessage.offset().top - 100
+                  }, 500);
+              },
+              error: function(xhr, status, error) {
+                  $errorMessage.removeClass('hidden');
+                  
+                  // Scroll to error message
+                  $('html, body').animate({
+                      scrollTop: $errorMessage.offset().top - 100
+                  }, 500);
+              },
+              complete: function() {
+                  $submitButton.prop('disabled', false).text('SEND MESSAGE');
+              }
+          });
+      });
+      
+      // Hide messages when user starts typing
+      $('.controled').on('keyup', function() {
+          $('#contactSuccess, #contactError').addClass('hidden');
+      });
+  });
+</script>
 <!-- OWL CAROUSEL-->
 <script src="/js/owl.carousel.min.js"></script>
 <!-- MAIN SCRIPT-->
@@ -444,6 +511,4 @@
   
   
   
-</script><script id="__bs_script__">//<![CDATA[
-document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.12.5.js'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+</script><script id="__bs_script__">//<![CDATA[//]]></script>

@@ -3,34 +3,97 @@ head
   title #{typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions'}
   meta(charset="utf-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
-  meta(name="robots" content="index, follow")
-  meta(name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting")
+  meta(name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1")
+  meta(name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps")
   meta(name="description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(name="author" content="Ciphergram.io")
+  meta(name="language" content="English")
+  meta(name="revisit-after" content="7 days")
+  meta(name="distribution" content="global")
+  meta(name="rating" content="general")
+  meta(name="theme-color" content="#000000")
+  meta(name="msapplication-TileColor" content="#000000")
+  meta(name="apple-mobile-web-app-capable" content="yes")
+  meta(name="apple-mobile-web-app-status-bar-style" content="black")
+  meta(name="format-detection" content="telephone=no")
+  // Canonical URL
+  link(rel="canonical" href="https://ciphergram.io#{typeof canonicalUrl !== 'undefined' ? canonicalUrl : ''}")
   // Open Graph
   meta(property="og:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
   meta(property="og:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(property="og:type" content="website")
-  meta(property="og:url" content="https://ciphergrm.io")
-  meta(property="og:image" content="https://ciphergrm.io/images/og-image.jpg")
+  meta(property="og:url" content="https://ciphergram.io")
+  meta(property="og:image" content="https://ciphergram.io/images/og-image.jpg")
   // Twitter Card
   meta(name="twitter:card" content="summary_large_image")
   meta(name="twitter:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
   meta(name="twitter:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
-  meta(name="twitter:image" content="https://ciphergrm.io/images/og-image.jpg")
+  meta(name="twitter:image" content="https://ciphergram.io/images/og-image.jpg")
   // Structured Data (JSON-LD)
   script(type="application/ld+json").
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Ciphergram",
-      "url": "https://ciphergrm.io",
-      "logo": "https://ciphergrm.io/images/logo.png",
+      "url": "https://ciphergram.io",
+      "logo": "https://ciphergram.io/images/logo.png",
       "sameAs": [
         "https://www.linkedin.com/company/ciphergram",
         "https://twitter.com/ciphergram"
       ],
-      "description": "Expert cybersecurity, software development, and IT consulting."
+      "description": "Expert cybersecurity, software development, and IT consulting.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main St",
+        "addressLocality": "Orlando",
+        "addressRegion": "FL",
+        "postalCode": "32801",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-708-517-9987",
+        "contactType": "customer service",
+        "email": "info@ciphergram.io"
+      },
+      "foundingDate": "2019",
+      "numberOfEmployees": "10-50",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.5383,
+          "longitude": -81.3792
+        },
+        "geoRadius": "50000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cybersecurity Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Software Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT Consulting"
+            }
+          }
+        ]
+      }
     }
   // Favicon
   link(rel="icon" href="/images/favicon.ico" type="image/x-icon")

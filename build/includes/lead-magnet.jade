@@ -1,0 +1,56 @@
+// LEAD MAGNET SECTION
+.page-section.p-140-cont.grey-light-bg.clearfix
+    .container
+        .row
+            .col-md-6
+                .lead-magnet-content
+                    h2.mb-30.font-light
+                        span.font-light Free 
+                        span Cybersecurity Assessment
+                    p.mb-30 Get a comprehensive security audit of your business infrastructure. Our AI-powered assessment will identify vulnerabilities and provide actionable recommendations.
+                    ul.mb-30
+                        li ✓ Network Security Analysis
+                        li ✓ Vulnerability Assessment
+                        li ✓ Compliance Review
+                        li ✓ Custom Security Roadmap
+                        li ✓ 30-Day Action Plan
+            .col-md-6
+                .lead-magnet-form
+                    .contact-form-cont
+                        // TITLE
+                        .mb-40
+                            h3.section-title
+                                span.bold GET YOUR FREE ASSESSMENT
+                        // ASSESSMENT FORM
+                        div
+                            form#assessment-form
+                                .row
+                                    .col-md-12.mb-30
+                                        input#company.controled(type='text', value='', data-msg-required='Please enter your company name', maxlength='100', name='company', placeholder='COMPANY NAME', required='')
+                                .row
+                                    .col-md-12.mb-30
+                                        input#name.controled(type='text', value='', data-msg-required='Please enter your name', maxlength='100', name='name', placeholder='YOUR NAME', required='')
+                                .row
+                                    .col-md-12.mb-30
+                                        input#email.controled(type='email', value='', data-msg-required='Please enter your email address', data-msg-email='Please enter a valid email address', maxlength='100', name='email', placeholder='EMAIL ADDRESS', required='')
+                                .row
+                                    .col-md-12.mb-30
+                                        input#phone.controled(type='tel', value='', maxlength='20', name='phone', placeholder='PHONE NUMBER')
+                                .row
+                                    .col-md-12.mb-30
+                                        select#company-size.controled(name='company-size')
+                                            option(value='') COMPANY SIZE
+                                            option(value='1-10') 1-10 employees
+                                            option(value='11-50') 11-50 employees
+                                            option(value='51-200') 51-200 employees
+                                            option(value='200+') 200+ employees
+                                .row
+                                    .col-md-12.mb-40
+                                        textarea#concerns.controled(maxlength='1000', rows='3', name='concerns', placeholder='BRIEF DESCRIPTION OF YOUR SECURITY CONCERNS')
+                                .row
+                                    .col-md-12.text-center
+                                        input.button.medium.gray(id="submit-assessment", type='submit', value='GET FREE ASSESSMENT', data-loading-text='Loading...')
+                            .alert.alert-success.hidden.animated.fadeIn
+                                strong Success! We'll contact you soon.
+                            .alert.alert-danger.hidden.animated.shake
+                                strong Error! Please try again. 

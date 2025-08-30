@@ -1,0 +1,52 @@
+doctype html
+include ./includes/head.jade
+- var pageTitle = "Portfolio | Ciphergram - Cybersecurity & IT Consulting"
+- var pageDescription = "View our portfolio of successful projects in cybersecurity, software development, and IT consulting."
+- var currentPage = 'portfolio'
+body
+    #loader-overflow
+        #loader3 Please enable JS
+    #wrap.boxed
+        .grey-bg
+            include ./includes/header.jade
+            
+            // PORTFOLIO SINGLE
+            .page-section.p-140-cont.clearfix
+                .container
+                    .row
+                        .col-md-12
+                            h2.mb-50.font-light
+                                span.font-light Portfolio 
+                                span Project
+                            .row
+                                .col-md-8
+                                    .port-single-img-cont
+                                        img.port-main-img(src='images/portfolio/project-main.jpg', alt='Project Image')
+                                .col-md-4
+                                    .port-single-text-cont
+                                        h3.mb-30 Project Details
+                                        p.mb-30 This is a placeholder for portfolio project details. Please update with actual project information.
+                                        
+                                        .port-single-info
+                                            h4.mb-20 Project Info
+                                            .port-single-info-item
+                                                span.bold Project Type:
+                                                span Full Stack Development
+                                            .port-single-info-item
+                                                span.bold Client:
+                                                span Client Name
+                                            .port-single-info-item
+                                                span.bold Date:
+                                                span January 2024
+                                            .port-single-info-item
+                                                span.bold Technologies:
+                                                span React, Node.js, AWS
+                                        
+                                        .port-single-info.mt-50
+                                            h4.mb-20 Project Links
+                                            a.btn.btn-md.btn-color(href='#', target='_blank') View Live
+                                            a.btn.btn-md.btn-border(href='#', target='_blank') Source Code
+            
+            include ./includes/footer.jade
+    
+    include ./includes/scripts/js.jade 

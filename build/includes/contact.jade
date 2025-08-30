@@ -9,7 +9,7 @@
                             span.bold CONTACT US
                     // CONTACT FORM
                     div
-                        form#contact-form
+                        form#contact-form(action="https://formspree.io/f/xayzqkqw" method="POST")
                             .row
                                 .col-md-12.mb-30
                                     // <label>Your name *</label>
@@ -25,10 +25,10 @@
                             .row
                                 .col-md-12.text-center
                                     input.button.medium.gray(id="submit", type='submit', value='SEND MESSAGE', data-loading-text='Loading...')
-                        .alert.alert-success.hidden.animated.fadeIn
-                            strong Success!
-                        .alert.alert-danger.hidden.animated.shake
-                            strong Error!       
+                        #contactSuccess.alert.alert-success.hidden.animated.fadeIn
+                            strong Thank you! Your message has been sent successfully.
+                        #contactError.alert.alert-danger.hidden.animated.fadeIn
+                            strong Error! Please try again or contact us directly.       
 
                         .row.p-60-cont
                             .col-md-4.col-sm-6

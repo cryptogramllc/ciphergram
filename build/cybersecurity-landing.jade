@@ -1,0 +1,98 @@
+doctype html
+include ./includes/head.jade
+- var pageTitle = "Cybersecurity Services | Ciphergram - Protect Your Business"
+- var pageDescription = "Comprehensive cybersecurity solutions including penetration testing, security audits, threat detection, and compliance. Protect your business with AI-powered security."
+- var canonicalUrl = "/cybersecurity.html"
+- var currentPage = 'cybersecurity'
+body
+    #loader-overflow
+        #loader3 Please enable JS
+    #wrap.boxed
+        .grey-bg
+            include ./includes/header.jade
+            
+            // HERO SECTION
+            .page-section.p-140-cont.clearfix
+                .container
+                    .row
+                        .col-md-8
+                            h1.mb-30.font-light
+                                span.font-light Secure Your 
+                                span Business with AI-Powered Cybersecurity
+                            p.mb-40.lead Protect your digital assets with our comprehensive cybersecurity solutions. From threat detection to compliance, we've got you covered.
+                            .row
+                                .col-md-6
+                                    a.btn.btn-lg.btn-color.mb-20(href="#contact-link") Get Security Audit
+                                .col-md-6
+                                    a.btn.btn-lg.btn-border.mb-20(href="#services") View Services
+            
+            // SERVICES SECTION
+            .page-section.p-140-cont.grey-light-bg.clearfix#services
+                .container
+                    .row
+                        .col-md-12.text-center
+                            h2.mb-50.font-light
+                                span.font-light Our 
+                                span Cybersecurity Services
+                    .row
+                        .col-md-4
+                            .service-box.wow.fadeIn.mb-30
+                                .service-icon
+                                    .icon.icon-basic-shield
+                                h3.mb-20 Penetration Testing
+                                p.mb-20 Comprehensive security testing to identify vulnerabilities before hackers do.
+                                ul.mb-20
+                                    li Network Penetration Testing
+                                    li Web Application Testing
+                                    li Mobile App Security
+                                    li Social Engineering
+                        .col-md-4
+                            .service-box.wow.fadeIn.mb-30(data-wow-delay='200ms')
+                                .service-icon
+                                    .icon.icon-basic-eye
+                                h3.mb-20 Threat Detection
+                                p.mb-20 AI-powered monitoring to detect and respond to threats in real-time.
+                                ul.mb-20
+                                    li 24/7 Security Monitoring
+                                    li AI Threat Detection
+                                    li Incident Response
+                                    li Security Analytics
+                        .col-md-4
+                            .service-box.wow.fadeIn.mb-30(data-wow-delay='400ms')
+                                .service-icon
+                                    .icon.icon-basic-check
+                                h3.mb-20 Compliance
+                                p.mb-20 Ensure your business meets industry security standards and regulations.
+                                ul.mb-20
+                                    li SOC 2 Compliance
+                                    li ISO 27001
+                                    li GDPR Compliance
+                                    li HIPAA Security
+            
+            // CASE STUDY
+            .page-section.p-140-cont.clearfix
+                .container
+                    .row
+                        .col-md-6
+                            .case-study-content
+                                h2.mb-30.font-light
+                                    span.font-light Case Study: 
+                                    span Financial Services Security
+                                p.mb-30 We helped a major financial institution secure their digital infrastructure, resulting in 99.9% threat detection rate and zero security breaches.
+                                .results
+                                    h4.mb-20 Results:
+                                    ul
+                                        li ✓ 99.9% Threat Detection Rate
+                                        li ✓ Zero Security Breaches
+                                        li ✓ 60% Faster Incident Response
+                                        li ✓ Full Compliance Achieved
+                        .col-md-6
+                            .case-study-image
+                                img(src='images/case-studies/cybersecurity-case.jpg', alt='Cybersecurity Case Study')
+            
+            include ./includes/testimonials.jade
+            include ./includes/lead-magnet.jade
+            include ./includes/contact.jade
+            include ./includes/footer.jade
+    
+    include ./includes/scripts/js.jade 

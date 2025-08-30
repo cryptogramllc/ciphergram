@@ -1,15 +1,106 @@
 <!DOCTYPE html>
+<!-- SEO & Social Meta Tags-->
 <head>
-  <title>Ciphergram - Blog</title>
+  <title>Ciphergram | Cybersecurity &amp; Software Solutions</title>
   <meta charset="utf-8">
-  <!--if IEmeta(http-equiv='X-UA-Compatible', content='IE=edge')
-  -->
-  <meta name="robots" content="blog, follow">
-  <meta name="keywords" content="Ciphergram, Blog, Orlando IoT, London IoT, Amazon Web Services, Web Development, Cloud Services, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Cybersecurity.">
-  <meta name="description" content="Blog - International consultancy based in Orlando, IL specializing in IT Business Solutions and Fullstack Application developement, Cloud Computing, and Emerging Technologies. Having assisted dozens of prestigous companies around the world, we combine our years of experience to deliver the most effective solutions tailored to ensure successful business outcome and growth. From ideation to launch, we design, strategize and create high performing, digitally transformative applications with stunning interfaces, seamless user experience and dynamic functionalities.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps">
+  <meta name="description" content="Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.">
   <meta name="author" content="Ciphergram.io">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- FAVICONS-->
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <!-- Canonical URL-->
+  <link rel="canonical" href="https://ciphergram.io">
+  <!-- Open Graph-->
+  <meta property="og:title" content="Ciphergram | Cybersecurity &amp; Software Solutions">
+  <meta property="og:description" content="Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ciphergram.io">
+  <meta property="og:image" content="https://ciphergram.io/images/og-image.jpg">
+  <!-- Twitter Card-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ciphergram | Cybersecurity &amp; Software Solutions">
+  <meta name="twitter:description" content="Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.">
+  <meta name="twitter:image" content="https://ciphergram.io/images/og-image.jpg">
+  <!-- Structured Data (JSON-LD)-->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ciphergram",
+      "url": "https://ciphergram.io",
+      "logo": "https://ciphergram.io/images/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/ciphergram",
+        "https://twitter.com/ciphergram"
+      ],
+      "description": "Expert cybersecurity, software development, and IT consulting.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main St",
+        "addressLocality": "Orlando",
+        "addressRegion": "FL",
+        "postalCode": "32801",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-708-517-9987",
+        "contactType": "customer service",
+        "email": "info@ciphergram.io"
+      },
+      "foundingDate": "2019",
+      "numberOfEmployees": "10-50",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.5383,
+          "longitude": -81.3792
+        },
+        "geoRadius": "50000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cybersecurity Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Software Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT Consulting"
+            }
+          }
+        ]
+      }
+    }
+  </script>
+  <!-- Favicon-->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <!-- Page-specific FAQ JSON-LD-->
+  <!-- Page-specific LocalBusiness JSON-LD-->
   <link rel="shortcut icon" href="/images/favicon/favicon.png">
   <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-touch-icon-72x72.png">
@@ -45,35 +136,11 @@
   <!-- <script src="/js/modernizr.js"></script>-->
 </head>
 <body>
-  <!-- LOADER-->
   <div id="loader-overflow">
     <div id="loader3">Please enable JS</div>
   </div>
   <div id="wrap" class="boxed">
     <div class="grey-bg">
-      <!-- Grey BG-->
-      <!--if lte IE 8
-      #ie-container
-          #ie-cont-close
-              a(href='#', onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;')
-                  img(src='images/ie-warn/ie-warning-close.jpg', style='border: none;', alt='Close')
-          #ie-cont-content
-              #ie-cont-warning
-                  img(src='images/ie-warn/ie-warning.jpg', alt='Warning!')
-              #ie-cont-text
-                  #ie-text-bold
-                  #ie-text
-              #ie-cont-brows
-                  a(href='http://www.firefox.com', target='_blank')
-                      img(src='images/ie-warn/ie-warning-firefox.jpg', alt='Download Firefox')
-                  a(href='http://www.opera.com/download/', target='_blank')
-                      img(src='images/ie-warn/ie-warning-opera.jpg', alt='Download Opera')
-                  a(href='http://www.apple.com/safari/download/', target='_blank')
-                      img(src='images/ie-warn/ie-warning-safari.jpg', alt='Download Safari')
-                  a(href='http://www.google.com/chrome', target='_blank')
-                      img(src='images/ie-warn/ie-warning-chrome.jpg', alt='Download Google Chrome')
-      -->
-      <!-- HEADER 1 BLACK MOBILE-NO-TRANSPARENT-->
       <div id="home-link">
         <header id="nav" class="header header-1 black-header mobile-no-transparent">
           <div class="header-wrapper">
@@ -133,448 +200,668 @@
           </div>
         </header>
       </div>
-    </div>
-  </div>
-  <div id="blog" class="page-section p-140-cont">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
+      <!-- HERO SECTION-->
+      <div class="page-section p-140-cont clearfix">
+        <div class="container">
           <div class="row">
-            <div class="col-md-12 col-sm-12">
-              <div data-wow-delay="200ms" class="fes4-box wow fadeIn">
-                <h2 class="section-title"><span class="bold title"></span><span class="bold right small date"></span></h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 col-sm-12 pb-10">
-              <div data-wow-delay="200ms" class="fes5-box wow fadeIn">
-                <div class="main-content"></div>
+            <div class="col-md-8">
+              <h1 class="mb-30 font-light"><span class="font-light">Secure Your </span><span>Business with AI-Powered Cybersecurity</span></h1>
+              <p class="mb-40 lead">Protect your digital assets with our comprehensive cybersecurity solutions. From threat detection to compliance, we've got you covered.</p>
+              <div class="row">
+                <div class="col-md-6"><a href="#contact-link" class="btn btn-lg btn-color mb-20">Get Security Audit</a></div>
+                <div class="col-md-6"><a href="#services" class="btn btn-lg btn-border mb-20">View Services</a></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- SERVICES SECTION-->
+      <div id="services" class="page-section p-140-cont grey-light-bg clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="mb-50 font-light"><span class="font-light">Our </span><span>Cybersecurity Services</span></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="service-box wow fadeIn mb-30">
+                <div class="service-icon">
+                  <div class="icon icon-basic-shield"></div>
+                </div>
+                <h3 class="mb-20">Penetration Testing</h3>
+                <p class="mb-20">Comprehensive security testing to identify vulnerabilities before hackers do.</p>
+                <ul class="mb-20">
+                  <li>Network Penetration Testing</li>
+                  <li>Web Application Testing</li>
+                  <li>Mobile App Security</li>
+                  <li>Social Engineering</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-wow-delay="200ms" class="service-box wow fadeIn mb-30">
+                <div class="service-icon">
+                  <div class="icon icon-basic-eye"></div>
+                </div>
+                <h3 class="mb-20">Threat Detection</h3>
+                <p class="mb-20">AI-powered monitoring to detect and respond to threats in real-time.</p>
+                <ul class="mb-20">
+                  <li>24/7 Security Monitoring</li>
+                  <li>AI Threat Detection</li>
+                  <li>Incident Response</li>
+                  <li>Security Analytics</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-wow-delay="400ms" class="service-box wow fadeIn mb-30">
+                <div class="service-icon">
+                  <div class="icon icon-basic-check"></div>
+                </div>
+                <h3 class="mb-20">Compliance</h3>
+                <p class="mb-20">Ensure your business meets industry security standards and regulations.</p>
+                <ul class="mb-20">
+                  <li>SOC 2 Compliance</li>
+                  <li>ISO 27001</li>
+                  <li>GDPR Compliance</li>
+                  <li>HIPAA Security</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CASE STUDY-->
+      <div class="page-section p-140-cont clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="case-study-content">
+                <h2 class="mb-30 font-light"><span class="font-light">Case Study: </span><span>Financial Services Security</span></h2>
+                <p class="mb-30">We helped a major financial institution secure their digital infrastructure, resulting in 99.9% threat detection rate and zero security breaches.</p>
+                <div class="results">
+                  <h4 class="mb-20">Results:</h4>
+                  <ul>
+                    <li>✓ 99.9% Threat Detection Rate</li>
+                    <li>✓ Zero Security Breaches</li>
+                    <li>✓ 60% Faster Incident Response</li>
+                    <li>✓ Full Compliance Achieved</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="case-study-image"><img src="images/case-studies/cybersecurity-case.jpg" alt="Cybersecurity Case Study"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TESTIMONIALS SECTION-->
+      <div class="page-section p-140-cont clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="mb-50 font-light"><span class="font-light">What Our </span><span>Clients Say</span></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="testimonial-box wow fadeIn mb-30">
+                <div class="testimonial-content">
+                  <p class="mb-20">"Ciphergram transformed our cybersecurity infrastructure completely. Their AI-driven approach helped us identify vulnerabilities we never knew existed. Highly recommended!"</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-author-img"><img src="images/testimonials/client1.jpg" alt="Client"></div>
+                  <div class="testimonial-author-info">
+                    <h4 class="mb-5">John Smith</h4>
+                    <p class="mb-0">CEO, TechCorp Inc.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-wow-delay="200ms" class="testimonial-box wow fadeIn mb-30">
+                <div class="testimonial-content">
+                  <p class="mb-20">"The rapid prototyping service was incredible. We went from concept to working prototype in just 2 weeks. Ciphergram's AI expertise is unmatched."</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-author-img"><img src="images/testimonials/client2.jpg" alt="Client"></div>
+                  <div class="testimonial-author-info">
+                    <h4 class="mb-5">Sarah Johnson</h4>
+                    <p class="mb-0">CTO, StartupXYZ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-wow-delay="400ms" class="testimonial-box wow fadeIn mb-30">
+                <div class="testimonial-content">
+                  <p class="mb-20">"Their cloud migration expertise saved us months of work and significantly reduced our infrastructure costs. Professional, reliable, and results-driven."</p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-author-img"><img src="images/testimonials/client3.jpg" alt="Client"></div>
+                  <div class="testimonial-author-info">
+                    <h4 class="mb-5">Mike Davis</h4>
+                    <p class="mb-0">IT Director, Enterprise Solutions </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LEAD MAGNET SECTION-->
+      <div class="page-section p-140-cont grey-light-bg clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="lead-magnet-content">
+                <h2 class="mb-30 font-light"><span class="font-light">Free </span><span>Cybersecurity Assessment</span></h2>
+                <p class="mb-30">Get a comprehensive security audit of your business infrastructure. Our AI-powered assessment will identify vulnerabilities and provide actionable recommendations.</p>
+                <ul class="mb-30">
+                  <li>✓ Network Security Analysis</li>
+                  <li>✓ Vulnerability Assessment</li>
+                  <li>✓ Compliance Review</li>
+                  <li>✓ Custom Security Roadmap</li>
+                  <li>✓ 30-Day Action Plan</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="lead-magnet-form">
+                <div class="contact-form-cont">
+                  <!-- TITLE-->
+                  <div class="mb-40">
+                    <h3 class="section-title"><span class="bold">GET YOUR FREE ASSESSMENT</span></h3>
+                  </div>
+                  <!-- ASSESSMENT FORM-->
+                  <div>
+                    <form id="assessment-form">
+                      <div class="row">
+                        <div class="col-md-12 mb-30">
+                          <input id="company" type="text" value="" data-msg-required="Please enter your company name" maxlength="100" name="company" placeholder="COMPANY NAME" required="" class="controled">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mb-30">
+                          <input id="name" type="text" value="" data-msg-required="Please enter your name" maxlength="100" name="name" placeholder="YOUR NAME" required="" class="controled">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mb-30">
+                          <input id="email" type="email" value="" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address" maxlength="100" name="email" placeholder="EMAIL ADDRESS" required="" class="controled">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mb-30">
+                          <input id="phone" type="tel" value="" maxlength="20" name="phone" placeholder="PHONE NUMBER" class="controled">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mb-30">
+                          <select id="company-size" name="company-size" class="controled">
+                            <option value="">COMPANY SIZE</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="200+">200+ employees</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mb-40">
+                          <textarea id="concerns" maxlength="1000" rows="3" name="concerns" placeholder="BRIEF DESCRIPTION OF YOUR SECURITY CONCERNS" class="controled"></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <input id="submit-assessment" type="submit" value="GET FREE ASSESSMENT" data-loading-text="Loading..." class="button medium gray">
+                        </div>
+                      </div>
+                    </form>
+                    <div class="alert alert-success hidden animated fadeIn"><strong>Success! We'll contact you soon.</strong></div>
+                    <div class="alert alert-danger hidden animated shake"><strong>Error! Please try again. </strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact-link" class="page-section gray-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-form-cont">
+                <!-- TITLE-->
+                <div class="mb-40">
+                  <h2 class="section-title"><span class="bold">CONTACT US</span></h2>
+                </div>
+                <!-- CONTACT FORM-->
+                <div>
+                  <form id="contact-form" action="https://formspree.io/f/xayzqkqw" method="POST">
+                    <div class="row">
+                      <div class="col-md-12 mb-30">
+                        <!-- <label>Your name *</label>-->
+                        <input id="name" type="text" value="" data-msg-required="Please enter your name" maxlength="100" name="name" placeholder="NAME" required="" class="controled">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 mb-30">
+                        <!-- <label>Your email address *</label>-->
+                        <input id="email" type="email" value="" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address" maxlength="100" name="email" placeholder="EMAIL" required="" class="controled">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 mb-40">
+                        <!-- <label>Message *</label>-->
+                        <textarea id="message" maxlength="5000" data-msg-required="Please enter your message" rows="3" name="message" placeholder="MESSAGE" required="" class="controled"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                        <input id="submit" type="submit" value="SEND MESSAGE" data-loading-text="Loading..." class="button medium gray">
+                      </div>
+                    </div>
+                  </form>
+                  <div id="contactSuccess" class="alert alert-success hidden animated fadeIn"><strong>Thank you! Your message has been sent successfully.</strong></div>
+                  <div id="contactError" class="alert alert-danger hidden animated fadeIn"><strong>Error! Please try again or contact us directly.       </strong></div>
+                  <div class="row p-60-cont">
+                    <div class="col-md-4 col-sm-6">
+                      <div class="cis-cont">
+                        <div class="cis-icon">
+                          <div class="icon icon-basic-map"></div>
+                        </div>
+                        <div class="cis-text">
+                          <h3><span class="bold">ADDRESS</span></h3>
+                          <p> 20 North Orange Avenue, Unit 1100 <br/> Orlando, Florida 32801</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="cis-cont">
+                        <div class="cis-icon">
+                          <div class="icon icon-basic-mail"></div>
+                        </div>
+                        <div class="cis-text">
+                          <h3><span class="bold">EMAIL</span></h3>
+                          <p><a href="mailto:info@ciphergram.io">INFO@CIPHERGRAM.IO</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="cis-cont">
+                        <div class="cis-icon">
+                          <div class="icon icon-basic-smartphone"></div>
+                        </div>
+                        <div class="cis-text">
+                          <h3><span class="bold">CALL US</span></h3>
+                          <p>1-708-517-9987</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer1" class="page-section text-center pt-100-b-80-cont">
+        <div class="container">
+          <!-- Social Links--><a href="https://linkedin.com/company/ciphergram" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a><a href="https://twitter.com/ciphergram" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://github.com/ciphergram" title="GitHub" target="_blank"><i class="fa fa-github"></i></a><a href="https://youtube.com/ciphergram" title="YouTube" target="_blank"><i class="fa fa-youtube"></i></a><a href="https://medium.com/ciphergram" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+          <!-- Copyright-->
+          <div class="footer-copy"><a href="http://themeforest.net/user/abcgomel/portfolio" target="_blank">&copy; CIPHERGRAM LIMITED 2019</a></div>
+        </div>
+      </footer>
     </div>
   </div>
-  <footer id="footer1" class="page-section text-center pt-100-b-80-cont">
-    <div class="container">
-      <!-- Social Links--><a href="https://linkedin.com/company/ciphergram" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a><a href="https://twitter.com/ciphergram" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://github.com/ciphergram" title="GitHub" target="_blank"><i class="fa fa-github"></i></a><a href="https://youtube.com/ciphergram" title="YouTube" target="_blank"><i class="fa fa-youtube"></i></a><a href="https://medium.com/ciphergram" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
-      <!-- Copyright-->
-      <div class="footer-copy"><a href="http://themeforest.net/user/abcgomel/portfolio" target="_blank">&copy; CIPHERGRAM LIMITED 2019</a></div>
-    </div>
-  </footer>
-</body>
-<!-- JS begin-->
-<!-- jQuery-->
-<script src="/js/jquery-1.11.2.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed-->
-<script src="/js/bootstrap.min.js"></script>
-<!-- MAGNIFIC POPUP-->
-<script src="/js/jquery.magnific-popup.min.js"></script>
-<!-- PORTFOLIO SCRIPTS-->
-<script src="/js/isotope.pkgd.min.js"></script>
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/masonry.pkgd.min.js"></script>
-<!-- COUNTER-->
-<script src="/js/jquery.countTo.js"></script>
-<!-- APPEAR-->
-<script src="/js/jquery.appear.js"></script>
-<!-- GOOLE MAP-->
-<script src="/js/gmap3.min.js"></script>
-<!--if lt IE 10script(src='/js/jquery.placeholder.js')
--->
-<!-- FORMS VALIDATION-->
-<script src="/js/jquery.validate.min.js"></script>
-<script>
-  // Simple Contact Form Handler
-  jQuery(document).ready(function($) {
-      'use strict';
-  
-      $('#contact-form').on('submit', function(e) {
-          e.preventDefault();
-          
-          var $form = $(this);
-          var $submitButton = $form.find('button[type="submit"]');
-          var $successMessage = $('#contactSuccess');
-          var $errorMessage = $('#contactError');
-          
-          // Hide previous messages
-          $successMessage.addClass('hidden');
-          $errorMessage.addClass('hidden');
-          
-          // Disable submit button and show loading state
-          $submitButton.prop('disabled', true).text('SENDING...');
-          
-          // Get form data
-          var formData = {
-              name: $('#name').val(),
-              email: $('#email').val(),
-              message: $('#message').val()
-          };
-          
-          // Simple validation
-          if (!formData.name || !formData.email || !formData.message) {
-              $errorMessage.removeClass('hidden');
-              $submitButton.prop('disabled', false).text('SEND MESSAGE');
-              return;
-          }
-          
-          // Submit form using Formspree
-          $.ajax({
-              type: 'POST',
-              url: $form.attr('action'),
-              data: formData,
-              dataType: 'json',
-              success: function(response) {
-                  $successMessage.removeClass('hidden');
-                  $form[0].reset();
-                  
-                  // Scroll to success message
-                  $('html, body').animate({
-                      scrollTop: $successMessage.offset().top - 100
-                  }, 500);
-              },
-              error: function(xhr, status, error) {
-                  $errorMessage.removeClass('hidden');
-                  
-                  // Scroll to error message
-                  $('html, body').animate({
-                      scrollTop: $errorMessage.offset().top - 100
-                  }, 500);
-              },
-              complete: function() {
-                  $submitButton.prop('disabled', false).text('SEND MESSAGE');
-              }
-          });
-      });
-      
-      // Hide messages when user starts typing
-      $('.controled').on('keyup', function() {
-          $('#contactSuccess, #contactError').addClass('hidden');
-      });
-  });
-</script>
-<!-- OWL CAROUSEL-->
-<script src="/js/owl.carousel.min.js"></script>
-<!-- MAIN SCRIPT-->
-<script src="/js/main.js"></script>
-<!-- REVOSLIDER SCRIPTS-->
-<!-- SLIDER REVOLUTION 4.x SCRIPTS-->
-<script src="/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-<script src="/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js"></script>
-<script src="/js/jquery.nav.js"></script>
-<!-- SLIDER REVOLUTION INIT-->
-<script>
-  jQuery(document).ready(function() {
-  if ( (navigator.appVersion.indexOf("Win")!=-1) && ( ieDetect == false ) ) {
-  jQuery('#rs-fullwidth').revolution(
-  {
-  dottedOverlay:"none",
-  delay:16000,
-  startwidth:1170,
-  startheight:665,
-  hideThumbs:200,
-  thumbWidth:100,
-  thumbHeight:50,
-  thumbAmount:5,
-  //fullScreenAlignForce: "off",
-  navigationType:"none",
-  navigationArrows:"solo",
-  navigationStyle:"preview4",
-  hideTimerBar:"on",
-  touchenabled:"on",
-  onHoverStop:"on",
-  swipe_velocity: 0.7,
-  swipe_min_touches: 1,
-  swipe_max_touches: 1,
-  drag_block_vertical: false,
-  parallax:"scroll",
-  parallaxBgFreeze:"on",
-  parallaxLevels:[45,40,35,50],
-  parallaxDisableOnMobile:"on",
-  keyboardNavigation:"off",
-  navigationHAlign:"center",
-  navigationVAlign:"bottom",
-  navigationHOffset:0,
-  navigationVOffset:20,
-  soloArrowLeftHalign:"left",
-  soloArrowLeftValign:"center",
-  soloArrowLeftHOffset:20,
-  soloArrowLeftVOffset:0,
-  soloArrowRightHalign:"right",
-  soloArrowRightValign:"center",
-  soloArrowRightHOffset:20,
-  soloArrowRightVOffset:0,
-  shadow:0,
-  fullWidth:"on",
-  fullScreen:"off",
-  spinner:"spinner4",
-  stopLoop:"off",
-  stopAfterLoops:-1,
-  stopAtSlide:-1,
-  shuffle:"off",
-  autoHeight:"off",
-  forceFullWidth:"off",
-  hideThumbsOnMobile:"off",
-  hideNavDelayOnMobile:1500,
-  hideBulletsOnMobile:"off",
-  hideArrowsOnMobile:"off",
-  hideThumbsUnderResolution:0,
-  hideSliderAtLimit:0,
-  hideCaptionAtLimit:0,
-  hideAllCaptionAtLilmit:0,
-  startWithSlide:0,
-  //fullScreenOffsetContainer: ""
-  });
-  } else {
-  jQuery('#rs-fullwidth').revolution(
-  {
-  dottedOverlay:"none",
-  delay:16000,
-  startwidth:1170,
-  startheight:760,
-  hideThumbs:200,
-  thumbWidth:100,
-  thumbHeight:50,
-  thumbAmount:5,
-  navigationType:"none",
-  navigationArrows:"solo",
-  navigationStyle:"preview4",
-  hideTimerBar:"on",
-  touchenabled:"on",
-  onHoverStop:"on",
-  swipe_velocity: 0.7,
-  swipe_min_touches: 1,
-  swipe_max_touches: 1,
-  drag_block_vertical: false,
-  parallax:"mouse",
-  parallaxBgFreeze:"on",
-  parallaxLevels:[0],
-  parallaxDisableOnMobile:"on",
-  keyboardNavigation:"off",
-  navigationHAlign:"center",
-  navigationVAlign:"bottom",
-  navigationHOffset:0,
-  navigationVOffset:20,
-  soloArrowLeftHalign:"left",
-  soloArrowLeftValign:"center",
-  soloArrowLeftHOffset:20,
-  soloArrowLeftVOffset:0,
-  soloArrowRightHalign:"right",
-  soloArrowRightValign:"center",
-  soloArrowRightHOffset:20,
-  soloArrowRightVOffset:0,
-  shadow:0,
-  fullWidth:"on",
-  fullScreen:"off",
-  spinner:"spinner4",
-  stopLoop:"off",
-  stopAfterLoops:-1,
-  stopAtSlide:-1,
-  shuffle:"off",
-  autoHeight:"off",
-  forceFullWidth:"off",
-  hideThumbsOnMobile:"off",
-  hideNavDelayOnMobile:1500,
-  hideBulletsOnMobile:"off",
-  hideArrowsOnMobile:"off",
-  hideThumbsUnderResolution:0,
-  hideSliderAtLimit:0,
-  hideCaptionAtLimit:0,
-  hideAllCaptionAtLilmit:0,
-  startWithSlide:0,
-  });
-  }
-  });	//ready
-</script>
-<script>
-  $(document).ready(function() {
-  //ONE PAGE NAV	---------------------------------------------------------------------------
-      var top_offset = $('header').height() - 1;  // get height of fixed navbar
-      $('#nav-onepage').onePageNav({
-          currentClass: 'current',
-          changeHash: false,
-          scrollSpeed: 700,
-          scrollOffset: top_offset,
-          scrollThreshold: 0.5,
-          filter: '',
-          easing: 'swing',
-          begin: function() {
-              //I get fired when the animation is starting
-          },
-          end: function() {
-              //I get fired when the animation is ending
-          },
-          scrollChange: function($currentListItem) {
-              //I get fired when you enter a section and I pass the list item of the section
-          }
-      });
-  
-  });//END document.ready 
-</script>
-<script>
-  $(document).ready(function(){
-      $('#contact-form').submit(function(event){
-          event.preventDefault();
-          let $data = $(this).serializeArray();
-          let $name = $data[0].value;
-          let $email = $data[1].value;
-          let $message = $data[2].value;
-          let incomplete = ($name.length == 0 || $email.length == 0 || $message.length == 0);
-          if (!$email.match(/^[^@]+@[^@]+$/)) {
-              console.log('Not sending: invalid email address');
-              $('.alert').addClass('hidden');
-              $('.alert-danger').removeClass('hidden');
-              incomplete = true;
-          }
-          if(!incomplete){ 
-              console.log('processing')
-              let  payload = { 
-                  name : $name,
-                  email : $email,
-                  message: $message
-              }
-              const API_URL =
-                  "https://8syk5uud37.execute-api.us-east-1.amazonaws.com/prod/contact";
-              $.ajax({
-                  contentType: 'application/json',
-                  data: JSON.stringify(payload),
-                  dataType: 'json',
-                  type: 'POST',
-                  url: API_URL,
-              })
-              .done((data) => {
-                  console.log(data);
-                  $('.alert').addClass('hidden');
-                  $('.alert-success').removeClass('hidden');
-              })
-              .fail(() => {});
-  
-  
-          }
-      });
-  });
-</script>
-<script>
-  $(document).ready(function(){
-      $('.lightbox-item .icon_search').click(function(event){
-          const $this = $(event.target);
-          const $html = $this.closest('.port-item').find('.gallery-content').html();
-          $('.mfp-more-info').fadeIn();
-          $('.mfp-text').fadeIn();
-          $('.mfp-text-inner').html($html); 
-      });
-      $('.mfp-more-info').click(function(event){
-          $('.mfp-text').fadeIn();
-          $('.mfp-more-info').fadeOut();
-      });
-      $('body').on('click', function(event){
-          $this = $(event.target);
-          $className = $this.context.className;
-          console.log($className);
-          if($className.includes("mfp-container") || $className.includes("mfp-close")) {
-              $('.mfp-more-info').fadeOut();
-              $('.mfp-text').fadeOut();
-          }
-         
-      });
-      $('.mfp-text-close').click(function(){
-          $('.mfp-more-info').fadeIn();
-          $('.mfp-text').fadeOut();
-      });
-  });
-</script>
-<!-- JS end-->
-<script>
-  $(document).ready(function(){
-     let $url = window.location.pathname.split('/')[1].replace('.html', '');
-     $url === 'index' ? $url = '' : $url = $url;
-      console.log("🚀 ~ file: js.jade:255 ~ $ ~  $url:",  $url)
-      if($url.length > 0 ){ 
-        $('#nav').addClass('dark-bg');
-      }
-      if($url !== 'index') { 
-         $('#nav-onepage a').each(function() {
-            var href = $(this).attr('href');
-            // Check if the href is a fragment identifier (starts with #)
-            if (href && href.startsWith('#')) {
-                // Prepend "index.html" to the href
-                $(this).attr('href', 'index.html' + href);
-            }
-         });
-      }
-  });
+  <!-- JS begin-->
+  <!-- jQuery-->
+  <script src="/js/jquery-1.11.2.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed-->
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- MAGNIFIC POPUP-->
+  <script src="/js/jquery.magnific-popup.min.js"></script>
+  <!-- PORTFOLIO SCRIPTS-->
+  <script src="/js/isotope.pkgd.min.js"></script>
+  <script src="/js/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <!-- COUNTER-->
+  <script src="/js/jquery.countTo.js"></script>
+  <!-- APPEAR-->
+  <script src="/js/jquery.appear.js"></script>
+  <!-- GOOLE MAP-->
+  <script src="/js/gmap3.min.js"></script>
+  <!--if lt IE 10script(src='/js/jquery.placeholder.js')
+  -->
+  <!-- FORMS VALIDATION-->
+  <script src="/js/jquery.validate.min.js"></script>
+  <script>
+    // Simple Contact Form Handler
+    jQuery(document).ready(function($) {
+        'use strict';
     
-  
-  
-  
-  
-  
-</script><script id="__bs_script__">//<![CDATA[//]]></script>
-<script>
-  $(document).ready(function() {
-      function snippet(text, wordLimit) {
-          const words = text.split(' ');
-          if (wordLimit >= words.length) { return text; }
-          const truncatedText = words.slice(0, wordLimit).join(' ');
-          return truncatedText;
-      }
-  
-      function getUUIDFromURL() {
-          const fullURL = window.location.href;
-          const urlParts = fullURL.split('?');
-          if (urlParts.length > 0) {
-              return urlParts[1];
-          }
-          return null;
-      }
-      
-      function fetchContent(uuid) { 
-         try {
-              const id = uuid || '';
-              const url = `https://h38fikktw7.execute-api.us-east-1.amazonaws.com/prod/items/${id}`;
-              const response = $.ajax({
-                  url, 
-                  method: 'GET',
-                  async: false, // Set async to false for synchronous request
-              }).responseText;
-              return response;
-          } catch (error) {
-          console.error('An error occurred:', error);
-          }
-      }
-  
-      (async function () {
-          const uuid = getUUIDFromURL();
-          const response = await fetchContent(uuid);
-          if (response) {
-              const parsedJson = JSON.parse(response);
-              if(Array.isArray(parsedJson)) { 
-                      $('h2.section-title span.title').html('Blog');
-                      $('h2.section-title span.date').html('');
-                      $('.main-content').html('<ul class="blog-list"></ul>');
-                      let blogContent = ''
-  
-                      $.each(parsedJson, function(index, item) {
-                          const { uuid, title, image, content, date, link } = item;
-                          const snip = snippet(content, 50);
-                          blogContent += `<li class="blog-item">
-                                              <a href="/${link}">
-                                                  <div class="blog-item-image" style="background-image: url(${image})"></div>
-                                                  <div class="blog-item-content">
-                                                      <span class="title"><h1>${title}</h1></span>
-                                                      <span class="date right">${date}</span>
-                                                      <div class="snippet">${snip}...</div>
-                                                  </div>
-                                              </a>
-                                          </li>`;
-                      });
-                      $('.blog-list').html(blogContent);
+        $('#contact-form').on('submit', function(e) {
+            e.preventDefault();
+            
+            var $form = $(this);
+            var $submitButton = $form.find('button[type="submit"]');
+            var $successMessage = $('#contactSuccess');
+            var $errorMessage = $('#contactError');
+            
+            // Hide previous messages
+            $successMessage.addClass('hidden');
+            $errorMessage.addClass('hidden');
+            
+            // Disable submit button and show loading state
+            $submitButton.prop('disabled', true).text('SENDING...');
+            
+            // Get form data
+            var formData = {
+                name: $('#name').val(),
+                email: $('#email').val(),
+                message: $('#message').val()
+            };
+            
+            // Simple validation
+            if (!formData.name || !formData.email || !formData.message) {
+                $errorMessage.removeClass('hidden');
+                $submitButton.prop('disabled', false).text('SEND MESSAGE');
+                return;
+            }
+            
+            // Submit form using Formspree
+            $.ajax({
+                type: 'POST',
+                url: $form.attr('action'),
+                data: formData,
+                dataType: 'json',
+                success: function(response) {
+                    $successMessage.removeClass('hidden');
+                    $form[0].reset();
+                    
+                    // Scroll to success message
+                    $('html, body').animate({
+                        scrollTop: $successMessage.offset().top - 100
+                    }, 500);
+                },
+                error: function(xhr, status, error) {
+                    $errorMessage.removeClass('hidden');
+                    
+                    // Scroll to error message
+                    $('html, body').animate({
+                        scrollTop: $errorMessage.offset().top - 100
+                    }, 500);
+                },
+                complete: function() {
+                    $submitButton.prop('disabled', false).text('SEND MESSAGE');
+                }
+            });
+        });
+        
+        // Hide messages when user starts typing
+        $('.controled').on('keyup', function() {
+            $('#contactSuccess, #contactError').addClass('hidden');
+        });
+    });
+  </script>
+  <!-- OWL CAROUSEL-->
+  <script src="/js/owl.carousel.min.js"></script>
+  <!-- MAIN SCRIPT-->
+  <script src="/js/main.js"></script>
+  <!-- REVOSLIDER SCRIPTS-->
+  <!-- SLIDER REVOLUTION 4.x SCRIPTS-->
+  <script src="/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+  <script src="/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js"></script>
+  <script src="/js/jquery.nav.js"></script>
+  <!-- SLIDER REVOLUTION INIT-->
+  <script>
+    jQuery(document).ready(function() {
+    if ( (navigator.appVersion.indexOf("Win")!=-1) && ( ieDetect == false ) ) {
+    jQuery('#rs-fullwidth').revolution(
+    {
+    dottedOverlay:"none",
+    delay:16000,
+    startwidth:1170,
+    startheight:665,
+    hideThumbs:200,
+    thumbWidth:100,
+    thumbHeight:50,
+    thumbAmount:5,
+    //fullScreenAlignForce: "off",
+    navigationType:"none",
+    navigationArrows:"solo",
+    navigationStyle:"preview4",
+    hideTimerBar:"on",
+    touchenabled:"on",
+    onHoverStop:"on",
+    swipe_velocity: 0.7,
+    swipe_min_touches: 1,
+    swipe_max_touches: 1,
+    drag_block_vertical: false,
+    parallax:"scroll",
+    parallaxBgFreeze:"on",
+    parallaxLevels:[45,40,35,50],
+    parallaxDisableOnMobile:"on",
+    keyboardNavigation:"off",
+    navigationHAlign:"center",
+    navigationVAlign:"bottom",
+    navigationHOffset:0,
+    navigationVOffset:20,
+    soloArrowLeftHalign:"left",
+    soloArrowLeftValign:"center",
+    soloArrowLeftHOffset:20,
+    soloArrowLeftVOffset:0,
+    soloArrowRightHalign:"right",
+    soloArrowRightValign:"center",
+    soloArrowRightHOffset:20,
+    soloArrowRightVOffset:0,
+    shadow:0,
+    fullWidth:"on",
+    fullScreen:"off",
+    spinner:"spinner4",
+    stopLoop:"off",
+    stopAfterLoops:-1,
+    stopAtSlide:-1,
+    shuffle:"off",
+    autoHeight:"off",
+    forceFullWidth:"off",
+    hideThumbsOnMobile:"off",
+    hideNavDelayOnMobile:1500,
+    hideBulletsOnMobile:"off",
+    hideArrowsOnMobile:"off",
+    hideThumbsUnderResolution:0,
+    hideSliderAtLimit:0,
+    hideCaptionAtLimit:0,
+    hideAllCaptionAtLilmit:0,
+    startWithSlide:0,
+    //fullScreenOffsetContainer: ""
+    });
+    } else {
+    jQuery('#rs-fullwidth').revolution(
+    {
+    dottedOverlay:"none",
+    delay:16000,
+    startwidth:1170,
+    startheight:760,
+    hideThumbs:200,
+    thumbWidth:100,
+    thumbHeight:50,
+    thumbAmount:5,
+    navigationType:"none",
+    navigationArrows:"solo",
+    navigationStyle:"preview4",
+    hideTimerBar:"on",
+    touchenabled:"on",
+    onHoverStop:"on",
+    swipe_velocity: 0.7,
+    swipe_min_touches: 1,
+    swipe_max_touches: 1,
+    drag_block_vertical: false,
+    parallax:"mouse",
+    parallaxBgFreeze:"on",
+    parallaxLevels:[0],
+    parallaxDisableOnMobile:"on",
+    keyboardNavigation:"off",
+    navigationHAlign:"center",
+    navigationVAlign:"bottom",
+    navigationHOffset:0,
+    navigationVOffset:20,
+    soloArrowLeftHalign:"left",
+    soloArrowLeftValign:"center",
+    soloArrowLeftHOffset:20,
+    soloArrowLeftVOffset:0,
+    soloArrowRightHalign:"right",
+    soloArrowRightValign:"center",
+    soloArrowRightHOffset:20,
+    soloArrowRightVOffset:0,
+    shadow:0,
+    fullWidth:"on",
+    fullScreen:"off",
+    spinner:"spinner4",
+    stopLoop:"off",
+    stopAfterLoops:-1,
+    stopAtSlide:-1,
+    shuffle:"off",
+    autoHeight:"off",
+    forceFullWidth:"off",
+    hideThumbsOnMobile:"off",
+    hideNavDelayOnMobile:1500,
+    hideBulletsOnMobile:"off",
+    hideArrowsOnMobile:"off",
+    hideThumbsUnderResolution:0,
+    hideSliderAtLimit:0,
+    hideCaptionAtLimit:0,
+    hideAllCaptionAtLilmit:0,
+    startWithSlide:0,
+    });
+    }
+    });	//ready
+  </script>
+  <script>
+    $(document).ready(function() {
+    //ONE PAGE NAV	---------------------------------------------------------------------------
+        var top_offset = $('header').height() - 1;  // get height of fixed navbar
+        $('#nav-onepage').onePageNav({
+            currentClass: 'current',
+            changeHash: false,
+            scrollSpeed: 700,
+            scrollOffset: top_offset,
+            scrollThreshold: 0.5,
+            filter: '',
+            easing: 'swing',
+            begin: function() {
+                //I get fired when the animation is starting
+            },
+            end: function() {
+                //I get fired when the animation is ending
+            },
+            scrollChange: function($currentListItem) {
+                //I get fired when you enter a section and I pass the list item of the section
+            }
+        });
+    
+    });//END document.ready 
+  </script>
+  <script>
+    $(document).ready(function(){
+        $('#contact-form').submit(function(event){
+            event.preventDefault();
+            let $data = $(this).serializeArray();
+            let $name = $data[0].value;
+            let $email = $data[1].value;
+            let $message = $data[2].value;
+            let incomplete = ($name.length == 0 || $email.length == 0 || $message.length == 0);
+            if (!$email.match(/^[^@]+@[^@]+$/)) {
+                console.log('Not sending: invalid email address');
+                $('.alert').addClass('hidden');
+                $('.alert-danger').removeClass('hidden');
+                incomplete = true;
+            }
+            if(!incomplete){ 
+                console.log('processing')
+                let  payload = { 
+                    name : $name,
+                    email : $email,
+                    message: $message
+                }
+                const API_URL =
+                    "https://8syk5uud37.execute-api.us-east-1.amazonaws.com/prod/contact";
+                $.ajax({
+                    contentType: 'application/json',
+                    data: JSON.stringify(payload),
+                    dataType: 'json',
+                    type: 'POST',
+                    url: API_URL,
+                })
+                .done((data) => {
+                    console.log(data);
+                    $('.alert').addClass('hidden');
+                    $('.alert-success').removeClass('hidden');
+                })
+                .fail(() => {});
+    
+    
+            }
+        });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+        $('.lightbox-item .icon_search').click(function(event){
+            const $this = $(event.target);
+            const $html = $this.closest('.port-item').find('.gallery-content').html();
+            $('.mfp-more-info').fadeIn();
+            $('.mfp-text').fadeIn();
+            $('.mfp-text-inner').html($html); 
+        });
+        $('.mfp-more-info').click(function(event){
+            $('.mfp-text').fadeIn();
+            $('.mfp-more-info').fadeOut();
+        });
+        $('body').on('click', function(event){
+            $this = $(event.target);
+            $className = $this.context.className;
+            console.log($className);
+            if($className.includes("mfp-container") || $className.includes("mfp-close")) {
+                $('.mfp-more-info').fadeOut();
+                $('.mfp-text').fadeOut();
+            }
+           
+        });
+        $('.mfp-text-close').click(function(){
+            $('.mfp-more-info').fadeIn();
+            $('.mfp-text').fadeOut();
+        });
+    });
+  </script>
+  <!-- JS end-->
+  <script>
+    $(document).ready(function(){
+       let $url = window.location.pathname.split('/')[1].replace('.html', '');
+       $url === 'index' ? $url = '' : $url = $url;
+        console.log("🚀 ~ file: js.jade:255 ~ $ ~  $url:",  $url)
+        if($url.length > 0 ){ 
+          $('#nav').addClass('dark-bg');
+        }
+        if($url !== 'index') { 
+           $('#nav-onepage a').each(function() {
+              var href = $(this).attr('href');
+              // Check if the href is a fragment identifier (starts with #)
+              if (href && href.startsWith('#')) {
+                  // Prepend "index.html" to the href
+                  $(this).attr('href', 'index.html' + href);
               }
-          } else {
-              console.error('API request failed or returned an empty response');
-          }
-      })();
-  });
-</script>
+           });
+        }
+    });
+      
+    
+    
+    
+    
+    
+  </script><script id="__bs_script__">//<![CDATA[//]]></script>
+</body>

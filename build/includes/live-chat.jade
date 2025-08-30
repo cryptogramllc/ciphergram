@@ -1,0 +1,53 @@
+// LIVE CHAT WIDGET
+#live-chat-widget
+    .chat-button(onclick="toggleChat()")
+        .chat-icon
+            i.icon.icon-basic-message
+        .chat-text
+            span Chat with us
+    .chat-window#chat-window
+        .chat-header
+            h4.mb-0 Live Chat
+            button.close-chat(onclick="toggleChat()") ×
+        .chat-body
+            .chat-messages#chat-messages
+                .message.bot-message
+                    p Hi! How can we help you today?
+            .chat-input
+                input#chat-input(type="text" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)")
+                button#send-message(onclick="sendMessage()")
+                    i.icon.icon-basic-message
+
+script.
+    function toggleChat() {
+        const chatWindow = document.getElementById('chat-window');
+        chatWindow.classList.toggle('active');
+    }
+    
+    function sendMessage() {
+        const input = document.getElementById('chat-input');
+        const message = input.value.trim();
+        if (message) {
+            addMessage(message, 'user');
+            input.value = '';
+            // Simulate bot response
+            setTimeout(() => {
+                addMessage('Thanks for your message! We\'ll get back to you soon.', 'bot');
+            }, 1000);
+        }
+    }
+    
+    function handleChatKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    }
+    
+    function addMessage(text, sender) {
+        const messages = document.getElementById('chat-messages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}-message`;
+        messageDiv.innerHTML = `<p>${text}</p>`;
+        messages.appendChild(messageDiv);
+        messages.scrollTop = messages.scrollHeight;
+    } 
