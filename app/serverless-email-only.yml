@@ -1,0 +1,20 @@
+service: aws-nodejs-email
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: prod
+  region: us-east-1
+  stackName: ciphergram-email-prod
+  apiName: ciphergram-email-prod
+
+functions:
+  emailSubmission:
+    handler: index.email
+    role: arn:aws:iam::514188170070:role/aws-nodejs-prod-us-east-1-lambdaRole
+    description: Submit candidate information and starts interview process.
+    events:
+      - http: 
+          path: contact
+          method: post
+          cors: true

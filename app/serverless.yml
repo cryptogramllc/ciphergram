@@ -34,6 +34,7 @@ functions:
       - http: 
           path: contact
           method: post
+          cors: true
   getBlogPost:
     handler: index.getBlogPost
     role: arn:aws:iam::514188170070:role/aws-nodejs-prod-us-east-1-lambdaRole

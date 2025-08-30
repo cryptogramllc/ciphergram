@@ -6,27 +6,71 @@ const { v4: uuidv4 } = require('uuid');
 const s3 = new AWS.S3();
 
 exports.email = async function (event, context) {
-    const {
-        name,
-        email,
-        message
-    } = event;
-    // Set region
-    AWS.config.update({ region: 'us-east-1' });
-    // Create publish parameters
-    var params = {
-        Message: `New Message from ${name} <${email}>: 
-            "${message}"`, /* required */
-        TopicArn: 'arn:aws:sns:us-east-1:514188170070:Contact-Us'
-    };
-    const response = await new AWS.SNS({ apiVersion: '2010-03-31' }).publish(params).promise();
-    if (!response.error) {
+    try {
+        // Parse the event body if it's a string
+        let body = event;
+        if (typeof event.body === 'string') {
+            body = JSON.parse(event.body);
+        }
+        
+        const { name, email, message } = body;
+        
+        // Validate required fields
+        if (!name || !email || !message) {
+            return {
+                statusCode: 400,
+                body: JSON.stringify({ 
+                    error: 'Missing required fields: name, email, message' 
+                }),
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Methods': 'POST, OPTIONS'
+                }
+            };
+        }
+        
+        // Set region
+        AWS.config.update({ region: 'us-east-1' });
+        
+        // Create publish parameters
+        var params = {
+            Message: `New Message from ${name} <${email}>: 
+                "${message}"`,
+            TopicArn: 'arn:aws:sns:us-east-1:514188170070:Contact-Us'
+        };
+        
+        const response = await new AWS.SNS({ apiVersion: '2010-03-31' }).publish(params).promise();
+        
         return {
             statusCode: 200,
-            body: { status: 'OK', messageId: response.MessageId },
-        }
+            body: JSON.stringify({ 
+                status: 'OK', 
+                messageId: response.MessageId,
+                response: 'success'
+            }),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'POST, OPTIONS'
+            }
+        };
+        
+    } catch (error) {
+        console.error('Email submission error:', error);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ 
+                error: 'Internal server error',
+                message: error.message 
+            }),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'POST, OPTIONS'
+            }
+        };
     }
-
 };
 
 exports.getBlogPost = async (event) => {
