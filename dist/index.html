@@ -595,84 +595,6 @@
       <!-- TESTIMONIALS SECTION-->
       <!-- TRUST BADGES SECTION-->
       <!-- LEAD MAGNET SECTION-->
-      <!-- LEAD MAGNET SECTION-->
-      <div class="page-section p-140-cont grey-light-bg clearfix">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="lead-magnet-content">
-                <h2 class="mb-30 font-light"><span class="font-light">Free </span><span>Cybersecurity Assessment</span></h2>
-                <p class="mb-30">Get a comprehensive security audit of your business infrastructure. Our AI-powered assessment will identify vulnerabilities and provide actionable recommendations.</p>
-                <ul class="mb-30">
-                  <li>✓ Network Security Analysis</li>
-                  <li>✓ Vulnerability Assessment</li>
-                  <li>✓ Compliance Review</li>
-                  <li>✓ Custom Security Roadmap</li>
-                  <li>✓ 30-Day Action Plan</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="lead-magnet-form">
-                <div class="contact-form-cont">
-                  <!-- TITLE-->
-                  <div class="mb-40">
-                    <h3 class="section-title"><span class="bold">GET YOUR FREE ASSESSMENT</span></h3>
-                  </div>
-                  <!-- ASSESSMENT FORM-->
-                  <div>
-                    <form id="assessment-form">
-                      <div class="row">
-                        <div class="col-md-12 mb-30">
-                          <input id="company" type="text" value="" data-msg-required="Please enter your company name" maxlength="100" name="company" placeholder="COMPANY NAME" required="" class="controled">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12 mb-30">
-                          <input id="name" type="text" value="" data-msg-required="Please enter your name" maxlength="100" name="name" placeholder="YOUR NAME" required="" class="controled">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12 mb-30">
-                          <input id="email" type="email" value="" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address" maxlength="100" name="email" placeholder="EMAIL ADDRESS" required="" class="controled">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12 mb-30">
-                          <input id="phone" type="tel" value="" maxlength="20" name="phone" placeholder="PHONE NUMBER" class="controled">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12 mb-30">
-                          <select id="company-size" name="company-size" class="controled">
-                            <option value="">COMPANY SIZE</option>
-                            <option value="1-10">1-10 employees</option>
-                            <option value="11-50">11-50 employees</option>
-                            <option value="51-200">51-200 employees</option>
-                            <option value="200+">200+ employees</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12 mb-40">
-                          <textarea id="concerns" maxlength="1000" rows="3" name="concerns" placeholder="BRIEF DESCRIPTION OF YOUR SECURITY CONCERNS" class="controled"></textarea>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12 text-center">
-                          <input id="submit-assessment" type="submit" value="GET FREE ASSESSMENT" data-loading-text="Loading..." class="button medium gray">
-                        </div>
-                      </div>
-                    </form>
-                    <div class="alert alert-success hidden animated fadeIn"><strong>Success! We'll contact you soon.</strong></div>
-                    <div class="alert alert-danger hidden animated shake"><strong>Error! Please try again. </strong></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- FAQ SECTION-->
       <div class="page-section p-140-cont clearfix">
         <div class="container">
@@ -731,7 +653,7 @@
                 </div>
                 <!-- CONTACT FORM-->
                 <div>
-                  <form id="contact-form" action="https://formspree.io/f/xayzqkqw" method="POST">
+                  <form id="contact-form">
                     <div class="row">
                       <div class="col-md-12 mb-30">
                         <!-- <label>Your name *</label>-->
@@ -875,13 +797,11 @@
               return;
           }
           
-          // Submit form using Formspree
-          $.ajax({
-              type: 'POST',
-              url: $form.attr('action'),
-              data: formData,
-              dataType: 'json',
-              success: function(response) {
+          // For local testing - simulate successful submission
+          // In production, this will submit to AWS Lambda
+          if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+              // Local testing - simulate success
+              setTimeout(function() {
                   $successMessage.removeClass('hidden');
                   $form[0].reset();
                   
@@ -889,19 +809,43 @@
                   $('html, body').animate({
                       scrollTop: $successMessage.offset().top - 100
                   }, 500);
-              },
-              error: function(xhr, status, error) {
-                  $errorMessage.removeClass('hidden');
                   
-                  // Scroll to error message
-                  $('html, body').animate({
-                      scrollTop: $errorMessage.offset().top - 100
-                  }, 500);
-              },
-              complete: function() {
                   $submitButton.prop('disabled', false).text('SEND MESSAGE');
-              }
-          });
+                  
+                  console.log('Local test - Form data:', formData);
+              }, 1000);
+          } else {
+              // Production - submit to AWS Lambda
+              $.ajax({
+                  type: 'POST',
+                  url: 'https://8syk5uud37.execute-api.us-east-1.amazonaws.com/prod/contact',
+                  data: JSON.stringify(formData),
+                  contentType: 'application/json',
+                  dataType: 'json',
+                  success: function(response) {
+                      $successMessage.removeClass('hidden');
+                      $form[0].reset();
+                      
+                      // Scroll to success message
+                      $('html, body').animate({
+                          scrollTop: $successMessage.offset().top - 100
+                      }, 500);
+                  },
+                  error: function(xhr, status, error) {
+                      $errorMessage.removeClass('hidden');
+                      
+                      // Scroll to error message
+                      $('html, body').animate({
+                          scrollTop: $errorMessage.offset().top - 100
+                      }, 500);
+                      
+                      console.error('AWS Lambda error:', xhr, status, error);
+                  },
+                  complete: function() {
+                      $submitButton.prop('disabled', false).text('SEND MESSAGE');
+                  }
+              });
+          }
       });
       
       // Hide messages when user starts typing

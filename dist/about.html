@@ -290,13 +290,11 @@
               return;
           }
           
-          // Submit form using Formspree
-          $.ajax({
-              type: 'POST',
-              url: $form.attr('action'),
-              data: formData,
-              dataType: 'json',
-              success: function(response) {
+          // For local testing - simulate successful submission
+          // In production, this will submit to AWS Lambda
+          if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+              // Local testing - simulate success
+              setTimeout(function() {
                   $successMessage.removeClass('hidden');
                   $form[0].reset();
                   
@@ -304,19 +302,43 @@
                   $('html, body').animate({
                       scrollTop: $successMessage.offset().top - 100
                   }, 500);
-              },
-              error: function(xhr, status, error) {
-                  $errorMessage.removeClass('hidden');
                   
-                  // Scroll to error message
-                  $('html, body').animate({
-                      scrollTop: $errorMessage.offset().top - 100
-                  }, 500);
-              },
-              complete: function() {
                   $submitButton.prop('disabled', false).text('SEND MESSAGE');
-              }
-          });
+                  
+                  console.log('Local test - Form data:', formData);
+              }, 1000);
+          } else {
+              // Production - submit to AWS Lambda
+              $.ajax({
+                  type: 'POST',
+                  url: 'https://8syk5uud37.execute-api.us-east-1.amazonaws.com/prod/contact',
+                  data: JSON.stringify(formData),
+                  contentType: 'application/json',
+                  dataType: 'json',
+                  success: function(response) {
+                      $successMessage.removeClass('hidden');
+                      $form[0].reset();
+                      
+                      // Scroll to success message
+                      $('html, body').animate({
+                          scrollTop: $successMessage.offset().top - 100
+                      }, 500);
+                  },
+                  error: function(xhr, status, error) {
+                      $errorMessage.removeClass('hidden');
+                      
+                      // Scroll to error message
+                      $('html, body').animate({
+                          scrollTop: $errorMessage.offset().top - 100
+                      }, 500);
+                      
+                      console.error('AWS Lambda error:', xhr, status, error);
+                  },
+                  complete: function() {
+                      $submitButton.prop('disabled', false).text('SEND MESSAGE');
+                  }
+              });
+          }
       });
       
       // Hide messages when user starts typing
