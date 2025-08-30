@@ -1,10 +1,10 @@
-// Simple Email Function - No External Dependencies
+// Professional Email Function using AWS SES
 // Uses only built-in AWS SDK v3 that comes with Lambda
 
-const { SNSClient, PublishCommand } = require('@aws-sdk/client-sns');
+const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
 
-// Initialize SNS client
-const snsClient = new SNSClient({ region: 'us-east-1' });
+// Initialize SES client
+const sesClient = new SESClient({ region: 'us-east-1' });
 
 exports.handler = async (event, context) => {
     // Handle CORS preflight OPTIONS request
@@ -45,17 +45,96 @@ exports.handler = async (event, context) => {
             };
         }
         
-        // Create SNS publish parameters
-        const params = {
-            Message: `New Contact Form Submission from ${name} <${email}>: ${message}`,
-            TopicArn: 'arn:aws:sns:us-east-1:514188170070:Contact-Us'
+        // Create professional email content
+        const emailParams = {
+            Source: 'info@ciphergram.io', // From address (must be verified in SES)
+            Destination: {
+                ToAddresses: ['info@ciphergram.io'] // To address
+            },
+            Message: {
+                Subject: {
+                    Data: `New Contact Form Submission - ${name}`,
+                    Charset: 'UTF-8'
+                },
+                Body: {
+                    Html: {
+                        Data: `
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                                <meta charset="UTF-8">
+                                <title>New Contact Form Submission</title>
+                                <style>
+                                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                                    .header { background: #000; color: white; padding: 20px; text-align: center; }
+                                    .content { padding: 20px; background: #f9f9f9; }
+                                    .field { margin: 15px 0; }
+                                    .label { font-weight: bold; color: #000; }
+                                    .value { margin-left: 10px; }
+                                    .footer { margin-top: 30px; padding: 20px; text-align: center; color: #666; font-size: 12px; }
+                                </style>
+                            </head>
+                            <body>
+                                <div class="header">
+                                    <h1>📧 New Contact Form Submission</h1>
+                                </div>
+                                <div class="content">
+                                    <h2>Hello Team,</h2>
+                                    <p>You have received a new contact form submission from your website.</p>
+                                    
+                                    <div class="field">
+                                        <span class="label">Name:</span>
+                                        <span class="value">${name}</span>
+                                    </div>
+                                    <div class="field">
+                                        <span class="label">Email:</span>
+                                        <span class="value"><a href="mailto:${email}">${email}</a></span>
+                                    </div>
+                                    <div class="field">
+                                        <span class="label">Message:</span>
+                                        <div class="value" style="margin-left: 10px; margin-top: 10px; padding: 15px; background: white; border-left: 4px solid #000;">
+                                            ${message.replace(/\n/g, '<br>')}
+                                        </div>
+                                    </div>
+                                    
+                                    <p style="margin-top: 30px;">
+                                        <strong>Next Steps:</strong><br>
+                                        • Review the inquiry<br>
+                                        • Respond within 24 hours<br>
+                                        • Add to your CRM if applicable
+                                    </p>
+                                </div>
+                                <div class="footer">
+                                    <p>This email was sent automatically by your Ciphergram contact form system.</p>
+                                    <p>© 2024 Ciphergram. All rights reserved.</p>
+                                </div>
+                            </body>
+                            </html>
+                        `,
+                        Charset: 'UTF-8'
+                    },
+                    Text: {
+                        Data: `
+New Contact Form Submission
+
+Name: ${name}
+Email: ${email}
+Message: ${message}
+
+---
+This email was sent automatically by your Ciphergram contact form system.
+                        `,
+                        Charset: 'UTF-8'
+                    }
+                }
+            }
         };
         
-        // Publish to SNS
-        const command = new PublishCommand(params);
-        const response = await snsClient.send(command);
+        // Send email via SES
+        const command = new SendEmailCommand(emailParams);
+        const response = await sesClient.send(command);
         
-        console.log('SNS Message published successfully:', response.MessageId);
+        console.log('Email sent successfully via SES:', response.MessageId);
         
         return {
             statusCode: 200,
