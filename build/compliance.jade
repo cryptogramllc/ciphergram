@@ -1,0 +1,188 @@
+doctype html
+include ./includes/head.jade
+- var pageTitle = "Compliance Services - SOC 2, HIPAA, GDPR, PCI DSS | Ciphergram"
+- var pageDescription = "Ciphergram provides expert compliance services including SOC 2, HIPAA, GDPR, and PCI DSS audits. Get compliant and protect your business from regulatory fines and breaches."
+- var currentPage = 'services'
+- var canonicalUrl = '/compliance.html'
+
+body
+    include ./includes/header.jade
+    
+    .page-section.p-80-cont
+        .container
+            .row
+                .col-md-12
+                    .fes4-box.wow.fadeIn
+                        h1.section-title
+                            span.bold COMPLIANCE SERVICES
+                        h3 Get Compliant. Stay Protected. Avoid Fines.
+                        p.lead Don't let compliance issues cost you millions. Our expert team ensures your business meets all regulatory requirements with comprehensive audits, policy development, and ongoing monitoring.
+
+    .page-section.p-60-cont.grey-light-bg
+        .container
+            .row
+                .col-md-12
+                    h2.section-title
+                        span.bold OUR COMPLIANCE SERVICES
+            
+            .row
+                .col-xs-12.col-sm-6.col-md-6
+                    .fes4-box.wow.fadeIn
+                        .fes4-title-cont
+                            .fes4-box-icon
+                                .icon.icon-basic-shield
+                            h3
+                                span.bold SOC 2 COMPLIANCE
+                            p Complete SOC 2 Type I and Type II audits for SaaS and cloud service providers. Includes security, availability, processing integrity, confidentiality, and privacy controls.
+                            ul
+                                li Security Control Assessment
+                                li Policy & Procedure Development
+                                li Gap Analysis & Remediation
+                                li Ongoing Monitoring & Support
+                            a.btn.btn-md.btn-color.mt-20(href="#contact-link") GET FREE ASSESSMENT
+                
+                .col-xs-12.col-sm-6.col-md-6
+                    .fes4-box.wow.fadeIn
+                        .fes4-title-cont
+                            .fes4-box-icon
+                                .icon.icon-basic-heart
+                            h3
+                                span.bold HIPAA COMPLIANCE
+                            p Full HIPAA compliance for healthcare organizations, including risk assessments, policy development, employee training, and ongoing monitoring to protect patient data.
+                            ul
+                                li Risk Assessment & Analysis
+                                li Privacy & Security Policies
+                                li Employee Training Programs
+                                li Incident Response Planning
+                            a.btn.btn-md.btn-color.mt-20(href="#contact-link") GET FREE ASSESSMENT
+
+            .row
+                .col-xs-12.col-sm-6.col-md-6
+                    .fes4-box.wow.fadeIn
+                        .fes4-title-cont
+                            .fes4-box-icon
+                                .icon.icon-basic-globe
+                            h3
+                                span.bold GDPR COMPLIANCE
+                            p EU data protection compliance for businesses handling European customer data. Includes data mapping, consent management, and privacy impact assessments.
+                            ul
+                                li Data Protection Impact Assessment
+                                li Consent Management Systems
+                                li Data Subject Rights Implementation
+                                li Breach Notification Procedures
+                            a.btn.btn-md.btn-color.mt-20(href="#contact-link") GET FREE ASSESSMENT
+                
+                .col-xs-12.col-sm-6.col-md-6
+                    .fes4-box.wow.fadeIn
+                        .fes4-title-cont
+                            .fes4-box-icon
+                                .icon.icon-basic-credit-card
+                            h3
+                                span.bold PCI DSS COMPLIANCE
+                            p Payment card industry compliance for businesses processing credit card payments. Includes network security, access control, and vulnerability management.
+                            ul
+                                li Network Security Assessment
+                                li Access Control Implementation
+                                li Vulnerability Management
+                                li Security Testing & Validation
+                            a.btn.btn-md.btn-color.mt-20(href="#contact-link") GET FREE ASSESSMENT
+
+    .page-section.p-60-cont
+        .container
+            .row
+                .col-md-12
+                    h2.section-title
+                        span.bold COMPLIANCE PACKAGES
+            
+            .row
+                .col-xs-12.col-sm-4.col-md-4
+                    .fes4-box.wow.fadeIn
+                        .fes4-title-cont.text-center
+                            h3
+                                span.bold STARTER PACKAGE
+                            .price $2,500
+                            p Perfect for small businesses starting their compliance journey
+                            ul.text-left
+                                li Initial Compliance Assessment
+                                li Gap Analysis Report
+                                li Basic Policy Templates
+                                li 30-Day Support
+                            a.btn.btn-md.btn-color.mt-20(href="#contact-link") GET STARTED
+                
+                .col-xs-12.col-sm-4.col-md-4
+                    .fes4-box.wow.fadeIn
+                        .fes4-title-cont.text-center
+                            h3
+                                span.bold PROFESSIONAL PACKAGE
+                            .price $8,000
+                            p Comprehensive compliance for growing businesses
+                            ul.text-left
+                                li Full Compliance Audit
+                                li Custom Policy Development
+                                li Employee Training Program
+                                li 6 Months Support
+                                li Annual Renewal
+                            a.btn.btn-md.btn-color.mt-20(href="#contact-link") GET STARTED
+                
+                .col-xs-12.col-sm-4.col-md-4
+                    .fes4-box.wow.fadeIn
+                        .fes4-title-cont.text-center
+                            h3
+                                span.bold ENTERPRISE PACKAGE
+                            .price $15,000
+                            p Full-service compliance for large organizations
+                            ul.text-left
+                                li Multi-Framework Compliance
+                                li Custom Training Programs
+                                li Ongoing Monitoring
+                                li Incident Response Team
+                                li Unlimited Support
+                            a.btn.btn-md.btn-color.mt-20(href="#contact-link") GET STARTED
+
+    #contact-link.page-section.gray-bg
+        .container
+            .row
+                .col-md-12
+                    .contact-form-cont
+                        // TITLE
+                        .mb-40
+                            h2.section-title
+                                span.bold GET YOUR FREE COMPLIANCE ASSESSMENT
+                        p.lead.text-center.mb-40 Don't wait until it's too late. Get your free compliance assessment today and protect your business from regulatory fines and breaches.
+                        // COMPLIANCE FORM
+                        div
+                            form#complianceForm
+                                .row
+                                    .col-md-12.mb-30
+                                        input#name.controled(type='text', value='', data-msg-required='Please enter your name', maxlength='100', name='name', placeholder='NAME', required='')
+                                .row
+                                    .col-md-12.mb-30
+                                        input#email.controled(type='email', value='', data-msg-required='Please enter your email address', data-msg-email='Please enter a valid email address', maxlength='100', name='email', placeholder='EMAIL', required='')
+                                .row
+                                    .col-md-12.mb-30
+                                        input#company.controled(type='text', value='', data-msg-required='Please enter your company name', maxlength='100', name='company', placeholder='COMPANY NAME', required='')
+                                .row
+                                    .col-md-12.mb-30
+                                        input#phone.controled(type='tel', value='', maxlength='20', name='phone', placeholder='PHONE NUMBER')
+                                .row
+                                    .col-md-12.mb-30
+                                        select#compliance_type.controled(name='compliance_type', required='')
+                                            option(value='') SELECT COMPLIANCE TYPE *
+                                            option(value='soc2') SOC 2 Compliance
+                                            option(value='hipaa') HIPAA Compliance
+                                            option(value='gdpr') GDPR Compliance
+                                            option(value='pci') PCI DSS Compliance
+                                            option(value='multiple') Multiple Frameworks
+                                .row
+                                    .col-md-12.mb-40
+                                        textarea#message.controled(maxlength='5000', data-msg-required='Please tell us about your compliance needs', rows='3', name='message', placeholder='TELL US ABOUT YOUR COMPLIANCE NEEDS', required='')
+                                .row
+                                    .col-md-12.text-center
+                                        input.button.medium.gray(id="submit", type='submit', value='GET FREE ASSESSMENT', data-loading-text='Loading...')
+                            #complianceSuccess.alert.alert-success.hidden.animated.fadeIn
+                                strong Thank you! Your compliance assessment request has been sent successfully.
+                            #complianceError.alert.alert-danger.hidden.animated.fadeIn
+                                strong Error! Please try again or contact us directly.
+
+    include ./includes/footer.jade
+include ./includes/scripts/js.jade
