@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps">
+  <meta name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps, Managed SOC, Compliance Services, SOC 2, HIPAA, GDPR, PCI DSS, Security Training, Data Analytics, Cloud Architecture, Full Stack Development, Mobile App Development, Web Application Development, Enterprise Software, IT Strategy, Business Technology Solutions">
   <meta name="description" content="Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.">
   <meta name="author" content="Ciphergram.io">
   <meta name="language" content="English">
@@ -25,11 +25,19 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphergram.io">
   <meta property="og:image" content="https://ciphergram.io/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ciphergram - Cybersecurity and Software Solutions">
+  <meta property="og:site_name" content="Ciphergram">
+  <meta property="og:locale" content="en_US">
   <!-- Twitter Card-->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ciphergram | Cybersecurity &amp; Software Solutions">
   <meta name="twitter:description" content="Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.">
   <meta name="twitter:image" content="https://ciphergram.io/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Ciphergram - Cybersecurity and Software Solutions">
+  <meta name="twitter:site" content="@ciphergram">
+  <meta name="twitter:creator" content="@ciphergram">
   <!-- Structured Data (JSON-LD)-->
   <script type="application/ld+json">
     {
@@ -76,25 +84,73 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Cybersecurity Services"
+              "name": "Cybersecurity Services",
+              "description": "Comprehensive cybersecurity solutions including managed SOC, compliance services, and security training"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Software Development"
+              "name": "Software Development",
+              "description": "Full-stack development services including web applications, mobile apps, and AI integration"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "IT Consulting"
+              "name": "IT Consulting",
+              "description": "Strategic IT consulting, cloud architecture, and digital transformation services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI & Rapid Prototyping",
+              "description": "Generative AI solutions and rapid prototyping services for accelerated development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Data Analytics",
+              "description": "Data analytics and business intelligence solutions powered by AI"
             }
           }
         ]
-      }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Orlando",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "London",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "United Kingdom"
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Cybersecurity",
+        "Software Development",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Data Analytics",
+        "IT Consulting",
+        "Compliance Services",
+        "Managed SOC",
+        "Security Training"
+      ]
     }
   </script>
   <!-- Favicon-->
@@ -112,6 +168,10 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <!-- GOOGLE FONT-->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700" rel="stylesheet" type="text/css">
+  <!-- Preload critical resources-->
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="/js/jquery-1.11.2.min.js" as="script">
+  <link rel="preload" href="/js/bootstrap.min.js" as="script">
   <!-- ICONS ELEGANT FONT & FONT AWESOME & LINEA ICONS-->
   <link rel="stylesheet" href="/css/icons-fonts.css">
   <!-- CSS THEME-->
@@ -173,12 +233,11 @@
                         <div class="main-menu-title">ABOUT</div></a></li>
                     <li class="current"><a href="https://ciphergram.io/index.html#services-link">
                         <div class="main-menu-title">SERVICES</div></a></li>
-                    <li><a href="/pricing.html">
+                    <li><a href="https://ciphergram.io/index.html#pricing-link">
                         <div class="main-menu-title">PRICING</div></a></li>
                     <li><a href="https://ciphergram.io/index.html#our-clients">
                         <div class="main-menu-title">OUR CLIENTS</div></a></li>
-                    <li><a href="https://ciphergram.io/index.html#our-work-link">
-                        <div class="main-menu-title">OUR WORK</div></a></li>
+                    <!-- OUR WORK menu item removed-->
                     <li><a href="https://ciphergram.io/index.html#contact-link">
                         <div class="main-menu-title">CONTACT</div></a></li>
                     <li><a href="/blog">
@@ -888,8 +947,142 @@
          });
       }
   });
-    
   
+</script>
+<!-- Client Modal JavaScript-->
+<script>
+  // Client work data
+  const clientData = {
+    'edf': {
+      title: 'EDF Energy',
+      logo: 'images/clients/1.png',
+      description: 'Full Stack Developer for EDF\'s Customer Consumer Usage Report Application. Assisted in developing microservices for customer-facing Web/Mobile applications focused on reports, cost-efficiency, and billing. Created server-side RESTful API scripts with scalability for high user traffic, leveraged TDD to ensure business requirements were met, and participated in Agile ceremonies including Sprint Planning and Retrospectives.',
+      technologies: ['Node.js', 'TypeScript', 'AWS Lambda', 'GraphQL', 'CloudFormation', 'CloudWatch', 'Jenkins', 'Azure Artifacts', 'Serverless', 'Mocha', 'Jasmine']
+    },
+    'student-room': {
+      title: 'The Student Room',
+      logo: 'images/clients/2.png',
+      description: 'React Native Developer for SkillSeed - Student Mental Health and Well-being Application. Developed Beta version of iOS/Android mental health app for students across various colleges. Converted UI designs into manageable components, leveraged JSON APIs on AWS for real-time data parsing, integrated complex animations using Airbnb\'s Lottie plugin, and used FastLane automation for deployment to Microsoft App Center.',
+      technologies: ['React Native', 'XCode', 'Node.js', 'GitLab', 'EBS', 'Airbnb Lottie', 'FastLane CLI', 'TypeScript']
+    },
+    'vmware': {
+      title: 'VMware',
+      logo: 'images/clients/3.png',
+      description: 'Node.js Developer for Voice Interactive Trivia Application. Created an Alexa Skill with tech trivia for users seeking VMware cloud-based SaaS certifications. Designed dialogue architecture for conversation flow and user experience, leveraged TDD to ensure product specifications were met, and collaborated remotely using Zoom, Slack, and other collaboration tools.',
+      technologies: ['AWS Lambda', 'Alexa Skills Kit', 'Serverless', 'MySQL', 'JavaScript', 'Mocha', 'Chai', 'Node.js']
+    },
+    'allstate': {
+      title: 'Allstate Insurance',
+      logo: 'images/clients/4.png',
+      description: 'React Developer at Allstate Insurance, Northbrook, IL. Worked on frontend development projects using React to build responsive and interactive user interfaces for insurance applications.',
+      technologies: ['React', 'JavaScript', 'HTML/CSS', 'Node.js']
+    },
+    'iag': {
+      title: 'International Airlines Group',
+      logo: 'images/clients/5.png',
+      description: 'Worked on aviation technology solutions for IAG, contributing to flight operations and passenger management systems. Focused on building scalable applications to handle real-time data processing and improve operational efficiency.',
+      technologies: ['React', 'Node.js', 'JavaScript', 'AWS', 'Docker', 'MySQL']
+    },
+    'interactive-investor': {
+      title: 'Interactive Investor',
+      logo: 'images/clients/6.png',
+      description: 'Developed financial technology solutions for Interactive Investor, working on trading platforms and investment management tools. Built responsive user interfaces and integrated real-time market data APIs.',
+      technologies: ['React', 'Node.js', 'JavaScript', 'REST APIs', 'PostgreSQL', 'AWS']
+    },
+    'fantastic-thinking': {
+      title: 'Fantastic Thinking',
+      logo: 'images/clients/7.png',
+      description: 'Front-End Developer at Fantastic Thinking, London, UK. Utilized JavaScript task runner and automated CSS with Grunt, Node, Bower, and various JavaScript libraries. Worked with C# and .NET CMS - EPIServer, organized projects under Agile development practice, and designed UI interfaces for responsive mobile sites using jQuery and SASS. Created rich application websites using Angular, Node, and Yeoman, and incorporated accessibility for HTML into sites for hearing impaired users.',
+      technologies: ['JavaScript', 'Grunt', 'Node.js', 'Bower', 'C#', '.NET', 'EPIServer', 'jQuery', 'SASS', 'Angular', 'Yeoman', 'Susy', 'BitBucket', 'JIRA']
+    },
+    'intouch-solutions': {
+      title: 'InTouch Solutions',
+      logo: 'images/clients/8.png',
+      description: 'Built customer engagement solutions for InTouch Solutions, developing web applications and mobile interfaces. Focused on creating seamless user experiences and integrating various communication channels.',
+      technologies: ['Angular', 'Node.js', 'JavaScript', 'SQL Server', 'Azure', 'REST APIs']
+    },
+    'calabash': {
+      title: 'Calabash',
+      logo: 'images/clients/9.png',
+      description: 'Contributed to mobile testing solutions for Calabash, working on automated testing frameworks and quality assurance tools. Focused on improving testing efficiency and cross-platform compatibility.',
+      technologies: ['Ruby', 'JavaScript', 'Docker', 'Jenkins', 'iOS', 'Android']
+    },
+    'infinity': {
+      title: 'Infinity Systems',
+      logo: 'images/clients/10.png',
+      description: 'Developed cloud infrastructure solutions for Infinity Systems, working on scalable applications and deployment automation. Focused on improving system reliability and performance optimization.',
+      technologies: ['Node.js', 'Docker', 'AWS', 'JavaScript', 'MySQL', 'Monitoring']
+    },
+    'call-one': {
+      title: 'Call One',
+      logo: 'images/clients/11.png',
+      description: 'Built communication solutions for Call One, developing web and mobile applications for voice and video calling services. Focused on creating reliable and user-friendly communication platforms.',
+      technologies: ['React', 'Node.js', 'JavaScript', 'WebRTC', 'PostgreSQL', 'Docker']
+    },
+    'stylized-ci': {
+      title: 'CI Solutions',
+      logo: 'images/clients/12.png',
+      description: 'Worked on continuous integration and deployment solutions for CI Solutions, developing automation tools and build pipelines. Focused on improving development workflows and deployment efficiency.',
+      technologies: ['Node.js', 'Docker', 'Jenkins', 'JavaScript', 'Git', 'AWS']
+    }
+  };
+  
+  // Modal functionality
+  const modal = document.getElementById('clientModal');
+  const modalTitle = document.getElementById('clientModalTitle');
+  const modalLogo = document.getElementById('clientModalLogo');
+  const modalDescription = document.getElementById('clientModalDescription');
+  const modalTech = document.getElementById('clientModalTech');
+  const closeBtn = document.querySelector('.client-modal-close');
+  
+  // Add click event listeners to all client logos
+  document.querySelectorAll('[data-client]').forEach(element => {
+    element.addEventListener('click', function() {
+      const clientId = this.getAttribute('data-client');
+      const client = clientData[clientId];
+      
+      if (client) {
+        modalTitle.textContent = client.title;
+        modalLogo.src = client.logo;
+        modalLogo.alt = client.title;
+        modalDescription.textContent = client.description;
+        
+        // Clear and populate tech tags
+        modalTech.innerHTML = '';
+        client.technologies.forEach(tech => {
+          const tag = document.createElement('span');
+          tag.className = 'tech-tag';
+          tag.textContent = tech;
+          modalTech.appendChild(tag);
+        });
+        
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+    });
+  });
+  
+  // Close modal functionality
+  closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+  
+  // Close modal when clicking outside
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
   
   
   

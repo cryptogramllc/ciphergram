@@ -4,7 +4,7 @@ head
   meta(charset="utf-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
   meta(name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1")
-  meta(name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps")
+  meta(name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps, Managed SOC, Compliance Services, SOC 2, HIPAA, GDPR, PCI DSS, Security Training, Data Analytics, Cloud Architecture, Full Stack Development, Mobile App Development, Web Application Development, Enterprise Software, IT Strategy, Business Technology Solutions")
   meta(name="description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(name="author" content="Ciphergram.io")
   meta(name="language" content="English")
@@ -22,13 +22,21 @@ head
   meta(property="og:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
   meta(property="og:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(property="og:type" content="website")
-  meta(property="og:url" content="https://ciphergram.io")
+  meta(property="og:url" content="https://ciphergram.io#{typeof canonicalUrl !== 'undefined' ? canonicalUrl : ''}")
   meta(property="og:image" content="https://ciphergram.io/images/og-image.jpg")
+  meta(property="og:image:width" content="1200")
+  meta(property="og:image:height" content="630")
+  meta(property="og:image:alt" content="Ciphergram - Cybersecurity and Software Solutions")
+  meta(property="og:site_name" content="Ciphergram")
+  meta(property="og:locale" content="en_US")
   // Twitter Card
   meta(name="twitter:card" content="summary_large_image")
   meta(name="twitter:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
   meta(name="twitter:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(name="twitter:image" content="https://ciphergram.io/images/og-image.jpg")
+  meta(name="twitter:image:alt" content="Ciphergram - Cybersecurity and Software Solutions")
+  meta(name="twitter:site" content="@ciphergram")
+  meta(name="twitter:creator" content="@ciphergram")
   // Structured Data (JSON-LD)
   script(type="application/ld+json").
     {
@@ -75,25 +83,73 @@ head
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Cybersecurity Services"
+              "name": "Cybersecurity Services",
+              "description": "Comprehensive cybersecurity solutions including managed SOC, compliance services, and security training"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Software Development"
+              "name": "Software Development",
+              "description": "Full-stack development services including web applications, mobile apps, and AI integration"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "IT Consulting"
+              "name": "IT Consulting",
+              "description": "Strategic IT consulting, cloud architecture, and digital transformation services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI & Rapid Prototyping",
+              "description": "Generative AI solutions and rapid prototyping services for accelerated development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Data Analytics",
+              "description": "Data analytics and business intelligence solutions powered by AI"
             }
           }
         ]
-      }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Orlando",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "London",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "United Kingdom"
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Cybersecurity",
+        "Software Development",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Data Analytics",
+        "IT Consulting",
+        "Compliance Services",
+        "Managed SOC",
+        "Security Training"
+      ]
     }
   // Favicon
   link(rel="icon" href="/images/favicon.ico" type="image/x-icon")

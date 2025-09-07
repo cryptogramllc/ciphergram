@@ -47,13 +47,102 @@ body
             .row
               .col-md-12.col-sm-12
                 .fes4-box.wow.fadeIn(data-wow-delay='200ms')
-                  {{ image }}
                   h2.section-title
-                    span.bold.title {{ title }}
-                    span.bold.right.small.date  {{ date }}
+                    span.bold.title Blog Post
+                    span.bold.right.small.date
             .row
               .col-md-12.col-sm-12.pb-10
                 .fes5-box.wow.fadeIn(data-wow-delay='200ms')
-                  .main-content {{ content }}
+                  .main-content
+                    p Loading blog post content...
     include ../includes/footer.jade
 include ../includes/scripts/js.jade
+script.
+    $(document).ready(function() {
+        function getBlogSlugFromURL() {
+            const path = window.location.pathname;
+            // Extract the blog slug from URL like /article/2023/10/24/addressing-epic's-healthcare-crm/
+            const parts = path.split('/');
+            if (parts.length >= 5 && parts[1] === 'article') {
+                return parts.slice(2).join('/'); // Get everything after /article/
+            }
+            return null;
+        }
+        
+        function fetchBlogPost(slug) {
+            return new Promise((resolve, reject) => {
+                const url = `https://h38fikktw7.execute-api.us-east-1.amazonaws.com/prod/items/${slug}`;
+                
+                $.ajax({
+                    url: url, 
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        resolve(data);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('API request failed:', error);
+                        reject(error);
+                    }
+                });
+            });
+        }
+
+        async function loadBlogPost() {
+            try {
+                const slug = getBlogSlugFromURL();
+                
+                if (!slug) {
+                    // If no valid slug, redirect to blog index
+                    window.location.href = '/blog';
+                    return;
+                }
+                
+                const response = await fetchBlogPost(slug);
+                
+                if (response && response.title) {
+                    // Update page title
+                    document.title = `${response.title} | Ciphergram Blog`;
+                    
+                    // Update content
+                    $('h2.section-title span.title').html(response.title);
+                    $('h2.section-title span.date').html(response.date || '');
+                    
+                    // Update main content
+                    let content = '';
+                    if (response.image) {
+                        content += `<div class="blog-post-image" style="background-image: url(${response.image}); height: 400px; background-size: cover; background-position: center; margin-bottom: 30px; border-radius: 8px;"></div>`;
+                    }
+                    content += `<div class="blog-post-content">${response.content || 'Content not available.'}</div>`;
+                    
+                    $('.main-content').html(content);
+                } else {
+                    // Show error message
+                    $('h2.section-title span.title').html('Blog Post Not Found');
+                    $('h2.section-title span.date').html('');
+                    $('.main-content').html(`
+                        <div class="blog-error">
+                            <h3>Sorry, this blog post could not be found.</h3>
+                            <p>The requested blog post may have been moved or deleted.</p>
+                            <p><a href="/blog" class="btn btn-md btn-color">← Back to Blog</a></p>
+                        </div>
+                    `);
+                }
+            } catch (error) {
+                console.error('Error loading blog post:', error);
+                // Show error message
+                $('h2.section-title span.title').html('Error Loading Post');
+                $('h2.section-title span.date').html('');
+                $('.main-content').html(`
+                    <div class="blog-error">
+                        <h3>Sorry, there was an error loading this blog post.</h3>
+                        <p>Please try again later or <a href="/blog">return to the blog</a>.</p>
+                        <p><a href="/blog" class="btn btn-md btn-color">← Back to Blog</a></p>
+                    </div>
+                `);
+            }
+        }
+
+        // Load blog post content
+        loadBlogPost();
+    });

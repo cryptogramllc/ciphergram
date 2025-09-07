@@ -1,0 +1,332 @@
+// JS begin
+// jQuery
+script(src='/js/jquery-1.11.2.min.js')
+// Include all compiled plugins (below), or include individual files as needed
+script(src='/js/bootstrap.min.js')
+// MAGNIFIC POPUP
+script(src='/js/jquery.magnific-popup.min.js')
+// PORTFOLIO SCRIPTS
+script(src='/js/isotope.pkgd.min.js')
+script(src='/js/imagesloaded.pkgd.min.js')
+script(src='/js/masonry.pkgd.min.js')
+// COUNTER
+script(src='/js/jquery.countTo.js')
+// APPEAR
+script(src='/js/jquery.appear.js')
+// GOOLE MAP
+script(src='/js/gmap3.min.js')
+//if lt IE 10script(src='/js/jquery.placeholder.js')
+// FORMS VALIDATION
+script(src='/js/jquery.validate.min.js')
+script.
+  // Simple Contact Form Handler
+  jQuery(document).ready(function($) {
+      'use strict';
+  
+      $('#contact-form').on('submit', function(e) {
+          e.preventDefault();
+          
+          var $form = $(this);
+          var $submitButton = $form.find('button[type="submit"]');
+          var $successMessage = $('#contactSuccess');
+          var $errorMessage = $('#contactError');
+          
+          // Hide previous messages
+          $successMessage.addClass('hidden');
+          $errorMessage.addClass('hidden');
+          
+          // Disable submit button and show loading state
+          $submitButton.prop('disabled', true).text('SENDING...');
+          
+          // Get form data
+          var formData = {
+              name: $('#name').val(),
+              email: $('#email').val(),
+              message: $('#message').val()
+          };
+          
+          // Simple validation
+          if (!formData.name || !formData.email || !formData.message) {
+              $errorMessage.removeClass('hidden');
+              $submitButton.prop('disabled', false).text('SEND MESSAGE');
+              return;
+          }
+          
+          // For local testing - simulate successful submission
+          // In production, this will submit to AWS Lambda
+          if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+              // Local testing - simulate success
+              setTimeout(function() {
+                  $successMessage.removeClass('hidden');
+                  $form[0].reset();
+                  
+                  // Scroll to success message
+                  $('html, body').animate({
+                      scrollTop: $successMessage.offset().top - 100
+                  }, 500);
+                  
+                  $submitButton.prop('disabled', false).text('SEND MESSAGE');
+                  
+                  console.log('Local test - Form data:', formData);
+              }, 1000);
+          } else {
+              // Production - submit to AWS Lambda
+              $.ajax({
+                  type: 'POST',
+                  url: 'https://w2wmida0bj.execute-api.us-east-1.amazonaws.com/prod/contact',
+                  data: JSON.stringify(formData),
+                  contentType: 'application/json',
+                  dataType: 'json',
+                  success: function(response) {
+                      $successMessage.removeClass('hidden');
+                      $form[0].reset();
+                      
+                      // Scroll to success message
+                      $('html, body').animate({
+                          scrollTop: $successMessage.offset().top - 100
+                      }, 500);
+                  },
+                  error: function(xhr, status, error) {
+                      $errorMessage.removeClass('hidden');
+                      
+                      // Scroll to error message
+                      $('html, body').animate({
+                          scrollTop: $errorMessage.offset().top - 100
+                      }, 500);
+                      
+                      console.error('AWS Lambda error:', xhr, status, error);
+                  },
+                  complete: function() {
+                      $submitButton.prop('disabled', false).text('SEND MESSAGE');
+                  }
+              });
+          }
+      });
+      
+      // Hide messages when user starts typing
+      $('.controled').on('keyup', function() {
+          $('#contactSuccess, #contactError').addClass('hidden');
+      });
+  });
+// OWL CAROUSEL
+script(src='/js/owl.carousel.min.js')
+// MAIN SCRIPT
+script(src='/js/main.js')
+// REVOSLIDER SCRIPTS
+// SLIDER REVOLUTION 4.x SCRIPTS
+script(src='/rs-plugin/js/jquery.themepunch.tools.min.js')
+script(src='/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js')
+script(src='/js/jquery.nav.js')
+// SLIDER REVOLUTION INIT
+script.
+  jQuery(document).ready(function() {
+  if ( (navigator.appVersion.indexOf("Win")!=-1) && ( ieDetect == false ) ) {
+  jQuery('#rs-fullwidth').revolution(
+  {
+  dottedOverlay:"none",
+  delay:16000,
+  startwidth:1170,
+  startheight:665,
+  hideThumbs:200,
+  thumbWidth:100,
+  thumbHeight:50,
+  thumbAmount:5,
+  //fullScreenAlignForce: "off",
+  navigationType:"none",
+  navigationArrows:"solo",
+  navigationStyle:"preview4",
+  hideTimerBar:"on",
+  touchenabled:"on",
+  onHoverStop:"on",
+  swipe_velocity: 0.7,
+  swipe_min_touches: 1,
+  swipe_max_touches: 1,
+  drag_block_vertical: false,
+  parallax:"scroll",
+  parallaxBgFreeze:"on",
+  parallaxLevels:[45,40,35,50],
+  parallaxDisableOnMobile:"on",
+  keyboardNavigation:"off",
+  navigationHAlign:"center",
+  navigationVAlign:"bottom",
+  navigationHOffset:0,
+  navigationVOffset:20,
+  soloArrowLeftHalign:"left",
+  soloArrowLeftValign:"center",
+  soloArrowLeftHOffset:20,
+  soloArrowLeftVOffset:0,
+  soloArrowRightHalign:"right",
+  soloArrowRightValign:"center",
+  soloArrowRightHOffset:20,
+  soloArrowRightVOffset:0,
+  shadow:0,
+  fullWidth:"on",
+  fullScreen:"off",
+  spinner:"spinner4",
+  stopLoop:"off",
+  stopAfterLoops:-1,
+  stopAtSlide:-1,
+  shuffle:"off",
+  autoHeight:"off",
+  forceFullWidth:"off",
+  hideThumbsOnMobile:"off",
+  hideNavDelayOnMobile:1500,
+  hideBulletsOnMobile:"off",
+  hideArrowsOnMobile:"off",
+  hideThumbsUnderResolution:0,
+  hideSliderAtLimit:0,
+  hideCaptionAtLimit:0,
+  hideAllCaptionAtLilmit:0,
+  startWithSlide:0,
+  //fullScreenOffsetContainer: ""
+  });
+  } else {
+  jQuery('#rs-fullwidth').revolution(
+  {
+  dottedOverlay:"none",
+  delay:16000,
+  startwidth:1170,
+  startheight:760,
+  hideThumbs:200,
+  thumbWidth:100,
+  thumbHeight:50,
+  thumbAmount:5,
+  navigationType:"none",
+  navigationArrows:"solo",
+  navigationStyle:"preview4",
+  hideTimerBar:"on",
+  touchenabled:"on",
+  onHoverStop:"on",
+  swipe_velocity: 0.7,
+  swipe_min_touches: 1,
+  swipe_max_touches: 1,
+  drag_block_vertical: false,
+  parallax:"mouse",
+  parallaxBgFreeze:"on",
+  parallaxLevels:[0],
+  parallaxDisableOnMobile:"on",
+  keyboardNavigation:"off",
+  navigationHAlign:"center",
+  navigationVAlign:"bottom",
+  navigationHOffset:0,
+  navigationVOffset:20,
+  soloArrowLeftHalign:"left",
+  soloArrowLeftValign:"center",
+  soloArrowLeftHOffset:20,
+  soloArrowLeftVOffset:0,
+  soloArrowRightHalign:"right",
+  soloArrowRightValign:"center",
+  soloArrowRightHOffset:20,
+  soloArrowRightVOffset:0,
+  shadow:0,
+  fullWidth:"on",
+  fullScreen:"off",
+  spinner:"spinner4",
+  stopLoop:"off",
+  stopAfterLoops:-1,
+  stopAtSlide:-1,
+  shuffle:"off",
+  autoHeight:"off",
+  forceFullWidth:"off",
+  hideThumbsOnMobile:"off",
+  hideNavDelayOnMobile:1500,
+  hideBulletsOnMobile:"off",
+  hideArrowsOnMobile:"off",
+  hideThumbsUnderResolution:0,
+  hideSliderAtLimit:0,
+  hideCaptionAtLimit:0,
+  hideAllCaptionAtLilmit:0,
+  startWithSlide:0,
+  });
+  }
+  });	//ready
+script.
+  $(document).ready(function(){
+      $('#contact-form').submit(function(event){
+          event.preventDefault();
+          let $data = $(this).serializeArray();
+          let $name = $data[0].value;
+          let $email = $data[1].value;
+          let $message = $data[2].value;
+          let incomplete = ($name.length == 0 || $email.length == 0 || $message.length == 0);
+          if (!$email.match(/^[^@]+@[^@]+$/)) {
+              console.log('Not sending: invalid email address');
+              $('.alert').addClass('hidden');
+              $('.alert-danger').removeClass('hidden');
+              incomplete = true;
+          }
+          if(!incomplete){ 
+              console.log('processing')
+              let  payload = { 
+                  name : $name,
+                  email : $email,
+                  message: $message
+              }
+              const API_URL =
+                  "https://8syk5uud37.execute-api.us-east-1.amazonaws.com/prod/contact";
+              $.ajax({
+                  contentType: 'application/json',
+                  data: JSON.stringify(payload),
+                  dataType: 'json',
+                  type: 'POST',
+                  url: API_URL,
+              })
+              .done((data) => {
+                  console.log(data);
+                  $('.alert').addClass('hidden');
+                  $('.alert-success').removeClass('hidden');
+              })
+              .fail(() => {});
+  
+  
+          }
+      });
+  });
+script.
+  $(document).ready(function(){
+      $('.lightbox-item .icon_search').click(function(event){
+          const $this = $(event.target);
+          const $html = $this.closest('.port-item').find('.gallery-content').html();
+          $('.mfp-more-info').fadeIn();
+          $('.mfp-text').fadeIn();
+          $('.mfp-text-inner').html($html); 
+      });
+      $('.mfp-more-info').click(function(event){
+          $('.mfp-text').fadeIn();
+          $('.mfp-more-info').fadeOut();
+      });
+      $('body').on('click', function(event){
+          $this = $(event.target);
+          $className = $this.context.className;
+          console.log($className);
+          if($className.includes("mfp-container") || $className.includes("mfp-close")) {
+              $('.mfp-more-info').fadeOut();
+              $('.mfp-text').fadeOut();
+          }
+         
+      });
+      $('.mfp-text-close').click(function(){
+          $('.mfp-more-info').fadeIn();
+          $('.mfp-text').fadeOut();
+      });
+  });
+// JS end
+script.
+  $(document).ready(function(){
+     let $url = window.location.pathname.split('/')[1].replace('.html', '');
+     $url === 'index' ? $url = '' : $url = $url;
+      console.log("🚀 ~ file: js.jade:255 ~ $ ~  $url:",  $url)
+      if($url.length > 0 ){ 
+        $('#nav').addClass('dark-bg');
+      }
+      if($url !== 'index') { 
+         $('#nav-onepage a').each(function() {
+            var href = $(this).attr('href');
+            // Check if the href is a fragment identifier (starts with #)
+            if (href && href.startsWith('#')) {
+                // Prepend "index.html" to the href
+                $(this).attr('href', 'index.html' + href);
+            }
+         });
+      }
+  });

@@ -82,8 +82,11 @@ body
             // PORTFOLIO SECTION 1 GALLERY
             include ./includes/clients.jade
 
+            // PRICING SECTION
+            include ./includes/pricing.jade
+
             // CLIENTS 1 & TESTIMONIALS 1
-            include ./includes/ourwork.jade
+            // Portfolio section removed
             // WORK PROCESS 1
             //- include ./includes/process.jade
 
@@ -146,4 +149,18 @@ body
             button(title="Close (Esc)", type="button", class="mfp-text-close-button") ×
         // End BG
     // End wrap
+
+    // Client Work Modal
+    #clientModal.client-modal
+        .client-modal-content
+            span.client-modal-close ×
+            .client-modal-header
+                img#clientModalLogo(src="", alt="Client Logo", class="client-modal-logo")
+                h2#clientModalTitle.client-modal-title
+            .client-modal-body
+                p#clientModalDescription.client-modal-description
+                .client-modal-tech
+                    h4 Technologies Used:
+                    #clientModalTech.tech-tags
+
 include ./includes/scripts/js.jade

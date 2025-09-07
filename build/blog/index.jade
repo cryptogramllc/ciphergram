@@ -1,16 +1,10 @@
 doctype html
-head
-    title Ciphergram - Blog
-    meta(charset='utf-8')
-    //
-        if IEmeta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='robots' content='blog, follow')
-    meta(name='keywords' content='Ciphergram, Blog, Orlando IoT, London IoT, Amazon Web Services, Web Development, Cloud Services, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Cybersecurity.')
-    meta(name='description' content='Blog - International consultancy based in Orlando, IL specializing in IT Business Solutions and Fullstack Application developement, Cloud Computing, and Emerging Technologies. Having assisted dozens of prestigous companies around the world, we combine our years of experience to deliver the most effective solutions tailored to ensure successful business outcome and growth. From ideation to launch, we design, strategize and create high performing, digitally transformative applications with stunning interfaces, seamless user experience and dynamic functionalities.')
-    meta(name='author' content='Ciphergram.io')
-    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
-    // FAVICONS
-    include ../includes/tags/css.jade
+include ../includes/head.jade
+- var pageTitle = "Blog | Ciphergram - Latest Insights on Cybersecurity & Technology"
+- var pageDescription = "Stay updated with the latest insights on cybersecurity, software development, AI, and IT consulting from Ciphergram's expert team. Read our blog for industry trends, best practices, and technology solutions."
+- var canonicalUrl = "/blog"
+- var blogJsonLd = '{"@context":"https://schema.org","@type":"Blog","name":"Ciphergram Blog","description":"Latest insights on cybersecurity, software development, AI, and IT consulting","url":"https://ciphergram.io/blog","publisher":{"@type":"Organization","name":"Ciphergram","logo":{"@type":"ImageObject","url":"https://ciphergram.io/images/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ciphergram.io/blog"}}'
+- var currentPage = 'blog'
 body
     // LOADER
     #loader-overflow
@@ -56,6 +50,10 @@ body
                   .main-content
     include ../includes/footer.jade
 include ../includes/scripts/js.jade
+// Blog-specific structured data
+if typeof blogJsonLd !== 'undefined'
+  script(type="application/ld+json").
+    !{blogJsonLd}
 script.
     $(document).ready(function() {
         function snippet(text, wordLimit) {
@@ -68,56 +66,85 @@ script.
         function getUUIDFromURL() {
             const fullURL = window.location.href;
             const urlParts = fullURL.split('?');
-            if (urlParts.length > 0) {
+            if (urlParts.length > 1) {
                 return urlParts[1];
             }
-            return null;
+            return '';
         }
         
         function fetchContent(uuid) { 
-           try {
+            return new Promise((resolve, reject) => {
                 const id = uuid || '';
                 const url = `https://h38fikktw7.execute-api.us-east-1.amazonaws.com/prod/items/${id}`;
-                const response = $.ajax({
-                    url, 
+                
+                $.ajax({
+                    url: url, 
                     method: 'GET',
-                    async: false, // Set async to false for synchronous request
-                }).responseText;
-                return response;
+                    dataType: 'json',
+                    success: function(data) {
+                        resolve(data);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('API request failed:', error);
+                        reject(error);
+                    }
+                });
+            });
+        }
+
+        async function loadBlogContent() {
+            try {
+                const uuid = getUUIDFromURL();
+                const response = await fetchContent(uuid);
+                
+                if (response && Array.isArray(response)) { 
+                    $('h2.section-title span.title').html('Blog');
+                    $('h2.section-title span.date').html('');
+                    $('.main-content').html('<ul class="blog-list"></ul>');
+                    let blogContent = '';
+
+                    $.each(response, function(index, item) {
+                        const { uuid, title, image, content, date, link } = item;
+                        const snip = snippet(content, 50);
+                        blogContent += `<li class="blog-item">
+                                            <a href="/article.html?uuid=${encodeURIComponent(uuid)}">
+                                                <div class="blog-item-image" style="background-image: url(${image})"></div>
+                                                <div class="blog-item-content">
+                                                    <span class="title"><h1>${title}</h1></span>
+                                                    <span class="date right">${date}</span>
+                                                    <div class="snippet">${snip}...</div>
+                                                </div>
+                                            </a>
+                                        </li>`;
+                    });
+                    $('.blog-list').html(blogContent);
+                } else {
+                    // Show fallback content if API fails
+                    $('h2.section-title span.title').html('Blog');
+                    $('h2.section-title span.date').html('');
+                    $('.main-content').html(`
+                        <div class="blog-fallback">
+                            <h3>Welcome to Our Blog</h3>
+                            <p>We're currently updating our blog content. Please check back soon for the latest insights on cybersecurity, software development, and IT consulting.</p>
+                            <p>In the meantime, feel free to <a href="/index.html#contact-link">contact us</a> with any questions.</p>
+                        </div>
+                    `);
+                }
             } catch (error) {
-            console.error('An error occurred:', error);
+                console.error('Error loading blog content:', error);
+                // Show fallback content
+                $('h2.section-title span.title').html('Blog');
+                $('h2.section-title span.date').html('');
+                $('.main-content').html(`
+                    <div class="blog-fallback">
+                        <h3>Welcome to Our Blog</h3>
+                        <p>We're currently updating our blog content. Please check back soon for the latest insights on cybersecurity, software development, and IT consulting.</p>
+                        <p>In the meantime, feel free to <a href="/index.html#contact-link">contact us</a> with any questions.</p>
+                    </div>
+                `);
             }
         }
 
-        (async function () {
-            const uuid = getUUIDFromURL();
-            const response = await fetchContent(uuid);
-            if (response) {
-                const parsedJson = JSON.parse(response);
-                if(Array.isArray(parsedJson)) { 
-                        $('h2.section-title span.title').html('Blog');
-                        $('h2.section-title span.date').html('');
-                        $('.main-content').html('<ul class="blog-list"></ul>');
-                        let blogContent = ''
-
-                        $.each(parsedJson, function(index, item) {
-                            const { uuid, title, image, content, date, link } = item;
-                            const snip = snippet(content, 50);
-                            blogContent += `<li class="blog-item">
-                                                <a href="/${link}">
-                                                    <div class="blog-item-image" style="background-image: url(${image})"></div>
-                                                    <div class="blog-item-content">
-                                                        <span class="title"><h1>${title}</h1></span>
-                                                        <span class="date right">${date}</span>
-                                                        <div class="snippet">${snip}...</div>
-                                                    </div>
-                                                </a>
-                                            </li>`;
-                        });
-                        $('.blog-list').html(blogContent);
-                }
-            } else {
-                console.error('API request failed or returned an empty response');
-            }
-        })();
+        // Load blog content
+        loadBlogContent();
     });

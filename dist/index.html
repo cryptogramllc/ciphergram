@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps">
+  <meta name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps, Managed SOC, Compliance Services, SOC 2, HIPAA, GDPR, PCI DSS, Security Training, Data Analytics, Cloud Architecture, Full Stack Development, Mobile App Development, Web Application Development, Enterprise Software, IT Strategy, Business Technology Solutions">
   <meta name="description" content="Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.">
   <meta name="author" content="Ciphergram.io">
   <meta name="language" content="English">
@@ -25,11 +25,19 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ciphergram.io">
   <meta property="og:image" content="https://ciphergram.io/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ciphergram - Cybersecurity and Software Solutions">
+  <meta property="og:site_name" content="Ciphergram">
+  <meta property="og:locale" content="en_US">
   <!-- Twitter Card-->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ciphergram | Cybersecurity &amp; Software Solutions">
   <meta name="twitter:description" content="Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.">
   <meta name="twitter:image" content="https://ciphergram.io/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Ciphergram - Cybersecurity and Software Solutions">
+  <meta name="twitter:site" content="@ciphergram">
+  <meta name="twitter:creator" content="@ciphergram">
   <!-- Structured Data (JSON-LD)-->
   <script type="application/ld+json">
     {
@@ -76,25 +84,73 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Cybersecurity Services"
+              "name": "Cybersecurity Services",
+              "description": "Comprehensive cybersecurity solutions including managed SOC, compliance services, and security training"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Software Development"
+              "name": "Software Development",
+              "description": "Full-stack development services including web applications, mobile apps, and AI integration"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "IT Consulting"
+              "name": "IT Consulting",
+              "description": "Strategic IT consulting, cloud architecture, and digital transformation services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI & Rapid Prototyping",
+              "description": "Generative AI solutions and rapid prototyping services for accelerated development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Data Analytics",
+              "description": "Data analytics and business intelligence solutions powered by AI"
             }
           }
         ]
-      }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Orlando",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "London",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "United Kingdom"
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Cybersecurity",
+        "Software Development",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Data Analytics",
+        "IT Consulting",
+        "Compliance Services",
+        "Managed SOC",
+        "Security Training"
+      ]
     }
   </script>
   <!-- Favicon-->
@@ -112,6 +168,10 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <!-- GOOGLE FONT-->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700" rel="stylesheet" type="text/css">
+  <!-- Preload critical resources-->
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="/js/jquery-1.11.2.min.js" as="script">
+  <link rel="preload" href="/js/bootstrap.min.js" as="script">
   <!-- ICONS ELEGANT FONT & FONT AWESOME & LINEA ICONS-->
   <link rel="stylesheet" href="/css/icons-fonts.css">
   <!-- CSS THEME-->
@@ -202,12 +262,11 @@
                             <div class="main-menu-title">ABOUT</div></a></li>
                         <li><a href="https://ciphergram.io/index.html#services-link">
                             <div class="main-menu-title">SERVICES</div></a></li>
-                        <li><a href="/pricing.html">
+                        <li><a href="https://ciphergram.io/index.html#pricing-link">
                             <div class="main-menu-title">PRICING</div></a></li>
                         <li><a href="https://ciphergram.io/index.html#our-clients">
                             <div class="main-menu-title">OUR CLIENTS</div></a></li>
-                        <li><a href="https://ciphergram.io/index.html#our-work-link">
-                            <div class="main-menu-title">OUR WORK</div></a></li>
+                        <!-- OUR WORK menu item removed-->
                         <li><a href="https://ciphergram.io/index.html#contact-link">
                             <div class="main-menu-title">CONTACT</div></a></li>
                         <li><a href="/blog">
@@ -299,7 +358,15 @@
                 <div class="col-md-12 col-sm-12 pb-10">
                   <div data-wow-delay="200ms" class="fes5-box wow fadeIn">
                     <h3>Your Complete Business Technology Partner</h3>
-                    <p>Ciphergram is a full stack technology solutions company based in the heart of Orlando dedicated to delivering dynamic IT solutions with a fully managed IT approach. Empowering productivity and growth, we aim to provide complete and cutting-edge technology solutions that exceed our clients’ expectations and add value to their business.</p>
+                    <p>Ciphergram is a full stack technology solutions company based in the heart of Orlando dedicated to delivering dynamic IT solutions with a fully managed IT approach. Empowering productivity and growth, we aim to provide complete and cutting-edge technology solutions that exceed our clients' expectations and add value to their business.</p>
+                    <h4>Why Choose Ciphergram?</h4>
+                    <ul>
+                      <li>Expert team with years of experience in cybersecurity and software development</li>
+                      <li>Comprehensive solutions from AI integration to compliance services</li>
+                      <li>Proven track record with Fortune 500 companies and startups</li>
+                      <li>24/7 support and managed SOC services</li>
+                      <li>Cutting-edge technology including generative AI and rapid prototyping</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -509,126 +576,192 @@
             <!-- CLIENTS 1-->
             <div class="col-md-12">
               <div class="row client-row border-bot">
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/1.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/2.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/3.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/4.png"></div>
+                <div data-client="edf" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="EDF Energy - Full Stack Development Client" src="images/clients/1.png"></div>
+                </div>
+                <div data-client="student-room" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="The Student Room - React Native Development Client" src="images/clients/2.png"></div>
+                </div>
+                <div data-client="vmware" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="VMware - Node.js Development Client" src="images/clients/3.png"></div>
+                </div>
+                <div data-client="allstate" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Allstate Insurance - React Development Client" src="images/clients/4.png"></div>
+                </div>
+              </div>
+              <div class="row client-row border-bot">
+                <div data-client="iag" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="IAG" src="images/clients/5.png"></div>
+                </div>
+                <div data-client="interactive-investor" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Interactive Investor" src="images/clients/6.png"></div>
+                </div>
+                <div data-client="fantastic-thinking" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Fantastic Thinking" src="images/clients/7.png"></div>
+                </div>
+                <div data-client="intouch-solutions" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="InTouch Solutions" src="images/clients/8.png"></div>
+                </div>
               </div>
               <div class="row client-row">
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/5.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/6.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/7.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/8.png"></div>
-              </div>
-              <div class="row client-row">
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/9.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/10.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/11.png"></div>
-                <div class="col-xs-6 col-sm-3 text-center"><img alt="client" src="images/clients/12.png"></div>
+                <div data-client="calabash" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Calabash" src="images/clients/9.png"></div>
+                </div>
+                <div data-client="infinity" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Infinity" src="images/clients/10.png"></div>
+                </div>
+                <div data-client="call-one" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Call One" src="images/clients/11.png"></div>
+                </div>
+                <div data-client="stylized-ci" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Stylized C/I" src="images/clients/12.png"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- CLIENTS 1 & TESTIMONIALS 1-->
-      <div id="our-work-link" class="page-section max-prop">
-        <div class="relative">
-          <!-- ITEMS GRID-->
-          <ul id="items-grid" class="port-grid display-hover-on-mobile clearfix masonry">
-            <!-- Item 1-->
-            <li role="button" class="port-item mix"><a href="#">
-                <div class="port-img-overlay"><img src="images/portfolio/VMWare_Alexa.png" alt="img" class="port-main-img"></div></a>
-              <div class="port-overlay-cont">
-                <div class="port-title-cont">
-                  <h3><a href="https://www.vmware.com/" target="_blank">VMWARE</a></h3><span> <span>IoT - Smart Home Devices</span></span>
-                  <div class="gallery-content hidden">
-                    <h3><a href="https://www.vmware.com/" target="_blank">VMWARE</a></h3><span class="font-white">VMWare sought our understanding of cloud microservices to help develop and distrbute their Amazon Alexa Skill. </span><a href="https://www.amazon.com/VMWare-Education/dp/B07CZXHFJL" target="_blank">SEE IN STORE</a><br><br><i>Tech Stack: AWS LAMBDA, Serverless, and Node.js  </i>
-                  </div>
+      <!-- PRICING SECTION-->
+      <div id="pricing-link" class="page-section p-140-cont grey-light-bg clearfix">
+        <div class="container">
+          <h2 class="section-title"> <span class="bold">Pricing & Services</span></h2>
+          <h3>Transparent, Competitive Rates for Quality Solutions</h3>
+          <p>We believe in clear, upfront pricing that delivers exceptional value. Our flexible pricing models are designed to meet the diverse needs of businesses, from startups to enterprise organizations.</p>
+          <!-- Service Packages Section-->
+          <h3 class="mb-50">Service Packages</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="pricing-box wow fadeIn mb-30">
+                <div class="pricing-box-header">
+                  <h3>Startup Package</h3>
+                  <div class="price"><span class="currency">$2,500</span><span class="period">/month</span></div>
                 </div>
-                <div class="port-btn-cont"><span class="popup-multi-gallery"><a href="/images/portfolio/VMWare_Alexa.png" class="lightbox-item mr-20">
-                      <div aria-hidden="true" class="icon_search">                   </div></a></span></div>
-              </div>
-            </li>
-            <!-- Item 2-->
-            <li role="button" class="port-item mix"><a href="#">
-                <div class="port-img-overlay"><img src="images/portfolio/ii.png" alt="img" class="port-main-img"></div></a>
-              <div class="port-overlay-cont">
-                <div class="port-title-cont">
-                  <h3><a href="https://www.ii.co.uk/" target="_blank">INTERACTIVE INVESTOR</a></h3><span><span>FULLSTACK - Rebranding</span></span>
-                  <div class="gallery-content hidden">
-                    <h3><a href="https://www.ii.co.uk/" target="_blank">INTERACTIVE INVESTOR</a></h3>
-                    <p class="font-white">We aid in rebranding. London-based financial advisor and investment company, Interactive Investor, sought to re-create thier image by leveraging cutting edge web technologies and real-time data visualistion for their web and mobile apps. </p><i>Tech Stack: AWS, Websockets, Angular.js, and CSS3</i>
-                  </div>
-                </div>
-                <div class="port-btn-cont"><span class="popup-multi-gallery"><a href="/images/portfolio/ii_1.png" class="lightbox-item mr-20">
-                      <div aria-hidden="true" class="icon_search"></div></a><a href="/images/portfolio/ii_2.png"></a><a href="/images/portfolio/ii_3.png"></a></span></div>
-              </div>
-            </li>
-            <!-- Item 3-->
-            <li role="button" class="port-item mix"><a href="#">
-                <div class="port-img-overlay"><img src="images/portfolio/ba-image.png" alt="img" class="port-main-img"></div></a>
-              <div class="port-overlay-cont">
-                <div class="port-title-cont">
-                  <h3><a href="http://avios.com/" target="_blank">AVIOS (IAG)</a></h3><span><span>UI/UX & IoT </span></span>
-                  <div class="gallery-content hidden">
-                    <h3><a href="http://avios.com/" target="_blank">AVIOS (IAG)</a></h3>
-                    <h5 class="font-white summary">Ciphergram is proud to have assisted Avios Travel Rewards Programme on numerous projects for over two years, consisting of developement in UI/UX and IoT Mircoservices.</h5><span><span>UI/UX</span></span>
-                    <h5 class="font-white">In 2015, Avios rebranded their image by modernizing their web presence and booking journey for customers seeking to use their Avios points. We assisted their web transformation and delivered a well-rounded redesign for both the desktop and mobile responsive views.  </h5><i>Tech Stack: HTML5, CSS3, jQuery</i><br><br><span><span>IoT - Smart Home Devices </span></span>
-                    <h5 class="font-white">Ciphergram also assisted the innovations department by conceptualizing, building and deploying AWS microservies which facilitated the launch one of the first Amazon Alexa Skills in the UK.</h5><i>Tech Stack: AWS, Serverless, Lambda</i>
-                  </div>
-                </div>
-                <div class="port-btn-cont"><span class="popup-multi-gallery"><a href="/images/portfolio/avios_sn_1.png" class="lightbox-item mr-20">
-                      <div aria-hidden="true" class="icon_search"></div></a><a href="/images/portfolio/avios_sn_2.png"></a><a href="/images/portfolio/avios_sn_3.png"></a><a href="/images/portfolio/avios_sn_4.png"></a></span></div>
-              </div>
-            </li>
-            <!-- Item 4-->
-            <li role="button" class="port-item mix"><a href="portfolio-single1.html">
-                <div class="port-img-overlay"><img src="images/portfolio/InTouch_DFK.png" alt="img" class="port-main-img"></div></a>
-              <div class="port-overlay-cont">
-                <div class="port-title-cont">
-                  <h3><a href="portfolio-single1.html">INTOUCH SOLUTIONS</a></h3><span><span>FULLSTACK</span></span>
+                <div class="pricing-box-content">
+                  <ul>
+                    <li>Basic cybersecurity monitoring</li>
+                    <li>Monthly IT consultation (2 hours)</li>
+                    <li>Email & phone support</li>
+                    <li>Basic website maintenance</li>
+                    <li>Cloud backup setup</li>
+                  </ul><a href="#contact-link" class="btn btn-md btn-color">Get Started</a>
                 </div>
               </div>
-            </li>
-            <!-- Item 5-->
-            <li role="button" class="port-item mix"><a href="portfolio-single1.html">
-                <div class="port-img-overlay"><img src="images/portfolio/rsc.png" alt="Royal Society Of Chemistry - Display Image" class="port-main-img"></div></a>
-              <div class="port-overlay-cont">
-                <div class="port-title-cont">
-                  <h3><a href="portfolio-single1.html">FANTASTIC THINKING /<br><span> <i>ROYAL SOCIETY OF CHEMISTRY</i></span></a></h3><span><span>FULLSTACK</span></span>
-                  <div class="gallery-content hidden">
-                    <h3><a href="https://www.ii.co.uk/" target="_blank">FANTASTIC THINKING</a></h3>
-                    <p class="font-white">We specialize in a variety content management systems. At Fantastic Thinking, Ciphergram collaborated with a digital marketing team to produce a fully scalable, responsive website for their end client, The Royal Society of Chemistry. </p>
-                    <p class="font-white">Built with Episerver, RSC was able to recieved a robust product with the capacity to modify their content throughout the years. </p><i>Tech Stack: Episerver, C#, CSS3, JQuery</i>
-                  </div>
+            </div>
+            <div class="col-md-4">
+              <div class="pricing-box featured wow fadeIn mb-30">
+                <div class="pricing-box-header">
+                  <h3>Professional Package</h3>
+                  <div class="price"><span class="currency">$5,000</span><span class="period">/month</span></div>
                 </div>
-                <div class="port-btn-cont"><span class="popup-multi-gallery"><a href="/images/portfolio/ft_1.png" alt="Royal Society Of Chemistry - Main Page" class="lightbox-item mr-20">
-                      <div aria-hidden="true" class="icon_search"></div></a><a href="/images/portfolio/ft_2.png" alt="Royal Society Of Chemistry - Inner Page"></a><a href="/images/portfolio/ft_3.png" alt="Royal Society Of Chemistry - Mobile Page"></a></span></div>
-              </div>
-            </li>
-            <!-- Item 6-->
-            <li role="button" class="port-item mix"><a href="portfolio-single1.html">
-                <div class="port-img-overlay"><img src="images/portfolio/tsr.png" alt="img" class="port-main-img"></div></a>
-              <div class="port-overlay-cont">
-                <div class="port-title-cont">
-                  <h3><a href="portfolio-single1.html">THE STUDENT ROOM GROUP</a></h3><span><span>MOBILE APP</span></span>
+                <div class="pricing-box-content">
+                  <ul>
+                    <li>Advanced cybersecurity suite</li>
+                    <li>Weekly IT consultation (4 hours)</li>
+                    <li>Priority support (4-hour response)</li>
+                    <li>Custom software development (20 hours/month)</li>
+                    <li>AI integration services</li>
+                    <li>Data analytics dashboard</li>
+                  </ul><a href="#contact-link" class="btn btn-md btn-color">Get Started</a>
                 </div>
               </div>
-            </li>
-            <!-- Item 7-->
-            <li role="button" class="port-item mix"><a href="portfolio-single1.html">
-                <div class="port-img-overlay"><img src="images/portfolio/calabash.png" alt="img" class="port-main-img"></div></a>
-              <div class="port-overlay-cont">
-                <div class="port-title-cont">
-                  <h3><a href="portfolio-single1.html">CALABASH ANIMATION, INC.</a></h3><span><span>FULLSTACK</span></span>
+            </div>
+            <div class="col-md-4">
+              <div class="pricing-box wow fadeIn mb-30">
+                <div class="pricing-box-header">
+                  <h3>Enterprise Package</h3>
+                  <div class="price"><span class="currency">Custom</span><span class="period">/month</span></div>
                 </div>
-                
+                <div class="pricing-box-content">
+                  <ul>
+                    <li>Full-stack development team</li>
+                    <li>24/7 cybersecurity monitoring</li>
+                    <li>Dedicated IT manager</li>
+                    <li>Custom AI solutions</li>
+                    <li>Advanced analytics & reporting</li>
+                    <li>Unlimited consultation hours</li>
+                  </ul><a href="#contact-link" class="btn btn-md btn-color">Contact Us</a>
+                </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <!-- Rate Cards Section-->
+          <h3 class="mb-50">Hourly & Project Rates</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="rate-card wow fadeIn mb-30">
+                <h4>Development Services</h4>
+                <div class="rate-item"><span class="service">AI & Rapid Prototyping</span><span class="rate">$150/hour</span></div>
+                <div class="rate-item"><span class="service">Custom Software Development</span><span class="rate">$125/hour</span></div>
+                <div class="rate-item"><span class="service">Web Development</span><span class="rate">$100/hour</span></div>
+                <div class="rate-item"><span class="service">Mobile App Development</span><span class="rate">$120/hour</span></div>
+                <div class="rate-item"><span class="service">Database Design & Optimization</span><span class="rate">$110/hour</span></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rate-card wow fadeIn mb-30">
+                <h4>Consulting & Support</h4>
+                <div class="rate-item"><span class="service">IT Strategy Consulting</span><span class="rate">$200/hour</span></div>
+                <div class="rate-item"><span class="service">Cybersecurity Assessment</span><span class="rate">$175/hour</span></div>
+                <div class="rate-item"><span class="service">Cloud Architecture</span><span class="rate">$150/hour</span></div>
+                <div class="rate-item"><span class="service">Data Analytics</span><span class="rate">$140/hour</span></div>
+                <div class="rate-item"><span class="service">Technical Support</span><span class="rate">$95/hour</span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Project-Based Pricing-->
+          <h3 class="mb-50">Project-Based Pricing</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="project-package wow fadeIn mb-30">
+                <h4>Website Development</h4>
+                <div class="price-range">$3,000 - $15,000</div>
+                <p>Custom website development with responsive design, SEO optimization, and content management system.</p>
+                <ul>
+                  <li>Responsive design</li>
+                  <li>SEO optimization</li>
+                  <li>Content management</li>
+                  <li>3 months support</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-package wow fadeIn mb-30">
+                <h4>AI Integration</h4>
+                <div class="price-range">$5,000 - $25,000</div>
+                <p>AI-powered features including chatbots, recommendation engines, and intelligent automation.</p>
+                <ul>
+                  <li>Custom AI models</li>
+                  <li>API integration</li>
+                  <li>Training & documentation</li>
+                  <li>6 months support</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-package wow fadeIn mb-30">
+                <h4>Cybersecurity Audit</h4>
+                <div class="price-range">$2,500 - $10,000</div>
+                <p>Comprehensive security assessment including penetration testing and vulnerability analysis.</p>
+                <ul>
+                  <li>Security assessment</li>
+                  <li>Penetration testing</li>
+                  <li>Compliance review</li>
+                  <li>Remediation plan</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Call to Action-->
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h3 class="mb-30">Ready to Get Started?</h3>
+              <p class="mb-30">Contact us for a custom quote tailored to your specific needs and budget.</p><a href="#contact-link" class="btn btn-lg btn-color">Request Custom Quote</a>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- VIEW MORE PROJECTS-->
+      <!-- CLIENTS 1 & TESTIMONIALS 1-->
+      <!-- Portfolio section removed-->
       <!-- WORK PROCESS 1-->
       <!-- TESTIMONIALS SECTION-->
       <!-- TRUST BADGES SECTION-->
@@ -779,6 +912,21 @@
     <!-- End BG-->
   </div>
   <!-- End wrap-->
+  <!-- Client Work Modal-->
+  <div id="clientModal" class="client-modal">
+    <div class="client-modal-content"><span class="client-modal-close">×</span>
+      <div class="client-modal-header"><img id="clientModalLogo" src="" alt="Client Logo" class="client-modal-logo">
+        <h2 id="clientModalTitle" class="client-modal-title"></h2>
+      </div>
+      <div class="client-modal-body">
+        <p id="clientModalDescription" class="client-modal-description"></p>
+        <div class="client-modal-tech">
+          <h4>Technologies Used:</h4>
+          <div id="clientModalTech" class="tech-tags"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <!-- JS begin-->
 <!-- jQuery-->
@@ -1142,8 +1290,142 @@
          });
       }
   });
-    
   
+</script>
+<!-- Client Modal JavaScript-->
+<script>
+  // Client work data
+  const clientData = {
+    'edf': {
+      title: 'EDF Energy',
+      logo: 'images/clients/1.png',
+      description: 'Full Stack Developer for EDF\'s Customer Consumer Usage Report Application. Assisted in developing microservices for customer-facing Web/Mobile applications focused on reports, cost-efficiency, and billing. Created server-side RESTful API scripts with scalability for high user traffic, leveraged TDD to ensure business requirements were met, and participated in Agile ceremonies including Sprint Planning and Retrospectives.',
+      technologies: ['Node.js', 'TypeScript', 'AWS Lambda', 'GraphQL', 'CloudFormation', 'CloudWatch', 'Jenkins', 'Azure Artifacts', 'Serverless', 'Mocha', 'Jasmine']
+    },
+    'student-room': {
+      title: 'The Student Room',
+      logo: 'images/clients/2.png',
+      description: 'React Native Developer for SkillSeed - Student Mental Health and Well-being Application. Developed Beta version of iOS/Android mental health app for students across various colleges. Converted UI designs into manageable components, leveraged JSON APIs on AWS for real-time data parsing, integrated complex animations using Airbnb\'s Lottie plugin, and used FastLane automation for deployment to Microsoft App Center.',
+      technologies: ['React Native', 'XCode', 'Node.js', 'GitLab', 'EBS', 'Airbnb Lottie', 'FastLane CLI', 'TypeScript']
+    },
+    'vmware': {
+      title: 'VMware',
+      logo: 'images/clients/3.png',
+      description: 'Node.js Developer for Voice Interactive Trivia Application. Created an Alexa Skill with tech trivia for users seeking VMware cloud-based SaaS certifications. Designed dialogue architecture for conversation flow and user experience, leveraged TDD to ensure product specifications were met, and collaborated remotely using Zoom, Slack, and other collaboration tools.',
+      technologies: ['AWS Lambda', 'Alexa Skills Kit', 'Serverless', 'MySQL', 'JavaScript', 'Mocha', 'Chai', 'Node.js']
+    },
+    'allstate': {
+      title: 'Allstate Insurance',
+      logo: 'images/clients/4.png',
+      description: 'React Developer at Allstate Insurance, Northbrook, IL. Worked on frontend development projects using React to build responsive and interactive user interfaces for insurance applications.',
+      technologies: ['React', 'JavaScript', 'HTML/CSS', 'Node.js']
+    },
+    'iag': {
+      title: 'International Airlines Group',
+      logo: 'images/clients/5.png',
+      description: 'Worked on aviation technology solutions for IAG, contributing to flight operations and passenger management systems. Focused on building scalable applications to handle real-time data processing and improve operational efficiency.',
+      technologies: ['React', 'Node.js', 'JavaScript', 'AWS', 'Docker', 'MySQL']
+    },
+    'interactive-investor': {
+      title: 'Interactive Investor',
+      logo: 'images/clients/6.png',
+      description: 'Developed financial technology solutions for Interactive Investor, working on trading platforms and investment management tools. Built responsive user interfaces and integrated real-time market data APIs.',
+      technologies: ['React', 'Node.js', 'JavaScript', 'REST APIs', 'PostgreSQL', 'AWS']
+    },
+    'fantastic-thinking': {
+      title: 'Fantastic Thinking',
+      logo: 'images/clients/7.png',
+      description: 'Front-End Developer at Fantastic Thinking, London, UK. Utilized JavaScript task runner and automated CSS with Grunt, Node, Bower, and various JavaScript libraries. Worked with C# and .NET CMS - EPIServer, organized projects under Agile development practice, and designed UI interfaces for responsive mobile sites using jQuery and SASS. Created rich application websites using Angular, Node, and Yeoman, and incorporated accessibility for HTML into sites for hearing impaired users.',
+      technologies: ['JavaScript', 'Grunt', 'Node.js', 'Bower', 'C#', '.NET', 'EPIServer', 'jQuery', 'SASS', 'Angular', 'Yeoman', 'Susy', 'BitBucket', 'JIRA']
+    },
+    'intouch-solutions': {
+      title: 'InTouch Solutions',
+      logo: 'images/clients/8.png',
+      description: 'Built customer engagement solutions for InTouch Solutions, developing web applications and mobile interfaces. Focused on creating seamless user experiences and integrating various communication channels.',
+      technologies: ['Angular', 'Node.js', 'JavaScript', 'SQL Server', 'Azure', 'REST APIs']
+    },
+    'calabash': {
+      title: 'Calabash',
+      logo: 'images/clients/9.png',
+      description: 'Contributed to mobile testing solutions for Calabash, working on automated testing frameworks and quality assurance tools. Focused on improving testing efficiency and cross-platform compatibility.',
+      technologies: ['Ruby', 'JavaScript', 'Docker', 'Jenkins', 'iOS', 'Android']
+    },
+    'infinity': {
+      title: 'Infinity Systems',
+      logo: 'images/clients/10.png',
+      description: 'Developed cloud infrastructure solutions for Infinity Systems, working on scalable applications and deployment automation. Focused on improving system reliability and performance optimization.',
+      technologies: ['Node.js', 'Docker', 'AWS', 'JavaScript', 'MySQL', 'Monitoring']
+    },
+    'call-one': {
+      title: 'Call One',
+      logo: 'images/clients/11.png',
+      description: 'Built communication solutions for Call One, developing web and mobile applications for voice and video calling services. Focused on creating reliable and user-friendly communication platforms.',
+      technologies: ['React', 'Node.js', 'JavaScript', 'WebRTC', 'PostgreSQL', 'Docker']
+    },
+    'stylized-ci': {
+      title: 'CI Solutions',
+      logo: 'images/clients/12.png',
+      description: 'Worked on continuous integration and deployment solutions for CI Solutions, developing automation tools and build pipelines. Focused on improving development workflows and deployment efficiency.',
+      technologies: ['Node.js', 'Docker', 'Jenkins', 'JavaScript', 'Git', 'AWS']
+    }
+  };
+  
+  // Modal functionality
+  const modal = document.getElementById('clientModal');
+  const modalTitle = document.getElementById('clientModalTitle');
+  const modalLogo = document.getElementById('clientModalLogo');
+  const modalDescription = document.getElementById('clientModalDescription');
+  const modalTech = document.getElementById('clientModalTech');
+  const closeBtn = document.querySelector('.client-modal-close');
+  
+  // Add click event listeners to all client logos
+  document.querySelectorAll('[data-client]').forEach(element => {
+    element.addEventListener('click', function() {
+      const clientId = this.getAttribute('data-client');
+      const client = clientData[clientId];
+      
+      if (client) {
+        modalTitle.textContent = client.title;
+        modalLogo.src = client.logo;
+        modalLogo.alt = client.title;
+        modalDescription.textContent = client.description;
+        
+        // Clear and populate tech tags
+        modalTech.innerHTML = '';
+        client.technologies.forEach(tech => {
+          const tag = document.createElement('span');
+          tag.className = 'tech-tag';
+          tag.textContent = tech;
+          modalTech.appendChild(tag);
+        });
+        
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+    });
+  });
+  
+  // Close modal functionality
+  closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+  
+  // Close modal when clicking outside
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
   
   
   
