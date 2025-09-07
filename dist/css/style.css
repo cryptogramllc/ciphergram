@@ -3780,16 +3780,64 @@ select.input-border {
 }
 .privacy-content .contact-info {
   background: #f8f9fa;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
   border-left: 4px solid #4b4e53;
-  margin: 20px 0;
+  margin: 30px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .privacy-content .contact-info p {
   margin: 0;
   color: #4b4e53;
   font-size: 16px;
+  line-height: 1.8;
+}
+.privacy-content .contact-info p strong {
+  color: #2c3e50;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* PRIVACY POLICY CTA SECTION
+ =====================================================*/
+.bg-gray {
+  background-color: #f8f9fa !important;
+  border-top: 1px solid #eee;
+  padding: 60px 0 !important;
+}
+
+.privacy-cta-section {
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+.privacy-cta-section .section-title {
+  color: #4b4e53;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.privacy-cta-section .section-subtitle {
+  color: #696c6f;
+  font-size: 18px;
   line-height: 1.6;
+  margin-bottom: 30px;
+}
+.privacy-cta-section .btn-primary {
+  background-color: #4b4e53;
+  border-color: #4b4e53;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.privacy-cta-section .btn-primary:hover {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* #FOOTER 2 NEW
