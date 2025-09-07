@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------
+git /*------------------------------------------------------------------
 Project:    Haswell
 Version:    2.2
 Last change:    06.09.2019
@@ -4220,12 +4220,100 @@ select.input-border {
   a {
     font-size: 11px;
     color: #7e8082;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #4b4e53;
+      text-decoration: underline;
+    }
   }
 }
 
-.footer-soc-a a {
-  font-size: 16px;
-  padding: 12px;
+.footer-soc-a {
+  margin-bottom: 20px;
+  
+  a {
+    font-size: 16px;
+    padding: 12px;
+    color: #4b4e53;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    
+    &:hover {
+      color: #0077b5; // LinkedIn blue
+      transform: translateY(-2px);
+    }
+    
+    &:nth-child(2):hover {
+      color: #1da1f2; // Twitter blue
+    }
+    
+    &:nth-child(3):hover {
+      color: #333; // GitHub black
+    }
+    
+    &:nth-child(4):hover {
+      color: #ff0000; // YouTube red
+    }
+  }
+}
+
+/* PRIVACY POLICY STYLES
+ =====================================================*/
+.privacy-content {
+  h2 {
+    color: #4b4e53;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  h3 {
+    color: #4b4e53;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    color: #696c6f;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    
+    li {
+      color: #696c6f;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+  }
+  
+  .contact-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4b4e53;
+    margin: 20px 0;
+    
+    p {
+      margin: 0;
+      color: #4b4e53;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
 }
 
 /* #FOOTER 2 NEW
