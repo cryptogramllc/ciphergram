@@ -1,0 +1,166 @@
+doctype html
+include ./includes/head.jade
+- var pageTitle = "Home | Ciphergram - Cybersecurity, Compliance & IT Consulting"
+- var pageDescription = "Leading cybersecurity, compliance services, managed SOC, security training, software development, and IT consulting for businesses in Orlando, London, and worldwide. We leverage generative AI for rapid prototyping and intelligent solutions. Secure your future with Ciphergram."
+- var canonicalUrl = "/"
+- var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What services does Ciphergram offer?","acceptedAnswer":{"@type":"Answer","text":"We provide comprehensive cybersecurity, software development, IT consulting, cloud architecture, data analytics, AI services, and identity management solutions for businesses of all sizes."}},{"@type":"Question","name":"Where is Ciphergram located?","acceptedAnswer":{"@type":"Answer","text":"We serve clients in Orlando, London, and worldwide. Our team works remotely and on-site to deliver the best solutions for your business needs."}},{"@type":"Question","name":"How can I get started with Ciphergram?","acceptedAnswer":{"@type":"Answer","text":"Contact us through our website or call us directly. We will schedule a consultation to understand your needs and provide a tailored solution."}},{"@type":"Question","name":"What industries do you serve?","acceptedAnswer":{"@type":"Answer","text":"We work with businesses across all industries, from startups to Fortune 500 companies, providing customized IT solutions that drive growth and security."}},{"@type":"Question","name":"Do you offer AI and rapid prototyping services?","acceptedAnswer":{"@type":"Answer","text":"Yes! We leverage cutting-edge generative AI technologies to accelerate development cycles, create intelligent applications, and deliver rapid prototypes that transform ideas into working solutions in days, not months."}}]}'
+- var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","address":{"@type":"PostalAddress","streetAddress":"123 Main St","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"708-517-9987","url":"https://ciphergram.io"}'
+- var currentPage = 'home'
+body
+    // LOADER
+    #loader-overflow
+        #loader3 Please enable JS
+    #wrap.boxed
+        .grey-bg
+            // Grey BG
+            //if lte IE 8
+                #ie-container
+                    #ie-cont-close
+                        a(href='#', onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;')
+                            img(src='images/ie-warn/ie-warning-close.jpg', style='border: none;', alt='Close')
+                    #ie-cont-content
+                        #ie-cont-warning
+                            img(src='images/ie-warn/ie-warning.jpg', alt='Warning!')
+                        #ie-cont-text
+                            #ie-text-bold
+                            #ie-text
+                        #ie-cont-brows
+                            a(href='http://www.firefox.com', target='_blank')
+                                img(src='images/ie-warn/ie-warning-firefox.jpg', alt='Download Firefox')
+                            a(href='http://www.opera.com/download/', target='_blank')
+                                img(src='images/ie-warn/ie-warning-opera.jpg', alt='Download Opera')
+                            a(href='http://www.apple.com/safari/download/', target='_blank')
+                                img(src='images/ie-warn/ie-warning-safari.jpg', alt='Download Safari')
+                            a(href='http://www.google.com/chrome', target='_blank')
+                                img(src='images/ie-warn/ie-warning-chrome.jpg', alt='Download Google Chrome')
+            // HEADER 1 BLACK MOBILE-NO-TRANSPARENT
+            include ./includes/header.jade
+            // REVO SLIDER FULLSCREEN 1
+            include ./includes/slider.jade
+            // ABOUT US
+            include ./includes/about.jade
+            // FEATURES 7
+            //- .page-section.grey-light-bg.clearfix
+                .fes7-img-cont.col-md-5
+                    .fes7-img(style='background-image: url(images/fes7.jpg)')
+                .container
+                    .row
+                        .col-md-6.col-md-offset-6.fes7-text-cont.p-80-cont
+                            h1
+                                span.font-light Nulla varius faucibus vestibulum. Sed imperdiet, tellus at iaculis
+                            p.mb-60
+                            .row
+                                .col-md-6.col-sm-6
+                                    .fes7-box.wow.fadeIn
+                                        .fes7-box-icon
+                                            .icon.icon-ecommerce-graph-increase
+                                        h3 SEO Friendly
+                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
+                                .col-md-6.col-sm-6
+                                    .fes7-box.wow.fadeIn(data-wow-delay='200ms')
+                                        .fes7-box-icon
+                                            .icon.icon-software-font-smallcaps
+                                        h3 Google Fonts
+                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
+                            .row
+                                .col-md-6.col-sm-6
+                                    .fes7-box.wow.fadeIn(data-wow-delay='400ms')
+                                        .fes7-box-icon
+                                            .icon.icon-basic-mixer2
+                                        h3 Tons of Shortcodes
+                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
+                                .col-md-6.col-sm-6
+                                    .fes7-box.wow.fadeIn(data-wow-delay='600ms')
+                                        .fes7-box-icon
+                                            .icon.icon-basic-bolt
+                                        h3 1500+ Icons
+                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
+                    // end of row
+   
+            // FEATURES 4
+            include ./includes/services.jade
+            // PORTFOLIO SECTION 1 GALLERY
+            include ./includes/clients.jade
+
+            // PRICING SECTION
+            include ./includes/pricing.jade
+
+            // CLIENTS 1 & TESTIMONIALS 1
+            // Portfolio section removed
+            // WORK PROCESS 1
+            //- include ./includes/process.jade
+
+            // TESTIMONIALS SECTION
+            //- include ./includes/testimonials.jade
+
+            // TRUST BADGES SECTION
+            //- include ./includes/trust-badges.jade
+
+            // LEAD MAGNET SECTION
+            //- include ./includes/lead-magnet.jade
+
+            // FAQ SECTION
+            .page-section.p-140-cont.clearfix
+                .container
+                    .row
+                        .col-md-12.text-center
+                            h2.mb-50.font-light
+                                span.font-light Frequently Asked 
+                                span Questions
+                    .row
+                        .col-md-6
+                            .fes7-box.wow.fadeIn.mb-30
+                                h3.mb-20 What services does Ciphergram offer?
+                                p.mb-0 We provide comprehensive cybersecurity, compliance services, managed SOC, security training, software development, IT consulting, cloud architecture, data analytics, and identity management solutions for businesses of all sizes.
+                        .col-md-6
+                            .fes7-box.wow.fadeIn.mb-30
+                                h3.mb-20 Where is Ciphergram located?
+                                p.mb-0 We serve clients in Orlando, London, and worldwide. Our team works remotely and on-site to deliver the best solutions for your business needs.
+                    .row
+                        .col-md-6
+                            .fes7-box.wow.fadeIn.mb-30
+                                h3.mb-20 How can I get started with Ciphergram?
+                                p.mb-0 Contact us through our website or call us directly. We'll schedule a consultation to understand your needs and provide a tailored solution.
+                        .col-md-6
+                            .fes7-box.wow.fadeIn.mb-30
+                                h3.mb-20 What industries do you serve?
+                                p.mb-0 We work with businesses across all industries, from startups to Fortune 500 companies, providing customized IT solutions that drive growth and security.
+                    .row
+                        .col-md-6.col-md-offset-3
+                            .fes7-box.wow.fadeIn.mb-30
+                                h3.mb-20 Do you offer AI and rapid prototyping services?
+                                p.mb-0 Yes! We leverage cutting-edge generative AI technologies to accelerate development cycles, create intelligent applications, and deliver rapid prototypes that transform ideas into working solutions in days, not months.
+            // CONTACT INFO
+            include ./includes/contact.jade
+            // FOOTER 1
+            include ./includes/footer.jade
+                    // LIVE CHAT WIDGET
+        //- include ./includes/live-chat.jade
+            // BACK TO TOP
+            p#back-top
+                a(href='#top', title='Back to Top')
+                    span.icon.icon-arrows-up
+    .mfp-more-info
+        strong
+            i i
+    .mfp-text
+        .mfp-text-inner
+        .mfp-text-close 
+            button(title="Close (Esc)", type="button", class="mfp-text-close-button") ×
+        // End BG
+    // End wrap
+
+    // Client Work Modal
+    #clientModal.client-modal
+        .client-modal-content
+            span.client-modal-close ×
+            .client-modal-header
+                img#clientModalLogo(src="", alt="Client Logo", class="client-modal-logo")
+                h2#clientModalTitle.client-modal-title
+            .client-modal-body
+                p#clientModalDescription.client-modal-description
+                .client-modal-tech
+                    h4 Technologies Used:
+                    #clientModalTech.tech-tags
+
+include ./includes/scripts/js.jade
