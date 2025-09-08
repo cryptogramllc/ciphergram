@@ -229,7 +229,7 @@
                     <!-- MENU ITEM-->
                     <li><a href="https://ciphergram.io/index.html#home-link">
                         <div class="main-menu-title">HOME</div></a></li>
-                    <li><a href="https://ciphergram.io/index.html#about-us-link">
+                    <li class="current"><a href="https://ciphergram.io/index.html#about-us-link">
                         <div class="main-menu-title">ABOUT</div></a></li>
                     <li><a href="https://ciphergram.io/index.html#services-link">
                         <div class="main-menu-title">SERVICES</div></a></li>
@@ -242,6 +242,9 @@
                         <div class="main-menu-title">CONTACT</div></a></li>
                     <li><a href="/blog">
                         <div class="main-menu-title">BLOG</div></a></li>
+                    <!-- CTA BUTTONS-->
+                    <li class="cta-menu-item"><a href="#quote-request" class="btn btn-sm btn-color">Security Audit</a></li>
+                    <li class="cta-menu-item"><a href="#quote-request" class="btn btn-sm btn-white">Prototype Review</a></li>
                   </ul>
                 </nav>
               </div>
@@ -298,6 +301,8 @@
     <div class="container">
       <!-- Social Links-->
       <div class="footer-soc-a"><a href="https://www.linkedin.com/company/ciphergram-ltd" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a><a href="https://twitter.com/ciphergram" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://github.com/ciphergram" title="GitHub" target="_blank"><i class="fa fa-github"></i></a><a href="https://youtube.com/ciphergram" title="YouTube" target="_blank"><i class="fa fa-youtube"></i></a></div>
+      <!-- Footer CTAs-->
+      <div class="footer-cta"><a href="#quote-request" class="btn btn-lg btn-color mr-20">Get Free Security Audit</a><a href="#quote-request" class="btn btn-lg btn-white ml-20">Book Prototype Review</a></div>
       <!-- Copyright-->
       <div class="footer-copy"><a href="http://themeforest.net/user/abcgomel/portfolio" target="_blank">&copy; CIPHERGRAM LIMITED 2019</a> | <a href="/privacy-policy.html">Privacy Policy</a></div>
     </div>
@@ -669,6 +674,48 @@
 </script>
 <!-- Client Modal JavaScript-->
 <script>
+  // QUOTE FORM FUNCTIONALITY
+  $(document).ready(function() {
+      $('#quoteForm').on('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const formData = {
+              name: $('input[name="name"]').val(),
+              email: $('input[name="email"]').val(),
+              company: $('input[name="company"]').val(),
+              project_type: $('select[name="project_type"]').val(),
+              budget_range: $('select[name="budget_range"]').val(),
+              timeline: $('select[name="timeline"]').val(),
+              project_description: $('textarea[name="project_description"]').val(),
+              additional_info: $('textarea[name="additional_info"]').val()
+          };
+          
+          // Basic validation
+          if (!formData.name || !formData.email || !formData.project_type || !formData.project_description) {
+              alert('Please fill in all required fields.');
+              return;
+          }
+          
+          // Show loading state
+          const submitBtn = $(this).find('button[type="submit"]');
+          const originalText = submitBtn.text();
+          submitBtn.text('Sending Quote Request...').prop('disabled', true);
+          
+          // Simulate form submission (replace with actual endpoint)
+          setTimeout(function() {
+              // Reset form
+              $('#quoteForm')[0].reset();
+              
+              // Show success message
+              alert('Thank you! Your quote request has been submitted. We\'ll send you a detailed quote within 24 hours.');
+              
+              // Reset button
+              submitBtn.text(originalText).prop('disabled', false);
+          }, 2000);
+      });
+  });
+  
   // Client work data
   const clientData = {
     'edf': {

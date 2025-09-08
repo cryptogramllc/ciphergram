@@ -1,7 +1,7 @@
 doctype html
 include ./includes/head.jade
 - var pageTitle = "Home | Ciphergram - Cybersecurity, Compliance & IT Consulting"
-- var pageDescription = "Leading cybersecurity, compliance services, managed SOC, security training, software development, and IT consulting for businesses in Orlando, London, and worldwide. We leverage generative AI for rapid prototyping and intelligent solutions. Secure your future with Ciphergram."
+- var pageDescription = "Secure your digital future with Ciphergram. We build bulletproof cybersecurity, AI-powered apps, and achieve SOC 2 compliance—faster and with less risk. Full-stack development meets enterprise security."
 - var canonicalUrl = "/"
 - var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What services does Ciphergram offer?","acceptedAnswer":{"@type":"Answer","text":"We provide comprehensive cybersecurity, software development, IT consulting, cloud architecture, data analytics, AI services, and identity management solutions for businesses of all sizes."}},{"@type":"Question","name":"Where is Ciphergram located?","acceptedAnswer":{"@type":"Answer","text":"We serve clients in Orlando, London, and worldwide. Our team works remotely and on-site to deliver the best solutions for your business needs."}},{"@type":"Question","name":"How can I get started with Ciphergram?","acceptedAnswer":{"@type":"Answer","text":"Contact us through our website or call us directly. We will schedule a consultation to understand your needs and provide a tailored solution."}},{"@type":"Question","name":"What industries do you serve?","acceptedAnswer":{"@type":"Answer","text":"We work with businesses across all industries, from startups to Fortune 500 companies, providing customized IT solutions that drive growth and security."}},{"@type":"Question","name":"Do you offer AI and rapid prototyping services?","acceptedAnswer":{"@type":"Answer","text":"Yes! We leverage cutting-edge generative AI technologies to accelerate development cycles, create intelligent applications, and deliver rapid prototypes that transform ideas into working solutions in days, not months."}}]}'
 - var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","address":{"@type":"PostalAddress","streetAddress":"123 Main St","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"708-517-9987","url":"https://ciphergram.io"}'
@@ -82,6 +82,58 @@ body
             // PORTFOLIO SECTION 1 GALLERY
             include ./includes/clients.jade
 
+            // AI PROTOTYPING CTA SECTION
+            section.page-section.pt-80-b-80-cont.bg-dark
+                .container
+                    .row
+                        .col-md-8.col-md-offset-2.text-center
+                            h3.section-title.font-white
+                                span.bold Turn Your Idea Into Reality
+                            p.section-subtitle.font-white
+                                | See how we can turn your idea into a working proof of concept in weeks, not months.
+                            .ai-cta-buttons
+                                a.btn.btn-lg.btn-color.mr-20(href='#quote-request') Book Prototype Review Call
+                                a.btn.btn-lg.btn-white.ml-20(href='#quote-request') Request Free Security Audit
+                            .ai-features
+                                .row
+                                    .col-md-4
+                                        .ai-feature-item
+                                            i.fa.fa-rocket.fa-2x.font-white
+                                            h4.font-white Fast MVP
+                                            p.font-white Get to market in weeks, not months
+                                    .col-md-4
+                                        .ai-feature-item
+                                            i.fa.fa-cogs.fa-2x.font-white
+                                            h4.font-white AI-Powered
+                                            p.font-white Built with cutting-edge AI technology
+                                    .col-md-4
+                                        .ai-feature-item
+                                            i.fa.fa-shield.fa-2x.font-white
+                                            h4.font-white Secure by Design
+                                            p.font-white Enterprise-grade security from day one
+
+            // TRUST BOOSTERS SECTION
+            section.page-section.pt-80-b-80-cont.bg-gray
+                .container
+                    .row
+                        .col-md-8.col-md-offset-2.text-center
+                            h3.section-title
+                                span.bold Trusted by Industry Leaders
+                            .trust-boosters
+                                .row
+                                    .col-md-4
+                                        .trust-item
+                                            h4 90 Days
+                                            p SOC 2 Compliance achieved for healthcare client
+                                    .col-md-4
+                                        .trust-item
+                                            h4 50% Faster
+                                            p AI-powered development reduced project timelines
+                                    .col-md-4
+                                        .trust-item
+                                            h4 100% Secure
+                                            p Zero security breaches across all client projects
+
             // PRICING SECTION
             include ./includes/pricing.jade
 
@@ -130,6 +182,66 @@ body
                             .fes7-box.wow.fadeIn.mb-30
                                 h3.mb-20 Do you offer AI and rapid prototyping services?
                                 p.mb-0 Yes! We leverage cutting-edge generative AI technologies to accelerate development cycles, create intelligent applications, and deliver rapid prototypes that transform ideas into working solutions in days, not months.
+            // QUOTE REQUEST SECTION
+            section#quote-request.page-section.pt-80-b-80-cont.bg-gray
+                .container
+                    .row
+                        .col-md-8.col-md-offset-2.text-center
+                            h3.section-title
+                                span.bold Get Your Custom Quote
+                            p.section-subtitle
+                                | Tell us about your project and we'll provide a detailed quote within 24 hours.
+                            .quote-form-container
+                                form#quoteForm.quote-form
+                                    .row
+                                        .col-md-6
+                                            .form-group
+                                                input.form-control(type='text', name='name', placeholder='Your Name *', required)
+                                        .col-md-6
+                                            .form-group
+                                                input.form-control(type='email', name='email', placeholder='Email Address *', required)
+                                    .row
+                                        .col-md-6
+                                            .form-group
+                                                input.form-control(type='text', name='company', placeholder='Company Name')
+                                        .col-md-6
+                                            .form-group
+                                                select.form-control(name='project_type', required)
+                                                    option(value='') Select Project Type *
+                                                    option(value='ai-prototype') AI Prototype Development
+                                                    option(value='security-audit') Security Audit & Compliance
+                                                    option(value='full-stack') Full Stack Development
+                                                    option(value='mobile-app') Mobile Application
+                                                    option(value='web-app') Web Application
+                                                    option(value='other') Other
+                                    .row
+                                        .col-md-6
+                                            .form-group
+                                                select.form-control(name='budget_range')
+                                                    option(value='') Budget Range
+                                                    option(value='under-10k') Under $10,000
+                                                    option(value='10k-25k') $10,000 - $25,000
+                                                    option(value='25k-50k') $25,000 - $50,000
+                                                    option(value='50k-100k') $50,000 - $100,000
+                                                    option(value='over-100k') Over $100,000
+                                        .col-md-6
+                                            .form-group
+                                                select.form-control(name='timeline')
+                                                    option(value='') Project Timeline
+                                                    option(value='asap') ASAP (Rush Job)
+                                                    option(value='1-month') Within 1 Month
+                                                    option(value='2-3-months') 2-3 Months
+                                                    option(value='3-6-months') 3-6 Months
+                                                    option(value='flexible') Flexible
+                                    .form-group
+                                        textarea.form-control(name='project_description', rows='4', placeholder='Describe your project in detail. What are you trying to achieve? What technologies are you considering? Any specific requirements? *', required)
+                                    .form-group
+                                        textarea.form-control(name='additional_info', rows='3', placeholder='Any additional information, questions, or specific concerns?')
+                                    .text-center
+                                        button.btn.btn-lg.btn-color(type='submit') Get My Custom Quote
+                                        p.quote-note
+                                            | We'll review your project and send a detailed quote within 24 hours. No spam, no sales calls unless you request one.
+
             // CONTACT INFO
             include ./includes/contact.jade
             // FOOTER 1

@@ -2338,7 +2338,6 @@ table.shopping-cart-table tr td {
   background: rgba(255, 255, 255, 0.9);
   border-left: none;
   z-index: 10;
-  border-radius: 8px;
 }
 .client-row .col-xs-6.col-sm-3:hover img,
 .client1-item:hover img {
@@ -3744,6 +3743,21 @@ select.input-border {
   color: #ff0000;
 }
 
+.footer-cta {
+  margin: 30px 0;
+}
+.footer-cta .btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.footer-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* PRIVACY POLICY STYLES
  =====================================================*/
 .privacy-content h2 {
@@ -3836,6 +3850,160 @@ select.input-border {
 .privacy-cta-section .btn-primary:hover {
   background-color: #2c3e50;
   border-color: #2c3e50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* AI PROTOTYPING CTA STYLES
+ =====================================================*/
+.ai-cta-buttons {
+  margin: 30px 0;
+}
+.ai-cta-buttons .btn {
+  margin: 0 10px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.ai-cta-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-features {
+  margin-top: 50px;
+}
+.ai-features .ai-feature-item {
+  padding: 20px;
+  text-align: center;
+}
+.ai-features .ai-feature-item i {
+  margin-bottom: 15px;
+  color: #fff;
+}
+.ai-features .ai-feature-item h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.ai-features .ai-feature-item p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.hero-cta-buttons .btn {
+  margin: 0 10px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.hero-cta-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* QUOTE REQUEST FORM STYLES
+ =====================================================*/
+.quote-form-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.quote-form .form-group {
+  margin-bottom: 20px;
+}
+.quote-form .form-group .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.quote-form .form-group .form-control:focus {
+  border-color: #4b4e53;
+  box-shadow: 0 0 0 0.2rem rgba(75, 78, 83, 0.25);
+  outline: none;
+}
+.quote-form .form-group .form-control::placeholder {
+  color: #6c757d;
+  font-style: italic;
+}
+.quote-form .form-group select.form-control {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+}
+.quote-form .form-group textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+.quote-form .btn {
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.quote-form .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quote-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* TRUST BOOSTERS & CTA STYLES
+ =====================================================*/
+.trust-boosters {
+  margin-top: 40px;
+}
+.trust-boosters .trust-item {
+  padding: 20px;
+  text-align: center;
+}
+.trust-boosters .trust-item h4 {
+  color: #4b4e53;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.trust-boosters .trust-item p {
+  color: #696c6f;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.cta-menu-item {
+  margin-left: 15px;
+}
+.cta-menu-item .btn {
+  margin-top: 5px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.cta-menu-item .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

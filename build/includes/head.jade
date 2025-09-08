@@ -17,12 +17,14 @@ head
   meta(name="apple-mobile-web-app-status-bar-style" content="black")
   meta(name="format-detection" content="telephone=no")
   // Canonical URL
-  link(rel="canonical" href="https://ciphergram.io#{typeof canonicalUrl !== 'undefined' ? canonicalUrl : ''}")
+  - var currentPath = typeof currentPage !== 'undefined' ? currentPage : 'home'
+  - var canonicalPath = currentPath === 'home' ? '' : '/' + currentPath + '.html'
+  link(rel="canonical" href="https://ciphergram.io#{canonicalPath}")
   // Open Graph
   meta(property="og:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
   meta(property="og:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
   meta(property="og:type" content="website")
-  meta(property="og:url" content="https://ciphergram.io#{typeof canonicalUrl !== 'undefined' ? canonicalUrl : ''}")
+  meta(property="og:url" content="https://ciphergram.io#{canonicalPath}")
   meta(property="og:image" content="https://ciphergram.io/images/og-image.jpg")
   meta(property="og:image:width" content="1200")
   meta(property="og:image:height" content="630")
