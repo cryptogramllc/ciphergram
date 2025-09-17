@@ -3903,10 +3903,23 @@ select.input-border {
   font-weight: 600;
   border-radius: 6px;
   transition: all 0.3s ease;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 .hero-cta-buttons .btn:hover {
-  transform: translateY(-2px);
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  color: #1a365d !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero text line height adjustments */
+.tp-caption.font-white.light-60-wide {
+  line-height: 1.2 !important;
+}
+.tp-caption.font-white.light-60-wide span {
+  line-height: 1.2 !important;
 }
 
 /* QUOTE REQUEST FORM STYLES
