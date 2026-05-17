@@ -1,49 +1,45 @@
-.page-section(id="our-clients")
-    .container.p-60-cont
+.page-section.p-100-cont(id="case-studies")
+    .container
         .row
-            .col-md-12
+            .col-md-12.text-center.mb-40
                 .fes4-box.wow.fadeIn(data-wow-delay='200ms')
                     h2.section-title
-                        span.bold PROTOTYPE SUCCESS STORIES
+                        span.bold Representative case studies
+                    p.section-subtitle Anonymized examples reflecting common engagement patterns. Your architecture and numbers will differ; the approach is the same.
         .row
-            // CLIENTS 1
-            .col-md-12
-                .row.client-row.border-bot
-                    .col-xs-6.col-sm-3.text-center(data-client='fintech-startup')
-                        .client-logo-container
-                            img(alt='FinTech Startup - AI-Powered Trading Platform Prototype', src='images/clients/1.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='healthcare-ai')
-                        .client-logo-container
-                            img(alt='Healthcare AI - Medical Diagnosis Tool Prototype', src='images/clients/2.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='ecommerce-saas')
-                        .client-logo-container
-                            img(alt='E-commerce SaaS - Inventory Management Prototype', src='images/clients/3.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='edtech-platform')
-                        .client-logo-container
-                            img(alt='EdTech Platform - Learning Management Prototype', src='images/clients/4.png')
-                .row.client-row.border-bot
-                    .col-xs-6.col-sm-3.text-center(data-client='real-estate-tech')
-                        .client-logo-container
-                            img(alt='Real Estate Tech - Property Management Prototype', src='images/clients/5.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='food-delivery-app')
-                        .client-logo-container
-                            img(alt='Food Delivery App - Restaurant Management Prototype', src='images/clients/6.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='fitness-tracker')
-                        .client-logo-container
-                            img(alt='Fitness Tracker - Health Monitoring Prototype', src='images/clients/7.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='social-media-tool')
-                        .client-logo-container
-                            img(alt='Social Media Tool - Content Management Prototype', src='images/clients/8.png')
-                .row.client-row
-                    .col-xs-6.col-sm-3.text-center(data-client='blockchain-platform')
-                        .client-logo-container
-                            img(alt='Blockchain Platform - DeFi Prototype', src='images/clients/9.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='iot-solution')
-                        .client-logo-container
-                            img(alt='IoT Solution - Smart Home Prototype', src='images/clients/10.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='gaming-app')
-                        .client-logo-container
-                            img(alt='Gaming App - Multiplayer Prototype', src='images/clients/11.png')
-                    .col-xs-6.col-sm-3.text-center(data-client='analytics-dashboard')
-                        .client-logo-container
-                            img(alt='Analytics Dashboard - Business Intelligence Prototype', src='images/clients/12.png')
+            .col-md-4
+                .fes7-box.wow.fadeIn.mb-40
+                    h3 B2B SaaS — runaway Lambda bill
+                    p
+                        strong Problem:
+                        |  Monthly AWS spend jumped 3x after a traffic milestone. Lambda concurrency, API Gateway, and outbound data dominated; no single owner for cost.
+                    p
+                        strong Solution:
+                        |  Cost audit, concurrency and memory tuning, API caching layer, and removal of redundant cross-region chatter. Documented guardrails for future changes.
+                    p.mb-0
+                        strong Result:
+                        |  ~32% infrastructure cost reduction within one billing cycle; p95 API latency improved ~40% from fewer duplicate calls.
+            .col-md-4
+                .fes7-box.wow.fadeIn.mb-40(data-wow-delay='150ms')
+                    h3 Growth-stage API — timeouts at peak
+                    p
+                        strong Problem:
+                        |  Core Go service showed acceptable latency in staging but 5xx and tail latency spiked under production concurrency; database and fan-out patterns were the suspects.
+                    p
+                        strong Solution:
+                        |  Production profiling, query and batching fixes, bounded worker pools, and queue-backed offload for non-critical work.
+                    p.mb-0
+                        strong Result:
+                        |  p99 latency ~60% lower at peak; error rate dropped below prior SLO; team gained a repeatable load profile for releases.
+            .col-md-4
+                .fes7-box.wow.fadeIn.mb-40(data-wow-delay='300ms')
+                    h3 Legacy monolith — slow, risky deploys
+                    p
+                        strong Problem:
+                        |  Single deployable blocked feature teams; scaling meant bigger instances; incident recovery was manual.
+                    p
+                        strong Solution:
+                        |  Strangled high-churn domains into Lambda handlers and event buses; kept transactional core on existing DB with clear boundaries and observability.
+                    p.mb-0
+                        strong Result:
+                        |  Deploy frequency moved from bi-weekly to multiple times per week for migrated surfaces; on-call pages for that domain dropped sharply in the following quarter.

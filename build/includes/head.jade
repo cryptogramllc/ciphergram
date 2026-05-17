@@ -1,11 +1,11 @@
 // SEO & Social Meta Tags
 head
-  title #{typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions'}
+  title #{typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Backend Systems & AWS Consulting'}
   meta(charset="utf-8")
   meta(name="viewport" content="width=device-width, initial-scale=1")
   meta(name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1")
-  meta(name="keywords" content="Ciphergram, Cybersecurity, Software Development, IT Consulting, Cloud Services, Orlando, London, AWS, Web Development, IoT, Solutions Architecture, Server Maintenance, Databasing, User Identity Management, Artificial Intelligence, AI, Generative AI, Machine Learning, Rapid Prototyping, AI Development, AI Consulting, Digital Transformation, Cloud Migration, Security Audits, Penetration Testing, DevSecOps, Managed SOC, Compliance Services, SOC 2, HIPAA, GDPR, PCI DSS, Security Training, Data Analytics, Cloud Architecture, Full Stack Development, Mobile App Development, Web Application Development, Enterprise Software, IT Strategy, Business Technology Solutions")
-  meta(name="description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
+  meta(name="keywords" content="Ciphergram, AWS cost optimization, serverless architecture, AWS Lambda, Go backend consulting, backend performance engineering, distributed systems, SaaS infrastructure, cloud consultancy, Orlando, London")
+  meta(name="description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Backend consultancy for SaaS teams: AWS cost optimization, serverless on Lambda, Go performance engineering, and legacy modernization.')
   meta(name="author" content="Ciphergram.io")
   meta(name="language" content="English")
   meta(name="revisit-after" content="7 days")
@@ -21,22 +21,22 @@ head
   - var canonicalPath = currentPath === 'home' ? '' : '/' + currentPath + '.html'
   link(rel="canonical" href="https://ciphergram.io#{canonicalPath}")
   // Open Graph
-  meta(property="og:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
-  meta(property="og:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
+  meta(property="og:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Backend Systems & AWS Consulting')
+  meta(property="og:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Backend consultancy for SaaS teams: AWS cost optimization, serverless on Lambda, Go performance engineering, and legacy modernization.')
   meta(property="og:type" content="website")
   meta(property="og:url" content="https://ciphergram.io#{canonicalPath}")
   meta(property="og:image" content="https://ciphergram.io/images/og-image.jpg")
   meta(property="og:image:width" content="1200")
   meta(property="og:image:height" content="630")
-  meta(property="og:image:alt" content="Ciphergram - Cybersecurity and Software Solutions")
+  meta(property="og:image:alt" content="Ciphergram - Backend systems consultancy")
   meta(property="og:site_name" content="Ciphergram")
   meta(property="og:locale" content="en_US")
   // Twitter Card
   meta(name="twitter:card" content="summary_large_image")
-  meta(name="twitter:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Cybersecurity & Software Solutions')
-  meta(name="twitter:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Ciphergram provides expert cybersecurity, software development, and IT consulting for businesses. Secure your future with us.')
+  meta(name="twitter:title" content=typeof pageTitle !== 'undefined' ? pageTitle : 'Ciphergram | Backend Systems & AWS Consulting')
+  meta(name="twitter:description" content=typeof pageDescription !== 'undefined' ? pageDescription : 'Backend consultancy for SaaS teams: AWS cost optimization, serverless on Lambda, Go performance engineering, and legacy modernization.')
   meta(name="twitter:image" content="https://ciphergram.io/images/og-image.jpg")
-  meta(name="twitter:image:alt" content="Ciphergram - Cybersecurity and Software Solutions")
+  meta(name="twitter:image:alt" content="Ciphergram - Backend systems consultancy")
   meta(name="twitter:site" content="@ciphergram")
   meta(name="twitter:creator" content="@ciphergram")
   // Structured Data (JSON-LD)
@@ -51,10 +51,10 @@ head
         "https://www.linkedin.com/company/ciphergram-ltd",
         "https://twitter.com/ciphergram"
       ],
-      "description": "Expert cybersecurity, software development, and IT consulting.",
+      "description": "Backend systems consultancy: AWS cost optimization, serverless architecture on Lambda, and Go backend performance engineering for SaaS teams.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Main St",
+        "streetAddress": "20 North Orange Avenue, Unit 1100",
         "addressLocality": "Orlando",
         "addressRegion": "FL",
         "postalCode": "32801",
@@ -79,46 +79,30 @@ head
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "IT Services",
+        "name": "Backend consulting services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Cybersecurity Services",
-              "description": "Comprehensive cybersecurity solutions including managed SOC, compliance services, and security training"
+              "name": "AWS Cost Optimization Audit",
+              "description": "Identify cloud waste and deliver a prioritized savings plan across Lambda, compute, API Gateway, networking, and storage."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Software Development",
-              "description": "Full-stack development services including web applications, mobile apps, and AI integration"
+              "name": "Backend Performance Engineering",
+              "description": "Profile and improve Go services and distributed systems for latency and reliability under production load."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "IT Consulting",
-              "description": "Strategic IT consulting, cloud architecture, and digital transformation services"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI & Rapid Prototyping",
-              "description": "Generative AI solutions and rapid prototyping services for accelerated development"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Data Analytics",
-              "description": "Data analytics and business intelligence solutions powered by AI"
+              "name": "Serverless Migration",
+              "description": "Design event-driven architecture and migrate suitable workloads to AWS Lambda with clear operational boundaries."
             }
           }
         ]
@@ -142,15 +126,14 @@ head
         }
       ],
       "knowsAbout": [
-        "Cybersecurity",
-        "Software Development",
-        "Cloud Computing",
-        "Artificial Intelligence",
-        "Data Analytics",
-        "IT Consulting",
-        "Compliance Services",
-        "Managed SOC",
-        "Security Training"
+        "Amazon Web Services",
+        "AWS Lambda",
+        "Serverless computing",
+        "Go programming language",
+        "Distributed systems",
+        "Backend performance",
+        "Cloud cost optimization",
+        "Systems architecture"
       ]
     }
   // Favicon

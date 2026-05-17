@@ -2,62 +2,39 @@
     .rs-fullscr-container
         #rs-fullwidth.tp-banner.dark-bg
             ul
-                // SLIDE 1
+                // SLIDE 1 — primary hero
                 li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-saveperformance='on')
-                    // MAIN IMAGE
-                    img(src='images/1.jpg', alt='slidebg1', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
-                    // LAYERS
-                    // PARALLAX & OPACITY container
+                    img(src='images/1.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
                     .rs-parallaxlevel-4.opacity-scroll2
-                        // LAYER NR. 1 - TOP LINE (smaller, lighter)
-                        .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-35', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;')
-                            span Idea to Prototype
-                        // LAYER NR. 2 - BOTTOM LINE (larger, bolder)
-                        .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='35', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;')
-                            span.bold Validate Before You Scale
-                        // CTA BUTTONS
+                        .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-95', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; max-width: 900px; max-height: auto; white-space: normal; text-align: center; line-height: 1.2;')
+                            span Reduce AWS costs and fix backend performance issues in scaling SaaS systems.
+                        .tp-caption.font-white.light-40-wide.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='25', data-speed='500', data-start='1000', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; max-width: 760px; max-height: auto; white-space: normal; text-align: center; line-height: 1.45;')
+                            span We help engineering teams optimize, modernize, and stabilize backend infrastructure using Go, AWS Lambda, and serverless architecture.
                         .tp-caption.font-white.light-40-wide.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='120', data-speed='500', data-start='1250', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;')
                             .hero-cta-buttons
-                                a.btn.btn-lg.btn-white.ml-20(href='#quote-request') Book Free Consultation
+                                a.btn.btn-lg.btn-color.mr-15(href='#quote-request') Request a systems review
+                                a.btn.btn-lg.btn-white(href='#quote-request') Get a cost &amp; performance audit
                 // SLIDE 2
                 li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-saveperformance='on')
-                    // MAIN IMAGE
-                    img(src='images/2.jpg', alt='slidebg2', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
-                    // LAYERS
-                    // PARALLAX & OPACITY container
+                    img(src='images/2.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
                     .rs-parallaxlevel-4.opacity-scroll2
-                        // LAYER NR. 1 - TOP LINE (lighter)
                         .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-35', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;')
-                            span Rapid Prototyping
-                        // LAYER NR. 2 - BOTTOM LINE (bolder)
+                            span AWS spend should not grow blindly
                         .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='35', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;')
-                            span.bold That Gets Results
+                            span.bold We find waste and fix the architecture
                 // SLIDE 3
                 li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-saveperformance='on')
-                    // MAIN IMAGE
-                    img(src='images/3.jpg', alt='citybg', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
-                    // LAYERS
-                    // PARALLAX & OPACITY container
+                    img(src='images/3.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
                     .rs-parallaxlevel-4.opacity-scroll2
-                        // LAYER NR. 1 - TOP LINE (lighter)
                         .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-35', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;')
-                            span AI-Enabled Development
-                        // LAYER NR. 2 - BOTTOM LINE (bolder)
+                            span Production load exposes real bottlenecks
                         .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='35', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;')
-                            span.bold Investor-Ready Prototypes 
-                 // SLIDE 4
+                            span.bold Go services, queues, data paths—engineered, not guessed
+                // SLIDE 4
                 li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-saveperformance='on')
-                    // MAIN IMAGE
-                    img(src='images/4.jpg', alt='citybg', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
-                    // LAYERS
-                    // PARALLAX & OPACITY container
+                    img(src='images/4.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
                     .rs-parallaxlevel-4.opacity-scroll2
-                        // LAYER NR. 1 - TOP LINE (lighter)
                         .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-35', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;')
-                            span Proof of Concept
-                        // LAYER NR. 2 - BOTTOM LINE (bolder)
+                            span Serverless and events when they earn their place
                         .tp-caption.font-white.light-60-wide.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='35', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;')
-                            span.bold That Raises Money  
-
-                        
-      
+                            span.bold Less ops drag, clearer boundaries

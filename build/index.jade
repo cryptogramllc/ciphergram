@@ -1,11 +1,11 @@
 doctype html
-include ./includes/head.jade
-- var pageTitle = "Home | Ciphergram - From Idea to Prototype in Weeks"
-- var pageDescription = "From idea to prototype in weeks — validate before you scale. Ciphergram specializes in rapid prototyping, AI-enabled development, and investor-ready proof of concepts that help you test ideas fast and reduce risk."
+- var pageTitle = "Ciphergram | AWS Cost Optimization, Serverless & Backend Performance"
+- var pageDescription = "Specialist backend consultancy for SaaS teams: reduce AWS costs, fix production performance in Go and distributed systems, and migrate to AWS Lambda with clear architecture. Request a systems review."
 - var canonicalUrl = "/"
-- var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Ciphergram specialize in?","acceptedAnswer":{"@type":"Answer","text":"Ciphergram specializes in rapid prototyping and proof of concept development. We help entrepreneurs and businesses transform ideas into working prototypes in weeks, not months, using AI-enabled development and modern technologies."}},{"@type":"Question","name":"How fast can you build a prototype?","acceptedAnswer":{"@type":"Answer","text":"We typically deliver working prototypes in 2-4 weeks, depending on complexity. Our AI-enabled development process and experienced team allow us to move much faster than traditional development approaches."}},{"@type":"Question","name":"What types of prototypes do you build?","acceptedAnswer":{"@type":"Answer","text":"We build web applications, mobile apps, AI-powered tools, SaaS platforms, and custom software prototypes. Our focus is on creating investor-ready proof of concepts that validate your idea before you scale."}},{"@type":"Question","name":"Do you help with investor presentations?","acceptedAnswer":{"@type":"Answer","text":"Yes! Our prototypes are designed to be investor-ready, with clean code, professional UI/UX, and clear demonstration of your concept. We can also provide technical documentation and support for investor meetings."}},{"@type":"Question","name":"What happens after the prototype is complete?","acceptedAnswer":{"@type":"Answer","text":"After prototype completion, you can choose to scale the solution with us, take it to another development team, or use it to validate your concept and pivot if needed. We provide full documentation and handoff materials."}}]}'
-- var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","address":{"@type":"PostalAddress","streetAddress":"123 Main St","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"708-517-9987","url":"https://ciphergram.io"}'
+- var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Ciphergram do?","acceptedAnswer":{"@type":"Answer","text":"Ciphergram is a specialist backend systems consultancy. We help SaaS companies and scaling startups reduce AWS costs, improve backend performance, and modernize legacy systems using Go, AWS Lambda, and serverless architecture."}},{"@type":"Question","name":"Who do you work best with?","acceptedAnswer":{"@type":"Answer","text":"We work with SaaS teams scaling past MVP, engineering organizations with rising AWS bills, startups seeing production performance issues, and CTOs evolving legacy systems toward serverless and event-driven designs."}},{"@type":"Question","name":"What is an AWS cost optimization audit?","acceptedAnswer":{"@type":"Answer","text":"A fixed-scope review of how your AWS bill maps to actual workloads: Lambda, API Gateway, compute, networking, and storage. You receive a prioritized list of changes with expected savings and risk notes, not a generic dashboard export."}},{"@type":"Question","name":"Do you work with existing Go codebases?","acceptedAnswer":{"@type":"Answer","text":"Yes. Go is a core language for our performance work. We profile services under load, tighten hot paths, and align concurrency and IO patterns with how your system runs in production."}},{"@type":"Question","name":"How do engagements begin?","acceptedAnswer":{"@type":"Answer","text":"Most teams start with a backend systems review or a cost and performance audit. We clarify scope, access needs, and success metrics before work starts so expectations stay grounded in measurable infrastructure outcomes."}}]}'
+- var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","description":"Backend systems consultancy: AWS cost optimization, serverless architecture, Go performance engineering.","address":{"@type":"PostalAddress","streetAddress":"20 North Orange Avenue, Unit 1100","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"708-517-9987","url":"https://ciphergram.io"}'
 - var currentPage = 'home'
+include ./includes/head.jade
 body
     // LOADER
     #loader-overflow
@@ -33,235 +33,125 @@ body
                                 img(src='images/ie-warn/ie-warning-safari.jpg', alt='Download Safari')
                             a(href='http://www.google.com/chrome', target='_blank')
                                 img(src='images/ie-warn/ie-warning-chrome.jpg', alt='Download Google Chrome')
-            // HEADER 1 BLACK MOBILE-NO-TRANSPARENT
             include ./includes/header.jade
-            // REVO SLIDER FULLSCREEN 1
             include ./includes/slider.jade
-            // ABOUT US
-            include ./includes/about.jade
-            // FEATURES 7
-            //- .page-section.grey-light-bg.clearfix
-                .fes7-img-cont.col-md-5
-                    .fes7-img(style='background-image: url(images/fes7.jpg)')
-                .container
-                    .row
-                        .col-md-6.col-md-offset-6.fes7-text-cont.p-80-cont
-                            h1
-                                span.font-light Nulla varius faucibus vestibulum. Sed imperdiet, tellus at iaculis
-                            p.mb-60
-                            .row
-                                .col-md-6.col-sm-6
-                                    .fes7-box.wow.fadeIn
-                                        .fes7-box-icon
-                                            .icon.icon-ecommerce-graph-increase
-                                        h3 SEO Friendly
-                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
-                                .col-md-6.col-sm-6
-                                    .fes7-box.wow.fadeIn(data-wow-delay='200ms')
-                                        .fes7-box-icon
-                                            .icon.icon-software-font-smallcaps
-                                        h3 Google Fonts
-                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
-                            .row
-                                .col-md-6.col-sm-6
-                                    .fes7-box.wow.fadeIn(data-wow-delay='400ms')
-                                        .fes7-box-icon
-                                            .icon.icon-basic-mixer2
-                                        h3 Tons of Shortcodes
-                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
-                                .col-md-6.col-sm-6
-                                    .fes7-box.wow.fadeIn(data-wow-delay='600ms')
-                                        .fes7-box-icon
-                                            .icon.icon-basic-bolt
-                                        h3 1500+ Icons
-                                        p Sed ut perspiciatis unde omnis iste nat eror acus  antium que
-                    // end of row
-   
-            // FEATURES 4
+            include ./includes/problem.jade
             include ./includes/services.jade
-            // PORTFOLIO SECTION 1 GALLERY
+            include ./includes/who-for.jade
+            include ./includes/outcomes.jade
             include ./includes/clients.jade
+            include ./includes/about.jade
 
-            // RAPID PROTOTYPING CTA SECTION
             section.page-section.pt-80-b-80-cont.bg-dark
                 .container
                     .row
                         .col-md-8.col-md-offset-2.text-center
                             h3.section-title
-                                span.bold From Idea to Prototype in Weeks
+                                span.bold When the bill or latency curve breaks, you need systems engineers—not a generic dev shop
                             p.section-subtitle
-                                | Validate your concept before you scale. Get a working prototype that impresses investors and proves your idea works.
+                                | Tell us about your stack, AWS footprint, and what production is doing under load. We respond with a scoped review or audit plan, not a pitch deck.
                             .ai-cta-buttons
-                                a.btn.btn-lg.btn-color.mr-20(href='#quote-request') Start Your Prototype
-                            .ai-features
-                                .row
-                                    .col-md-4
-                                        .ai-feature-item
-                                            i.fa.fa-rocket.fa-2x
-                                            h4.font-black Rapid Development
-                                            p Working prototypes in 2-4 weeks
-                                    .col-md-4
-                                        .ai-feature-item
-                                            i.fa.fa-cogs.fa-2x
-                                            h4.font-black AI-Enabled
-                                            p Built with cutting-edge AI technology
-                                    .col-md-4
-                                        .ai-feature-item
-                                            i.fa.fa-dollar.fa-2x
-                                            h4.font-black Investor-Ready
-                                            p Prototypes that help raise funding
+                                a.btn.btn-lg.btn-color.mr-15(href='#quote-request') Request a backend systems review
+                                a.btn.btn-lg.btn-white(href='#quote-request') Book a performance audit
 
-            // TRUST BOOSTERS SECTION
-            section.page-section.pt-80-b-80-cont.bg-gray
-                .container
-                    .row
-                        .col-md-8.col-md-offset-2.text-center
-                            h3.section-title
-                                span.bold Proven Results
-                            .trust-boosters
-                                .row
-                                    .col-md-4
-                                        .trust-item
-                                            h4 2-4 Weeks
-                                            p Average prototype delivery time
-                                    .col-md-4
-                                        .trust-item
-                                            h4 85% Success
-                                            p Prototypes that led to funding or validation
-                                    .col-md-4
-                                        .trust-item
-                                            h4 100% AI-Enabled
-                                            p Every prototype built with cutting-edge AI tools
-
-            // PRICING SECTION
             include ./includes/pricing.jade
 
-            // CLIENTS 1 & TESTIMONIALS 1
-            // Portfolio section removed
-            // WORK PROCESS 1
-            //- include ./includes/process.jade
-
-            // TESTIMONIALS SECTION
-            //- include ./includes/testimonials.jade
-
-            // TRUST BADGES SECTION
-            //- include ./includes/trust-badges.jade
-
-            // LEAD MAGNET SECTION
-            //- include ./includes/lead-magnet.jade
-
-            // FAQ SECTION
             .page-section.p-140-cont.clearfix
                 .container
                     .row
                         .col-md-12.text-center
                             h2.mb-50.font-light
-                                span.font-light Frequently Asked 
-                                span Questions
+                                span.font-light Frequently asked 
+                                span questions
                     .row
                         .col-md-6
                             .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 What does Ciphergram specialize in?
-                                p.mb-0 Ciphergram specializes in rapid prototyping and proof of concept development. We help entrepreneurs and businesses transform ideas into working prototypes in weeks, not months, using AI-enabled development and modern technologies.
+                                h3.mb-20 What does Ciphergram do?
+                                p.mb-0 Ciphergram is a specialist backend systems consultancy. We help SaaS companies and scaling startups reduce AWS costs, improve backend performance, and modernize legacy systems using Go, AWS Lambda, and serverless architecture.
                         .col-md-6
                             .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 How fast can you build a prototype?
-                                p.mb-0 We typically deliver working prototypes in 2-4 weeks, depending on complexity. Our AI-enabled development process and experienced team allow us to move much faster than traditional development approaches.
+                                h3.mb-20 Who do you work best with?
+                                p.mb-0 SaaS teams scaling past MVP, engineering organizations with rising AWS bills, startups seeing production performance issues, and CTOs evolving legacy systems toward serverless and event-driven designs.
                     .row
                         .col-md-6
                             .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 What types of prototypes do you build?
-                                p.mb-0 We build web applications, mobile apps, AI-powered tools, SaaS platforms, and custom software prototypes. Our focus is on creating investor-ready proof of concepts that validate your idea before you scale.
+                                h3.mb-20 What is an AWS cost optimization audit?
+                                p.mb-0 A fixed-scope review of how your AWS bill maps to actual workloads: Lambda, API Gateway, compute, networking, and storage. You get a prioritized list of changes with expected savings and risk notes—not a generic dashboard export.
                         .col-md-6
                             .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 Do you help with investor presentations?
-                                p.mb-0 Yes! Our prototypes are designed to be investor-ready, with clean code, professional UI/UX, and clear demonstration of your concept. We can also provide technical documentation and support for investor meetings.
+                                h3.mb-20 Do you work with existing Go codebases?
+                                p.mb-0 Yes. Go is a core language for our performance work. We profile services under load, tighten hot paths, and align concurrency and IO patterns with how your system runs in production.
                     .row
                         .col-md-6.col-md-offset-3
                             .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 What happens after the prototype is complete?
-                                p.mb-0 After prototype completion, you can choose to scale the solution with us, take it to another development team, or use it to validate your concept and pivot if needed. We provide full documentation and handoff materials.
-            // QUOTE REQUEST SECTION
+                                h3.mb-20 How do engagements begin?
+                                p.mb-0 Most teams start with a backend systems review or a cost and performance audit. We clarify scope, access needs, and success metrics before work starts so expectations stay grounded in measurable infrastructure outcomes.
+
             section#quote-request.page-section.pt-80-b-80-cont.bg-gray
                 .container
                     .row
                         .col-md-8.col-md-offset-2.text-center
                             h3.section-title
-                                span.bold Start Your Prototype
+                                span.bold Request a backend systems review
                             p.section-subtitle
-                                | Tell us about your idea and we'll provide a detailed quote for your prototype within 24 hours.
+                                | Share your stack, symptoms, and AWS context. We reply with next steps for a cost analysis, performance audit, or migration assessment—usually within one business day.
                             .quote-form-container
                                 form#quoteForm.quote-form
                                     .row
                                         .col-md-6
                                             .form-group
-                                                input.form-control(type='text', name='name', placeholder='Your Name *', required)
+                                                input.form-control(type='text', name='name', placeholder='Name *', required)
                                         .col-md-6
                                             .form-group
-                                                input.form-control(type='email', name='email', placeholder='Email Address *', required)
+                                                input.form-control(type='email', name='email', placeholder='Work email *', required)
                                     .row
                                         .col-md-6
                                             .form-group
-                                                input.form-control(type='text', name='company', placeholder='Company Name')
+                                                input.form-control(type='text', name='company', placeholder='Company')
+                                        .col-md-6
+                                            .form-group
+                                                input.form-control(type='text', name='role', placeholder='Role (e.g. CTO, VP Eng, Lead)')
+                                    .row
                                         .col-md-6
                                             .form-group
                                                 select.form-control(name='project_type', required)
-                                                    option(value='') Select Prototype Type *
-                                                    option(value='web-app') Web Application Prototype
-                                                    option(value='mobile-app') Mobile App Prototype
-                                                    option(value='ai-tool') AI-Powered Tool Prototype
-                                                    option(value='saas-platform') SaaS Platform Prototype
-                                                    option(value='mvp') MVP Development
-                                                    option(value='other') Other
-                                    .row
-                                        .col-md-6
-                                            .form-group
-                                                select.form-control(name='budget_range')
-                                                    option(value='') Budget Range
-                                                    option(value='under-3k') Under $3,000
-                                                    option(value='3k-5k') $3,000 - $5,000
-                                                    option(value='5k-10k') $5,000 - $10,000
-                                                    option(value='10k-15k') $10,000 - $15,000
-                                                    option(value='over-15k') Over $15,000
+                                                    option(value='') Primary need *
+                                                    option(value='aws-cost') AWS cost optimization audit
+                                                    option(value='performance') Backend performance engineering
+                                                    option(value='serverless') Serverless migration
+                                                    option(value='combined') Combined / not sure yet
                                         .col-md-6
                                             .form-group
                                                 select.form-control(name='timeline')
-                                                    option(value='') Prototype Timeline
-                                                    option(value='asap') ASAP (Rush Job)
-                                                    option(value='2-weeks') 2 Weeks
-                                                    option(value='3-weeks') 3 Weeks
-                                                    option(value='4-weeks') 4 Weeks
-                                                    option(value='flexible') Flexible
+                                                    option(value='') Target start window
+                                                    option(value='asap') ASAP
+                                                    option(value='2-4w') 2–4 weeks
+                                                    option(value='1-2m') 1–2 months
+                                                    option(value='flex') Flexible
+                                    .row
+                                        .col-md-12
+                                            .form-group
+                                                select.form-control(name='aws_scale')
+                                                    option(value='') Approx. monthly AWS spend (optional)
+                                                    option(value='under-5k') Under $5k
+                                                    option(value='5k-25k') $5k–$25k
+                                                    option(value='25k-100k') $25k–$100k
+                                                    option(value='100k-plus') $100k+
+                                                    option(value='unsure') Prefer not to say / unsure
                                     .form-group
-                                        textarea.form-control(name='project_description', rows='4', placeholder='Describe your idea in detail. What problem are you solving? Who is your target audience? What key features do you want to demonstrate? *', required)
+                                        textarea.form-control(name='project_description', rows='5', placeholder='Describe your architecture (languages, AWS services), what broke or is trending wrong (cost, latency, errors), and what good looks like. *', required)
                                     .form-group
-                                        textarea.form-control(name='additional_info', rows='3', placeholder='Any additional information about your prototype goals, target market, or specific requirements?')
+                                        textarea.form-control(name='additional_info', rows='3', placeholder='Links to dashboards, postmortems, or constraints (compliance, multi-region, etc.)')
                                     .text-center
-                                        button.btn.btn-lg.btn-color(type='submit') Get My Prototype Quote
+                                        button.btn.btn-lg.btn-color(type='submit') Submit review request
                                         p.quote-note
-                                            | We'll review your idea and send a detailed prototype quote within 24 hours. No spam, no sales calls unless you request one.
+                                            | No spam. We may ask one clarifying round by email before proposing scope.
 
-            // CONTACT INFO
             include ./includes/contact.jade
-            // FOOTER 1
             include ./includes/footer.jade
-                    // LIVE CHAT WIDGET
-        //- include ./includes/live-chat.jade
-            // BACK TO TOP
             p#back-top
                 a(href='#top', title='Back to Top')
                     span.icon.icon-arrows-up
-    .mfp-more-info
-        strong
-            i i
-    .mfp-text
-        .mfp-text-inner
-        .mfp-text-close 
-            button(title="Close (Esc)", type="button", class="mfp-text-close-button") ×
-        // End BG
-    // End wrap
-
-    // Client Work Modal
     #clientModal.client-modal
         .client-modal-content
             span.client-modal-close ×
@@ -273,5 +163,12 @@ body
                 .client-modal-tech
                     h4 Technologies Used:
                     #clientModalTech.tech-tags
+    .mfp-more-info
+        strong
+            i i
+    .mfp-text
+        .mfp-text-inner
+        .mfp-text-close 
+            button(title="Close (Esc)", type="button", class="mfp-text-close-button") ×
 
 include ./includes/scripts/js.jade
