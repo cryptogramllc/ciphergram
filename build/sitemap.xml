@@ -22,22 +22,6 @@
         <priority>0.8</priority>
     </url>
     
-    <!-- Blog -->
-    <url>
-        <loc>https://ciphergram.io/blog/</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Article Page -->
-    <url>
-        <loc>https://ciphergram.io/article.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
     <!-- Service Pages (if they exist) -->
     <url>
         <loc>https://ciphergram.io/cybersecurity.html</loc>

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Blog is retired
+Disallow: /blog/
+Disallow: /blog
+Disallow: /article.html
+Disallow: /article/
+
+# Sitemap
+Sitemap: https://ciphergram.io/sitemap.xml
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
