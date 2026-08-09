@@ -1,25 +1,24 @@
-.page-section.p-100-cont.grey-light-bg.clearfix(id="problem-link")
+.page-section.p-120-cont.cg-section.grey-light-bg.clearfix(id="problem-link")
     .container
         .row
-            .col-md-12.text-center.mb-50
-                h2.section-title
-                    span.bold Most scaling systems fail in the same 3 ways
-        .row
+            .col-md-10.col-md-offset-1.text-center.mb-60
+                h2.cg-section-title Most scaling systems fail in the same 3 ways
+        .row.cg-problem-grid
             .col-md-4
-                .fes7-box.wow.fadeIn.mb-30
-                    .fes7-box-icon
+                .cg-feature-card.wow.fadeIn
+                    .cg-feature-icon
                         .icon.icon-ecommerce-graph1
                     h3 AWS costs outpace value
                     p Monthly cloud spend grows with traffic while architecture stays unchanged. Waste hides in Lambda configuration, API Gateway, data transfer, and idle capacity.
             .col-md-4
-                .fes7-box.wow.fadeIn.mb-30(data-wow-delay='150ms')
-                    .fes7-box-icon
+                .cg-feature-card.wow.fadeIn(data-wow-delay='150ms')
+                    .cg-feature-icon
                         .icon.icon-basic-bolt
                     h3 APIs degrade under real load
                     p Latency spikes, timeouts, and flaky dependencies show up in production—not in demos. Hot paths in Go services, queues, and databases need engineering, not more instances.
             .col-md-4
-                .fes7-box.wow.fadeIn.mb-30(data-wow-delay='300ms')
-                    .fes7-box-icon
+                .cg-feature-card.wow.fadeIn(data-wow-delay='300ms')
+                    .cg-feature-icon
                         .icon.icon-basic-lock
                     h3 Legacy architecture slows shipping
                     p Monoliths and manual ops block safe deploys. Teams want event-driven, serverless boundaries so they can release often without overnight maintenance windows.

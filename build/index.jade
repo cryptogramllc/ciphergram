@@ -42,59 +42,53 @@ body
             include ./includes/clients.jade
             include ./includes/about.jade
 
-            section.page-section.pt-80-b-80-cont.bg-dark
+            section.page-section.cg-cta-band
                 .container
                     .row
                         .col-md-8.col-md-offset-2.text-center
-                            h3.section-title
-                                span.bold When the bill or latency curve breaks, you need systems engineers—not a generic dev shop
-                            p.section-subtitle
-                                | Tell us about your stack, AWS footprint, and what production is doing under load. We respond with a scoped review or audit plan, not a pitch deck.
-                            .ai-cta-buttons
-                                a.btn.btn-lg.btn-color.mr-15(href='#quote-request') Request a backend systems review
-                                a.btn.btn-lg.btn-white(href='#quote-request') Book a performance audit
+                            h3.cg-cta-title When the bill or latency curve breaks, you need systems engineers—not a generic dev shop
+                            p.cg-cta-sub Tell us about your stack, AWS footprint, and what production is doing under load. We respond with a scoped review or audit plan, not a pitch deck.
+                            .cg-hero-actions
+                                a.btn.btn-lg.btn-color(href='#quote-request') Request a backend systems review
+                                a.btn.btn-lg.btn-white-outline(href='#quote-request') Book a performance audit
 
             include ./includes/pricing.jade
 
-            .page-section.p-140-cont.clearfix
+            .page-section.p-120-cont.cg-section.clearfix
                 .container
                     .row
-                        .col-md-12.text-center
-                            h2.mb-50.font-light
-                                span.font-light Frequently asked 
-                                span questions
+                        .col-md-10.col-md-offset-1.text-center.mb-60
+                            h2.cg-section-title Frequently asked questions
                     .row
                         .col-md-6
-                            .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 What does Ciphergram do?
-                                p.mb-0 Ciphergram is a specialist backend systems consultancy. We help SaaS companies and scaling startups reduce AWS costs, improve backend performance, and modernize legacy systems using Go, AWS Lambda, and serverless architecture.
+                            .cg-faq-item.wow.fadeIn.mb-30
+                                h3 What does Ciphergram do?
+                                p Ciphergram is a specialist backend systems consultancy. We help SaaS companies and scaling startups reduce AWS costs, improve backend performance, and modernize legacy systems using Go, AWS Lambda, and serverless architecture.
                         .col-md-6
-                            .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 Who do you work best with?
-                                p.mb-0 SaaS teams scaling past MVP, engineering organizations with rising AWS bills, startups seeing production performance issues, and CTOs evolving legacy systems toward serverless and event-driven designs.
+                            .cg-faq-item.wow.fadeIn.mb-30
+                                h3 Who do you work best with?
+                                p SaaS teams scaling past MVP, engineering organizations with rising AWS bills, startups seeing production performance issues, and CTOs evolving legacy systems toward serverless and event-driven designs.
                     .row
                         .col-md-6
-                            .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 What is an AWS cost optimization audit?
-                                p.mb-0 A fixed-scope review of how your AWS bill maps to actual workloads: Lambda, API Gateway, compute, networking, and storage. You get a prioritized list of changes with expected savings and risk notes—not a generic dashboard export.
+                            .cg-faq-item.wow.fadeIn.mb-30
+                                h3 What is an AWS cost optimization audit?
+                                p A fixed-scope review of how your AWS bill maps to actual workloads: Lambda, API Gateway, compute, networking, and storage. You get a prioritized list of changes with expected savings and risk notes—not a generic dashboard export.
                         .col-md-6
-                            .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 Do you work with existing Go codebases?
-                                p.mb-0 Yes. Go is a core language for our performance work. We profile services under load, tighten hot paths, and align concurrency and IO patterns with how your system runs in production.
+                            .cg-faq-item.wow.fadeIn.mb-30
+                                h3 Do you work with existing Go codebases?
+                                p Yes. Go is a core language for our performance work. We profile services under load, tighten hot paths, and align concurrency and IO patterns with how your system runs in production.
                     .row
                         .col-md-6.col-md-offset-3
-                            .fes7-box.wow.fadeIn.mb-30
-                                h3.mb-20 How do engagements begin?
-                                p.mb-0 Most teams start with a backend systems review or a cost and performance audit. We clarify scope, access needs, and success metrics before work starts so expectations stay grounded in measurable infrastructure outcomes.
+                            .cg-faq-item.wow.fadeIn.mb-30
+                                h3 How do engagements begin?
+                                p Most teams start with a backend systems review or a cost and performance audit. We clarify scope, access needs, and success metrics before work starts so expectations stay grounded in measurable infrastructure outcomes.
 
-            section#quote-request.page-section.pt-80-b-80-cont.bg-gray
+            section#quote-request.page-section.p-120-cont.cg-section.grey-light-bg
                 .container
                     .row
                         .col-md-8.col-md-offset-2.text-center
-                            h3.section-title
-                                span.bold Request a backend systems review
-                            p.section-subtitle
-                                | Share your stack, symptoms, and AWS context. We reply with next steps for a cost analysis, performance audit, or migration assessment—usually within one business day.
+                            h3.cg-section-title Request a backend systems review
+                            p.cg-section-lead Share your stack, symptoms, and AWS context. We reply with next steps for a cost analysis, performance audit, or migration assessment—usually within one business day.
                             .quote-form-container
                                 form#quoteForm.quote-form
                                     .row

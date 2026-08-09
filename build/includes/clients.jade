@@ -1,45 +1,43 @@
-.page-section.p-100-cont(id="case-studies")
+.page-section.p-120-cont.cg-section.grey-light-bg.clearfix(id="case-studies")
     .container
         .row
-            .col-md-12.text-center.mb-40
-                .fes4-box.wow.fadeIn(data-wow-delay='200ms')
-                    h2.section-title
-                        span.bold Representative case studies
-                    p.section-subtitle Anonymized examples reflecting common engagement patterns. Your architecture and numbers will differ; the approach is the same.
+            .col-md-10.col-md-offset-1.text-center.mb-60
+                h2.cg-section-title Representative case studies
+                p.cg-section-lead Anonymized examples reflecting common engagement patterns. Your architecture and numbers will differ; the approach is the same.
         .row
             .col-md-4
-                .fes7-box.wow.fadeIn.mb-40
+                .cg-case-card.wow.fadeIn
                     h3 B2B SaaS — runaway Lambda bill
                     p
-                        strong Problem:
+                        strong Problem.
                         |  Monthly AWS spend jumped 3x after a traffic milestone. Lambda concurrency, API Gateway, and outbound data dominated; no single owner for cost.
                     p
-                        strong Solution:
-                        |  Cost audit, concurrency and memory tuning, API caching layer, and removal of redundant cross-region chatter. Documented guardrails for future changes.
+                        strong Solution.
+                        |  Cost audit, concurrency and memory tuning, API caching, and removal of redundant cross-region traffic. Documented guardrails for future changes.
                     p.mb-0
-                        strong Result:
+                        strong Result.
                         |  ~32% infrastructure cost reduction within one billing cycle; p95 API latency improved ~40% from fewer duplicate calls.
             .col-md-4
-                .fes7-box.wow.fadeIn.mb-40(data-wow-delay='150ms')
+                .cg-case-card.wow.fadeIn(data-wow-delay='150ms')
                     h3 Growth-stage API — timeouts at peak
                     p
-                        strong Problem:
-                        |  Core Go service showed acceptable latency in staging but 5xx and tail latency spiked under production concurrency; database and fan-out patterns were the suspects.
+                        strong Problem.
+                        |  Core Go service looked fine in staging but 5xx and tail latency spiked under production concurrency.
                     p
-                        strong Solution:
+                        strong Solution.
                         |  Production profiling, query and batching fixes, bounded worker pools, and queue-backed offload for non-critical work.
                     p.mb-0
-                        strong Result:
+                        strong Result.
                         |  p99 latency ~60% lower at peak; error rate dropped below prior SLO; team gained a repeatable load profile for releases.
             .col-md-4
-                .fes7-box.wow.fadeIn.mb-40(data-wow-delay='300ms')
+                .cg-case-card.wow.fadeIn(data-wow-delay='300ms')
                     h3 Legacy monolith — slow, risky deploys
                     p
-                        strong Problem:
+                        strong Problem.
                         |  Single deployable blocked feature teams; scaling meant bigger instances; incident recovery was manual.
                     p
-                        strong Solution:
-                        |  Strangled high-churn domains into Lambda handlers and event buses; kept transactional core on existing DB with clear boundaries and observability.
+                        strong Solution.
+                        |  Strangled high-churn domains into Lambda handlers and event buses; kept transactional core with clear boundaries and observability.
                     p.mb-0
-                        strong Result:
-                        |  Deploy frequency moved from bi-weekly to multiple times per week for migrated surfaces; on-call pages for that domain dropped sharply in the following quarter.
+                        strong Result.
+                        |  Deploy frequency moved from bi-weekly to multiple times per week for migrated surfaces; on-call pages for that domain dropped sharply.

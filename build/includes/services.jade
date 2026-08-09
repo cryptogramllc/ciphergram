@@ -1,39 +1,31 @@
-.page-section.p-140-cont.clearfix(id="services-link")
+.page-section.p-120-cont.cg-section.clearfix(id="services-link")
     .container
         .row
-            .col-xs-12.col-sm-12.col-md-12
-                .fes4-box.wow.fadeIn
-                    h2.section-title
-                        span.bold Services
-                    p.text-center.lead.mb-50 Productized backend engagements—clear scope, senior execution, no generic dev shop retainers.
+            .col-md-10.col-md-offset-1.text-center.mb-60
+                h2.cg-section-title Services
+                p.cg-section-lead Productized backend engagements—clear scope, senior execution, no generic dev shop retainers.
         .row
-            .col-xs-12.col-sm-4.col-md-4
-                .fes4-box.wow.fadeIn(data-wow-delay='200ms')
-                    .fes4-title-cont
-                        .fes4-box-icon
-                            .icon.icon-ecommerce-graph1
-                        h3
-                            span.bold AWS cost optimization audit
-                        p Baseline spend, find waste in compute, Lambda, API Gateway, networking, and storage, and deliver a prioritized savings plan your team can implement or we can execute with you.
-                            a.learn-more(href="#quote-request") Get an AWS cost analysis
-                    div
-            .col-xs-12.col-sm-4.col-md-4
-                .fes4-box.wow.fadeIn(data-wow-delay='400ms')
-                    .fes4-title-cont
-                        .fes4-box-icon
-                            .icon.icon-basic-bolt
-                        h3
-                            span.bold Backend performance engineering
-                        p Trace production bottlenecks, tune Go services and distributed workflows, and improve latency and reliability under load—not just load-test dashboards.
-                            a.learn-more(href="#quote-request") Book a performance audit
-                    div
-            .col-xs-12.col-sm-4.col-md-4
-                .fes4-box.wow.fadeIn(data-wow-delay='600ms')
-                    .fes4-title-cont
-                        .fes4-box-icon
-                            .icon.icon-basic-cloud
-                        h3
-                            span.bold Serverless migration
-                        p Design event-driven boundaries, move suitable workloads to AWS Lambda, and reduce operational overhead while keeping data consistency and observability explicit.
-                            a.learn-more(href="#quote-request") Request a systems review
-                    div
+            .col-md-4
+                .cg-offer-card.wow.fadeIn(data-wow-delay='200ms')
+                    h3 AWS cost optimization audit
+                    ul
+                        li Baseline spend and find waste in compute, Lambda, API Gateway, networking, and storage
+                        li Deliver a prioritized savings plan your team can implement—or we execute with you
+                        li Guardrails so cost gains hold as traffic grows
+                    a.cg-offer-link(href="#quote-request") Get an AWS cost analysis →
+            .col-md-4
+                .cg-offer-card.wow.fadeIn(data-wow-delay='400ms')
+                    h3 Backend performance engineering
+                    ul
+                        li Trace production bottlenecks in APIs and workers
+                        li Tune Go services and distributed workflows under real load
+                        li Improve latency and reliability—not just load-test dashboards
+                    a.cg-offer-link(href="#quote-request") Book a performance audit →
+            .col-md-4
+                .cg-offer-card.wow.fadeIn(data-wow-delay='600ms')
+                    h3 Serverless migration
+                    ul
+                        li Design event-driven boundaries for the right workloads
+                        li Move suitable surfaces to AWS Lambda with clear cutover plans
+                        li Reduce operational overhead without losing observability
+                    a.cg-offer-link(href="#quote-request") Request a systems review →

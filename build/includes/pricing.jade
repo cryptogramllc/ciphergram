@@ -1,51 +1,41 @@
-.page-section.p-140-cont.grey-light-bg.clearfix(id="pricing-link")
+.page-section.p-120-cont.cg-section.grey-light-bg.clearfix(id="pricing-link")
     .container
-        h2.section-title 
-            span.bold Engagements
-        p.lead.text-center.mb-50 Scoping starts with your stack, traffic patterns, and business constraints. Below are typical shapes of work—not shopping-cart SKUs.
-        
+        .row
+            .col-md-10.col-md-offset-1.text-center.mb-60
+                h2.cg-section-title Engagements
+                p.cg-section-lead Scoping starts with your stack, traffic patterns, and business constraints. Below are typical shapes of work—not shopping-cart SKUs.
         .row
             .col-md-4
-                .pricing-box.wow.fadeIn.mb-30
-                    .pricing-box-header
-                        h3 Cost optimization audit
-                        .price
-                            span.period Fixed scope · 2–4 weeks typical
-                    .pricing-box-content
-                        ul
-                            li Billing and resource inventory across AWS accounts
-                            li Waste analysis: Lambda, API Gateway, data transfer, storage
-                            li Prioritized remediation list with expected savings bands
-                            li Optional implementation support
-                        a.btn.btn-md.btn-color(href="#quote-request") Get an AWS cost analysis
+                .cg-offer-card.wow.fadeIn.mb-30
+                    h3 Cost optimization audit
+                    p.cg-meta Fixed scope · 2–4 weeks typical
+                    ul
+                        li Billing and resource inventory across AWS accounts
+                        li Waste analysis: Lambda, API Gateway, data transfer, storage
+                        li Prioritized remediation list with expected savings bands
+                        li Optional implementation support
+                    a.btn.btn-md.btn-color(href="#quote-request") Get an AWS cost analysis
             .col-md-4
-                .pricing-box.featured.wow.fadeIn.mb-30
-                    .pricing-box-header
-                        h3 Performance engineering sprint
-                        .price
-                            span.period Time-boxed · senior engineers
-                    .pricing-box-content
-                        ul
-                            li Production profiling and bottleneck analysis
-                            li Go service and distributed systems tuning
-                            li Load validation against agreed scenarios
-                            li Runbooks and monitoring gaps called out explicitly
-                        a.btn.btn-md.btn-color(href="#quote-request") Book a performance audit
+                .cg-offer-card.cg-offer-card--featured.wow.fadeIn.mb-30
+                    h3 Performance engineering sprint
+                    p.cg-meta Time-boxed · senior engineers
+                    ul
+                        li Production profiling and bottleneck analysis
+                        li Go service and distributed systems tuning
+                        li Load validation against agreed scenarios
+                        li Runbooks and monitoring gaps called out explicitly
+                    a.btn.btn-md.btn-color(href="#quote-request") Book a performance audit
             .col-md-4
-                .pricing-box.wow.fadeIn.mb-30
-                    .pricing-box-header
-                        h3 Serverless migration program
-                        .price
-                            span.period Phased · architecture-first
-                    .pricing-box-content
-                        ul
-                            li Domain boundaries and event design
-                            li Lambda, queues, and integration patterns
-                            li Cutover plans with rollback and observability
-                            li Knowledge transfer for your platform team
-                        a.btn.btn-md.btn-color(href="#quote-request") Request a systems review
-        
+                .cg-offer-card.wow.fadeIn.mb-30
+                    h3 Serverless migration program
+                    p.cg-meta Phased · architecture-first
+                    ul
+                        li Domain boundaries and event design
+                        li Lambda, queues, and integration patterns
+                        li Cutover plans with rollback and observability
+                        li Knowledge transfer for your platform team
+                    a.btn.btn-md.btn-color(href="#quote-request") Request a systems review
         .row
-            .col-md-12.text-center.mt-40
-                p.mb-30 If you are unsure where to start, we begin with a short technical review and point you to the right engagement.
+            .col-md-8.col-md-offset-2.text-center.mt-20
+                p.cg-section-lead If you are unsure where to start, we begin with a short technical review and point you to the right engagement.
                 a.btn.btn-lg.btn-color(href="#quote-request") Request a backend systems review
