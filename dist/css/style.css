@@ -3896,22 +3896,42 @@ select.input-border {
   margin: 0;
 }
 
-.hero-cta-buttons .btn {
-  margin: 0 10px;
-  padding: 12px 30px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  border: 2px solid #ffffff;
-  background-color: transparent;
-  color: #ffffff;
+.hero-cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
 }
-.hero-cta-buttons .btn:hover {
-  background-color: #ffffff;
+.hero-cta-buttons .btn {
+  margin: 0;
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  line-height: 1.2;
+}
+.hero-cta-buttons .btn-color {
+  background-color: #c45c26;
+  border: 2px solid #c45c26;
+  color: #fff !important;
+}
+.hero-cta-buttons .btn-color:hover {
+  background-color: #a84c1d;
+  border-color: #a84c1d;
+  color: #fff !important;
+}
+.hero-cta-buttons .btn-white-outline,
+.hero-cta-buttons .btn-white {
+  background-color: transparent;
   border: 2px solid #ffffff;
-  color: #1a365d !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff !important;
+}
+.hero-cta-buttons .btn-white-outline:hover,
+.hero-cta-buttons .btn-white:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #1a1d21 !important;
 }
 
 /* Hero text line height adjustments */
@@ -14047,6 +14067,60 @@ li.blog-item {
 /* =====================================================
    CIPHERGRAM CONSULTANCY LAYOUT (hero + sections)
    ===================================================== */
+/* Revolution Slider caption styles — readable tracking for short punch lines */
+.tp-caption.cg-rs-line {
+  font-family: "Lato", "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-size: 52px !important;
+  line-height: 1.15 !important;
+  font-weight: 300 !important;
+  letter-spacing: 3px !important;
+  color: #fff !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+.tp-caption.cg-rs-line .bold,
+.tp-caption.cg-rs-line span.bold {
+  font-weight: 700 !important;
+}
+
+.tp-caption.cg-rs-cta {
+  white-space: nowrap !important;
+}
+
+.tp-caption .hero-cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tp-caption .hero-cta-buttons .btn {
+  margin: 0 !important;
+  padding: 14px 26px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.2 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+@media (max-width: 991px) {
+  .tp-caption.cg-rs-line {
+    font-size: 36px !important;
+    letter-spacing: 2px !important;
+  }
+}
+@media (max-width: 767px) {
+  .tp-caption.cg-rs-line {
+    font-size: 28px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .tp-caption .hero-cta-buttons {
+    flex-direction: column;
+  }
+}
 .cg-hero {
   position: relative;
   min-height: 78vh;

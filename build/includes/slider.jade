@@ -1,12 +1,40 @@
-section.cg-hero#home-hero
-    .cg-hero-bg(style="background-image: url(images/1.jpg);")
-    .cg-hero-overlay
-    .cg-hero-inner
-        .container
-            .cg-hero-content
-                p.cg-hero-eyebrow Backend systems consultancy
-                h1.cg-hero-title Reduce AWS costs and fix backend performance issues in scaling SaaS systems.
-                p.cg-hero-sub We help engineering teams optimize, modernize, and stabilize backend infrastructure using Go, AWS Lambda, and serverless architecture.
-                .cg-hero-actions
-                    a.btn.btn-lg.btn-color(href='#quote-request') Request a systems review
-                    a.btn.btn-lg.btn-white-outline(href='#quote-request') Get a cost &amp; performance audit
+.relative
+    .rs-fullscr-container
+        #rs-fullwidth.tp-banner.dark-bg
+            ul
+                // SLIDE 1 — primary hero + CTAs
+                li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-saveperformance='on')
+                    img(src='images/1.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
+                    .rs-parallaxlevel-4.opacity-scroll2
+                        .tp-caption.font-white.cg-rs-line.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-70', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; white-space: nowrap;')
+                            span Reduce AWS Costs
+                        .tp-caption.font-white.cg-rs-line.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='0', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; white-space: nowrap;')
+                            span.bold Fix Backend Performance
+                        .tp-caption.font-white.cg-rs-cta.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='90', data-speed='500', data-start='1250', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 9; white-space: nowrap;')
+                            .hero-cta-buttons
+                                a.btn.btn-lg.btn-color(href='#quote-request') Request a systems review
+                                a.btn.btn-lg.btn-white-outline(href='#quote-request') Get a cost &amp; performance audit
+                // SLIDE 2
+                li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-saveperformance='on')
+                    img(src='images/2.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
+                    .rs-parallaxlevel-4.opacity-scroll2
+                        .tp-caption.font-white.cg-rs-line.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-35', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; white-space: nowrap;')
+                            span Cloud Spend Climbing
+                        .tp-caption.font-white.cg-rs-line.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='35', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; white-space: nowrap;')
+                            span.bold We Find the Waste
+                // SLIDE 3
+                li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-saveperformance='on')
+                    img(src='images/3.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
+                    .rs-parallaxlevel-4.opacity-scroll2
+                        .tp-caption.font-white.cg-rs-line.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-35', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; white-space: nowrap;')
+                            span APIs Slow Under Load
+                        .tp-caption.font-white.cg-rs-line.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='35', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; white-space: nowrap;')
+                            span.bold We Fix the Hot Paths
+                // SLIDE 4
+                li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-saveperformance='on')
+                    img(src='images/4.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
+                    .rs-parallaxlevel-4.opacity-scroll2
+                        .tp-caption.font-white.cg-rs-line.sfb.tp-resizeme(data-x='center', data-hoffset='0', data-y='center', data-voffset='-35', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; white-space: nowrap;')
+                            span Legacy Blocking Deploys
+                        .tp-caption.font-white.cg-rs-line.sfb.tp-resizeme(data-x='center', data-y='center', data-voffset='35', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; white-space: nowrap;')
+                            span.bold Serverless Done Right
