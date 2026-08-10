@@ -1,0 +1,43 @@
+.page-section.p-120-cont.cg-section.grey-light-bg.clearfix(id="case-studies")
+    .container
+        .row
+            .col-md-10.col-md-offset-1.text-center.mb-60
+                h2.cg-section-title Representative case studies
+                p.cg-section-lead Anonymized examples reflecting common engagement patterns. Your architecture and numbers will differ; the approach is the same.
+        .row
+            .col-md-4
+                .cg-case-card.wow.fadeIn
+                    h3 B2B SaaS — runaway Lambda + AI spend
+                    p
+                        strong Problem.
+                        |  Monthly AWS spend jumped 3x after a traffic milestone. Lambda concurrency, API Gateway, outbound data, and a new inference path dominated; no single owner for cost.
+                    p
+                        strong Solution.
+                        |  Cost audit with AI-assisted inventory across accounts, concurrency and memory tuning, API caching, async offload for model calls, and removal of redundant cross-region traffic.
+                    p.mb-0
+                        strong Result.
+                        |  ~32% infrastructure cost reduction within one billing cycle; p95 API latency improved ~40% from fewer duplicate and blocking AI calls.
+            .col-md-4
+                .cg-case-card.wow.fadeIn(data-wow-delay='150ms')
+                    h3 Growth-stage API — timeouts at peak
+                    p
+                        strong Problem.
+                        |  Core Go service looked fine in staging but 5xx and tail latency spiked under production concurrency—including synchronous calls to an LLM on hot paths.
+                    p
+                        strong Solution.
+                        |  Production profiling, query and batching fixes, bounded worker pools, and queue-backed AI offload so inference no longer sat on the request path.
+                    p.mb-0
+                        strong Result.
+                        |  p99 latency ~60% lower at peak; error rate dropped below prior SLO; team gained a repeatable load profile for releases.
+            .col-md-4
+                .cg-case-card.wow.fadeIn(data-wow-delay='300ms')
+                    h3 Legacy monolith — AI feature stuck in a prototype
+                    p
+                        strong Problem.
+                        |  Single deployable blocked feature teams; an AI prototype lived outside the main system and could not meet reliability or cost expectations.
+                    p
+                        strong Solution.
+                        |  Strangled high-churn domains into Lambda handlers and event buses; wired the AI path into queues with budgets and observability alongside the transactional core.
+                    p.mb-0
+                        strong Result.
+                        |  Deploy frequency moved from bi-weekly to multiple times per week for migrated surfaces; AI feature reached production with predictable cost and on-call ownership.

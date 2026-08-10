@@ -487,6 +487,7 @@ script.
   const modalTech = document.getElementById('clientModalTech');
   const closeBtn = document.querySelector('.client-modal-close');
 
+  if (modal && modalTitle && modalLogo && modalDescription && modalTech) {
   // Add click event listeners to all client logos
   document.querySelectorAll('[data-client]').forEach(element => {
     element.addEventListener('click', function() {
@@ -515,10 +516,12 @@ script.
   });
 
   // Close modal functionality
+  if (closeBtn) {
   closeBtn.addEventListener('click', function() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
   });
+  }
 
   // Close modal when clicking outside
   window.addEventListener('click', function(event) {
@@ -535,6 +538,7 @@ script.
       document.body.style.overflow = 'auto';
     }
   });
+  }
 
 
 

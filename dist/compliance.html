@@ -225,6 +225,8 @@
                         <div class="main-menu-title">HOME</div></a></li>
                     <li class="current"><a href="https://ciphergram.io/index.html#services-link">
                         <div class="main-menu-title">SERVICES</div></a></li>
+                    <li><a href="https://ciphergram.io/index.html#our-clients">
+                        <div class="main-menu-title">CLIENTS</div></a></li>
                     <li><a href="https://ciphergram.io/index.html#case-studies">
                         <div class="main-menu-title">CASE STUDIES</div></a></li>
                     <li><a href="https://ciphergram.io/index.html#about-us-link">
@@ -967,6 +969,7 @@
   const modalTech = document.getElementById('clientModalTech');
   const closeBtn = document.querySelector('.client-modal-close');
   
+  if (modal && modalTitle && modalLogo && modalDescription && modalTech) {
   // Add click event listeners to all client logos
   document.querySelectorAll('[data-client]').forEach(element => {
     element.addEventListener('click', function() {
@@ -995,10 +998,12 @@
   });
   
   // Close modal functionality
+  if (closeBtn) {
   closeBtn.addEventListener('click', function() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
   });
+  }
   
   // Close modal when clicking outside
   window.addEventListener('click', function(event) {
@@ -1015,6 +1020,7 @@
       document.body.style.overflow = 'auto';
     }
   });
+  }
   
   
   

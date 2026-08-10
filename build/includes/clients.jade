@@ -1,43 +1,47 @@
-.page-section.p-120-cont.cg-section.grey-light-bg.clearfix(id="case-studies")
+.page-section.p-120-cont.cg-section.clearfix(id="our-clients")
     .container
         .row
             .col-md-10.col-md-offset-1.text-center.mb-60
-                h2.cg-section-title Representative case studies
-                p.cg-section-lead Anonymized examples reflecting common engagement patterns. Your architecture and numbers will differ; the approach is the same.
+                h2.cg-section-title Clients
+                p.cg-section-lead Teams and organizations we have worked with across energy, fintech, insurance, aviation, and platform engineering.
         .row
-            .col-md-4
-                .cg-case-card.wow.fadeIn
-                    h3 B2B SaaS — runaway Lambda + AI spend
-                    p
-                        strong Problem.
-                        |  Monthly AWS spend jumped 3x after a traffic milestone. Lambda concurrency, API Gateway, outbound data, and a new inference path dominated; no single owner for cost.
-                    p
-                        strong Solution.
-                        |  Cost audit with AI-assisted inventory across accounts, concurrency and memory tuning, API caching, async offload for model calls, and removal of redundant cross-region traffic.
-                    p.mb-0
-                        strong Result.
-                        |  ~32% infrastructure cost reduction within one billing cycle; p95 API latency improved ~40% from fewer duplicate and blocking AI calls.
-            .col-md-4
-                .cg-case-card.wow.fadeIn(data-wow-delay='150ms')
-                    h3 Growth-stage API — timeouts at peak
-                    p
-                        strong Problem.
-                        |  Core Go service looked fine in staging but 5xx and tail latency spiked under production concurrency—including synchronous calls to an LLM on hot paths.
-                    p
-                        strong Solution.
-                        |  Production profiling, query and batching fixes, bounded worker pools, and queue-backed AI offload so inference no longer sat on the request path.
-                    p.mb-0
-                        strong Result.
-                        |  p99 latency ~60% lower at peak; error rate dropped below prior SLO; team gained a repeatable load profile for releases.
-            .col-md-4
-                .cg-case-card.wow.fadeIn(data-wow-delay='300ms')
-                    h3 Legacy monolith — AI feature stuck in a prototype
-                    p
-                        strong Problem.
-                        |  Single deployable blocked feature teams; an AI prototype lived outside the main system and could not meet reliability or cost expectations.
-                    p
-                        strong Solution.
-                        |  Strangled high-churn domains into Lambda handlers and event buses; wired the AI path into queues with budgets and observability alongside the transactional core.
-                    p.mb-0
-                        strong Result.
-                        |  Deploy frequency moved from bi-weekly to multiple times per week for migrated surfaces; AI feature reached production with predictable cost and on-call ownership.
+            .col-md-12
+                .row.client-row.border-bot
+                    .col-xs-6.col-sm-3.text-center(data-client='edf')
+                        .client-logo-container
+                            img(alt='EDF Energy', src='images/clients/1.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='student-room')
+                        .client-logo-container
+                            img(alt='The Student Room', src='images/clients/2.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='vmware')
+                        .client-logo-container
+                            img(alt='VMware', src='images/clients/3.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='allstate')
+                        .client-logo-container
+                            img(alt='Allstate Insurance', src='images/clients/4.png')
+                .row.client-row.border-bot
+                    .col-xs-6.col-sm-3.text-center(data-client='iag')
+                        .client-logo-container
+                            img(alt='International Airlines Group', src='images/clients/5.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='interactive-investor')
+                        .client-logo-container
+                            img(alt='Interactive Investor', src='images/clients/6.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='fantastic-thinking')
+                        .client-logo-container
+                            img(alt='Fantastic Thinking', src='images/clients/7.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='intouch-solutions')
+                        .client-logo-container
+                            img(alt='InTouch Solutions', src='images/clients/8.png')
+                .row.client-row
+                    .col-xs-6.col-sm-3.text-center(data-client='calabash')
+                        .client-logo-container
+                            img(alt='Calabash', src='images/clients/9.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='infinity')
+                        .client-logo-container
+                            img(alt='Infinity Systems', src='images/clients/10.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='call-one')
+                        .client-logo-container
+                            img(alt='Call One', src='images/clients/11.png')
+                    .col-xs-6.col-sm-3.text-center(data-client='stylized-ci')
+                        .client-logo-container
+                            img(alt='CI Solutions', src='images/clients/12.png')

@@ -255,6 +255,8 @@
                             <div class="main-menu-title">HOME</div></a></li>
                         <li><a href="https://ciphergram.io/index.html#services-link">
                             <div class="main-menu-title">SERVICES</div></a></li>
+                        <li><a href="https://ciphergram.io/index.html#our-clients">
+                            <div class="main-menu-title">CLIENTS</div></a></li>
                         <li><a href="https://ciphergram.io/index.html#case-studies">
                             <div class="main-menu-title">CASE STUDIES</div></a></li>
                         <li><a href="https://ciphergram.io/index.html#about-us-link">
@@ -510,6 +512,62 @@
               <div data-wow-delay="300ms" class="cg-outcome-card wow fadeIn">
                 <h3>Faster delivery with AI-assisted engineering</h3>
                 <p>Shorter cycles from diagnosis to shipped change: AI accelerates exploration and scaffolding; senior engineers own architecture, review, and production risk.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="our-clients" class="page-section p-120-cont cg-section clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center mb-60">
+              <h2 class="cg-section-title">Clients</h2>
+              <p class="cg-section-lead">Teams and organizations we have worked with across energy, fintech, insurance, aviation, and platform engineering.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row client-row border-bot">
+                <div data-client="edf" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="EDF Energy" src="images/clients/1.png"></div>
+                </div>
+                <div data-client="student-room" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="The Student Room" src="images/clients/2.png"></div>
+                </div>
+                <div data-client="vmware" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="VMware" src="images/clients/3.png"></div>
+                </div>
+                <div data-client="allstate" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Allstate Insurance" src="images/clients/4.png"></div>
+                </div>
+              </div>
+              <div class="row client-row border-bot">
+                <div data-client="iag" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="International Airlines Group" src="images/clients/5.png"></div>
+                </div>
+                <div data-client="interactive-investor" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Interactive Investor" src="images/clients/6.png"></div>
+                </div>
+                <div data-client="fantastic-thinking" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Fantastic Thinking" src="images/clients/7.png"></div>
+                </div>
+                <div data-client="intouch-solutions" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="InTouch Solutions" src="images/clients/8.png"></div>
+                </div>
+              </div>
+              <div class="row client-row">
+                <div data-client="calabash" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Calabash" src="images/clients/9.png"></div>
+                </div>
+                <div data-client="infinity" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Infinity Systems" src="images/clients/10.png"></div>
+                </div>
+                <div data-client="call-one" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="Call One" src="images/clients/11.png"></div>
+                </div>
+                <div data-client="stylized-ci" class="col-xs-6 col-sm-3 text-center">
+                  <div class="client-logo-container"><img alt="CI Solutions" src="images/clients/12.png"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -1387,6 +1445,7 @@
   const modalTech = document.getElementById('clientModalTech');
   const closeBtn = document.querySelector('.client-modal-close');
   
+  if (modal && modalTitle && modalLogo && modalDescription && modalTech) {
   // Add click event listeners to all client logos
   document.querySelectorAll('[data-client]').forEach(element => {
     element.addEventListener('click', function() {
@@ -1415,10 +1474,12 @@
   });
   
   // Close modal functionality
+  if (closeBtn) {
   closeBtn.addEventListener('click', function() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
   });
+  }
   
   // Close modal when clicking outside
   window.addEventListener('click', function(event) {
@@ -1435,6 +1496,7 @@
       document.body.style.overflow = 'auto';
     }
   });
+  }
   
   
   

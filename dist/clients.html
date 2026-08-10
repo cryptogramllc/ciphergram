@@ -225,7 +225,9 @@
                         <div class="main-menu-title">HOME</div></a></li>
                     <li><a href="https://ciphergram.io/index.html#services-link">
                         <div class="main-menu-title">SERVICES</div></a></li>
-                    <li class="current"><a href="https://ciphergram.io/index.html#case-studies">
+                    <li class="current"><a href="https://ciphergram.io/index.html#our-clients">
+                        <div class="main-menu-title">CLIENTS</div></a></li>
+                    <li><a href="https://ciphergram.io/index.html#case-studies">
                         <div class="main-menu-title">CASE STUDIES</div></a></li>
                     <li><a href="https://ciphergram.io/index.html#about-us-link">
                         <div class="main-menu-title">ABOUT</div></a></li>
@@ -247,37 +249,57 @@
       </div>
     </header>
   </div>
-  <div id="case-studies" class="page-section p-120-cont cg-section grey-light-bg clearfix">
+  <div id="our-clients" class="page-section p-120-cont cg-section clearfix">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1 text-center mb-60">
-          <h2 class="cg-section-title">Representative case studies</h2>
-          <p class="cg-section-lead">Anonymized examples reflecting common engagement patterns. Your architecture and numbers will differ; the approach is the same.</p>
+          <h2 class="cg-section-title">Clients</h2>
+          <p class="cg-section-lead">Teams and organizations we have worked with across energy, fintech, insurance, aviation, and platform engineering.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <div class="cg-case-card wow fadeIn">
-            <h3>B2B SaaS — runaway Lambda + AI spend</h3>
-            <p><strong>Problem.</strong> Monthly AWS spend jumped 3x after a traffic milestone. Lambda concurrency, API Gateway, outbound data, and a new inference path dominated; no single owner for cost.</p>
-            <p><strong>Solution.</strong> Cost audit with AI-assisted inventory across accounts, concurrency and memory tuning, API caching, async offload for model calls, and removal of redundant cross-region traffic.</p>
-            <p class="mb-0"><strong>Result.</strong> ~32% infrastructure cost reduction within one billing cycle; p95 API latency improved ~40% from fewer duplicate and blocking AI calls.</p>
+        <div class="col-md-12">
+          <div class="row client-row border-bot">
+            <div data-client="edf" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="EDF Energy" src="images/clients/1.png"></div>
+            </div>
+            <div data-client="student-room" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="The Student Room" src="images/clients/2.png"></div>
+            </div>
+            <div data-client="vmware" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="VMware" src="images/clients/3.png"></div>
+            </div>
+            <div data-client="allstate" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="Allstate Insurance" src="images/clients/4.png"></div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div data-wow-delay="150ms" class="cg-case-card wow fadeIn">
-            <h3>Growth-stage API — timeouts at peak</h3>
-            <p><strong>Problem.</strong> Core Go service looked fine in staging but 5xx and tail latency spiked under production concurrency—including synchronous calls to an LLM on hot paths.</p>
-            <p><strong>Solution.</strong> Production profiling, query and batching fixes, bounded worker pools, and queue-backed AI offload so inference no longer sat on the request path.</p>
-            <p class="mb-0"><strong>Result.</strong> p99 latency ~60% lower at peak; error rate dropped below prior SLO; team gained a repeatable load profile for releases.</p>
+          <div class="row client-row border-bot">
+            <div data-client="iag" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="International Airlines Group" src="images/clients/5.png"></div>
+            </div>
+            <div data-client="interactive-investor" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="Interactive Investor" src="images/clients/6.png"></div>
+            </div>
+            <div data-client="fantastic-thinking" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="Fantastic Thinking" src="images/clients/7.png"></div>
+            </div>
+            <div data-client="intouch-solutions" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="InTouch Solutions" src="images/clients/8.png"></div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div data-wow-delay="300ms" class="cg-case-card wow fadeIn">
-            <h3>Legacy monolith — AI feature stuck in a prototype</h3>
-            <p><strong>Problem.</strong> Single deployable blocked feature teams; an AI prototype lived outside the main system and could not meet reliability or cost expectations.</p>
-            <p><strong>Solution.</strong> Strangled high-churn domains into Lambda handlers and event buses; wired the AI path into queues with budgets and observability alongside the transactional core.</p>
-            <p class="mb-0"><strong>Result.</strong> Deploy frequency moved from bi-weekly to multiple times per week for migrated surfaces; AI feature reached production with predictable cost and on-call ownership.</p>
+          <div class="row client-row">
+            <div data-client="calabash" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="Calabash" src="images/clients/9.png"></div>
+            </div>
+            <div data-client="infinity" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="Infinity Systems" src="images/clients/10.png"></div>
+            </div>
+            <div data-client="call-one" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="Call One" src="images/clients/11.png"></div>
+            </div>
+            <div data-client="stylized-ci" class="col-xs-6 col-sm-3 text-center">
+              <div class="client-logo-container"><img alt="CI Solutions" src="images/clients/12.png"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -787,6 +809,7 @@
   const modalTech = document.getElementById('clientModalTech');
   const closeBtn = document.querySelector('.client-modal-close');
   
+  if (modal && modalTitle && modalLogo && modalDescription && modalTech) {
   // Add click event listeners to all client logos
   document.querySelectorAll('[data-client]').forEach(element => {
     element.addEventListener('click', function() {
@@ -815,10 +838,12 @@
   });
   
   // Close modal functionality
+  if (closeBtn) {
   closeBtn.addEventListener('click', function() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
   });
+  }
   
   // Close modal when clicking outside
   window.addEventListener('click', function(event) {
@@ -835,6 +860,7 @@
       document.body.style.overflow = 'auto';
     }
   });
+  }
   
   
   

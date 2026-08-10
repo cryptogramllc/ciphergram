@@ -14559,6 +14559,24 @@ a.btn.btn-white-outline:focus {
   font-size: 15px;
 }
 
+#our-clients .client-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  padding: 12px;
+}
+
+#our-clients .client-logo-container img {
+  max-width: 140px;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
 .cg-section p {
   font-size: 16px;
   line-height: 1.65;
