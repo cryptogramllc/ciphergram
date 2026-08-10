@@ -3,38 +3,49 @@
         .row
             .col-md-10.col-md-offset-1.text-center.mb-60
                 h2.cg-section-title Engagements
-                p.cg-section-lead Scoping starts with your stack, traffic patterns, and business constraints. Below are typical shapes of work—not shopping-cart SKUs.
+                p.cg-section-lead Scoping starts with your stack, traffic patterns, AI usage, and business constraints. Below are typical shapes of work—not shopping-cart SKUs.
         .row
-            .col-md-4
+            .col-md-6
                 .cg-offer-card.wow.fadeIn.mb-30
                     h3 Cost optimization audit
                     p.cg-meta Fixed scope · 2–4 weeks typical
                     ul
                         li Billing and resource inventory across AWS accounts
-                        li Waste analysis: Lambda, API Gateway, data transfer, storage
+                        li Waste analysis: Lambda, API Gateway, data transfer, storage, and AI/inference spend
+                        li AI-assisted pattern finding across configs and usage—engineer-reviewed recommendations
                         li Prioritized remediation list with expected savings bands
-                        li Optional implementation support
                     a.btn.btn-md.btn-color(href="#quote-request") Get an AWS cost analysis
-            .col-md-4
+            .col-md-6
                 .cg-offer-card.cg-offer-card--featured.wow.fadeIn.mb-30
                     h3 Performance engineering sprint
-                    p.cg-meta Time-boxed · senior engineers
+                    p.cg-meta Time-boxed · senior engineers · AI-assisted
                     ul
                         li Production profiling and bottleneck analysis
-                        li Go service and distributed systems tuning
+                        li Go service, distributed systems, and AI call-path tuning
                         li Load validation against agreed scenarios
                         li Runbooks and monitoring gaps called out explicitly
                     a.btn.btn-md.btn-color(href="#quote-request") Book a performance audit
-            .col-md-4
+        .row
+            .col-md-6
                 .cg-offer-card.wow.fadeIn.mb-30
                     h3 Serverless migration program
                     p.cg-meta Phased · architecture-first
                     ul
                         li Domain boundaries and event design
                         li Lambda, queues, and integration patterns
-                        li Cutover plans with rollback and observability
+                        li AI-assisted scaffolding for handlers and tests; humans own cutover risk
                         li Knowledge transfer for your platform team
                     a.btn.btn-md.btn-color(href="#quote-request") Request a systems review
+            .col-md-6
+                .cg-offer-card.wow.fadeIn.mb-30
+                    h3 AI systems integration
+                    p.cg-meta Architecture + implementation
+                    ul
+                        li Integrate LLMs into existing backends (Go, Lambda, event buses)
+                        li Design async inference paths, retries, and failure isolation
+                        li Cost and latency budgets for Bedrock and related AWS AI services
+                        li Observability so AI features are operable by your on-call team
+                    a.btn.btn-md.btn-color(href="#quote-request") Talk about AI integration
         .row
             .col-md-8.col-md-offset-2.text-center.mt-20
                 p.cg-section-lead If you are unsure where to start, we begin with a short technical review and point you to the right engagement.

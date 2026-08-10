@@ -1,9 +1,9 @@
 doctype html
-- var pageTitle = "Ciphergram | AWS Cost Optimization, Serverless & Backend Performance"
-- var pageDescription = "Specialist backend consultancy for SaaS teams: reduce AWS costs, fix production performance in Go and distributed systems, and migrate to AWS Lambda with clear architecture. Request a systems review."
+- var pageTitle = "Ciphergram | AWS, Serverless, Backend Performance & AI Systems"
+- var pageDescription = "Backend systems consultancy for SaaS teams: AWS cost optimization, Go performance engineering, serverless migration, and AI systems integration—delivered with AI-assisted engineering. Request a systems review."
 - var canonicalUrl = "/"
-- var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Ciphergram do?","acceptedAnswer":{"@type":"Answer","text":"Ciphergram is a specialist backend systems consultancy. We help SaaS companies and scaling startups reduce AWS costs, improve backend performance, and modernize legacy systems using Go, AWS Lambda, and serverless architecture."}},{"@type":"Question","name":"Who do you work best with?","acceptedAnswer":{"@type":"Answer","text":"We work with SaaS teams scaling past MVP, engineering organizations with rising AWS bills, startups seeing production performance issues, and CTOs evolving legacy systems toward serverless and event-driven designs."}},{"@type":"Question","name":"What is an AWS cost optimization audit?","acceptedAnswer":{"@type":"Answer","text":"A fixed-scope review of how your AWS bill maps to actual workloads: Lambda, API Gateway, compute, networking, and storage. You receive a prioritized list of changes with expected savings and risk notes, not a generic dashboard export."}},{"@type":"Question","name":"Do you work with existing Go codebases?","acceptedAnswer":{"@type":"Answer","text":"Yes. Go is a core language for our performance work. We profile services under load, tighten hot paths, and align concurrency and IO patterns with how your system runs in production."}},{"@type":"Question","name":"How do engagements begin?","acceptedAnswer":{"@type":"Answer","text":"Most teams start with a backend systems review or a cost and performance audit. We clarify scope, access needs, and success metrics before work starts so expectations stay grounded in measurable infrastructure outcomes."}}]}'
-- var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","description":"Backend systems consultancy: AWS cost optimization, serverless architecture, Go performance engineering.","address":{"@type":"PostalAddress","streetAddress":"20 North Orange Avenue, Unit 1100","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"708-517-9987","url":"https://ciphergram.io"}'
+- var faqJsonLd = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Ciphergram do?","acceptedAnswer":{"@type":"Answer","text":"Ciphergram is a specialist backend systems consultancy. We help SaaS companies reduce AWS costs, improve backend performance, modernize with serverless architecture, and integrate AI into existing production systems using Go, AWS Lambda, and AI-assisted engineering."}},{"@type":"Question","name":"How do you use AI in your work?","acceptedAnswer":{"@type":"Answer","text":"We use AI-assisted development to accelerate codebase analysis, scaffolding, and migration diffs. Senior engineers own architecture, review, and production risk. We also integrate LLMs and inference into your existing AWS backends with cost, latency, and reliability controls."}},{"@type":"Question","name":"Who do you work best with?","acceptedAnswer":{"@type":"Answer","text":"We work with SaaS teams scaling past MVP, engineering organizations with rising AWS or AI bills, startups seeing production performance issues, and CTOs adding production AI to legacy or serverless backends."}},{"@type":"Question","name":"What is an AWS cost optimization audit?","acceptedAnswer":{"@type":"Answer","text":"A fixed-scope review of how your AWS bill maps to actual workloads: Lambda, API Gateway, compute, networking, storage, and AI/inference spend when in scope. You receive a prioritized list of changes with expected savings and risk notes."}},{"@type":"Question","name":"How do engagements begin?","acceptedAnswer":{"@type":"Answer","text":"Most teams start with a backend systems review or a cost and performance audit. We clarify scope, access needs, AI usage, and success metrics before work starts."}}]}'
+- var localBusinessJsonLd = '{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ciphergram","description":"Backend systems consultancy: AWS cost optimization, serverless architecture, Go performance engineering, and AI systems integration.","address":{"@type":"PostalAddress","streetAddress":"20 North Orange Avenue, Unit 1100","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},"telephone":"708-517-9987","url":"https://ciphergram.io"}'
 - var currentPage = 'home'
 include ./includes/head.jade
 body
@@ -37,6 +37,7 @@ body
             include ./includes/slider.jade
             include ./includes/problem.jade
             include ./includes/services.jade
+            include ./includes/ai.jade
             include ./includes/who-for.jade
             include ./includes/outcomes.jade
             include ./includes/clients.jade
@@ -46,11 +47,11 @@ body
                 .container
                     .row
                         .col-md-8.col-md-offset-2.text-center
-                            h3.cg-cta-title When the bill or latency curve breaks, you need systems engineers—not a generic dev shop
-                            p.cg-cta-sub Tell us about your stack, AWS footprint, and what production is doing under load. We respond with a scoped review or audit plan, not a pitch deck.
+                            h3.cg-cta-title When cost, latency, or AI in production breaks, you need systems engineers—not a generic AI demo shop
+                            p.cg-cta-sub Tell us about your stack, AWS footprint, AI usage, and what production is doing under load. We respond with a scoped review or audit plan.
                             .cg-hero-actions
                                 a.btn.btn-lg.btn-color(href='#quote-request') Request a backend systems review
-                                a.btn.btn-lg.btn-white-outline(href='#quote-request') Book a performance audit
+                                a.btn.btn-lg.btn-white-outline(href='#quote-request') Talk about AI integration
 
             include ./includes/pricing.jade
 
@@ -63,32 +64,32 @@ body
                         .col-md-6
                             .cg-faq-item.wow.fadeIn.mb-30
                                 h3 What does Ciphergram do?
-                                p Ciphergram is a specialist backend systems consultancy. We help SaaS companies and scaling startups reduce AWS costs, improve backend performance, and modernize legacy systems using Go, AWS Lambda, and serverless architecture.
+                                p Ciphergram is a specialist backend systems consultancy. We help SaaS companies reduce AWS costs, improve backend performance, modernize with serverless architecture, and integrate AI into existing production systems—using Go, AWS Lambda, and AI-assisted engineering.
                         .col-md-6
                             .cg-faq-item.wow.fadeIn.mb-30
-                                h3 Who do you work best with?
-                                p SaaS teams scaling past MVP, engineering organizations with rising AWS bills, startups seeing production performance issues, and CTOs evolving legacy systems toward serverless and event-driven designs.
+                                h3 How do you use AI in your work?
+                                p Two ways. First, AI-assisted delivery: we use AI to accelerate codebase analysis, scaffolding, and migration diffs while senior engineers own architecture, review, and production risk. Second, AI systems integration: we wire LLMs and inference into your existing AWS backends with cost, latency, and reliability controls.
                     .row
                         .col-md-6
                             .cg-faq-item.wow.fadeIn.mb-30
-                                h3 What is an AWS cost optimization audit?
-                                p A fixed-scope review of how your AWS bill maps to actual workloads: Lambda, API Gateway, compute, networking, and storage. You get a prioritized list of changes with expected savings and risk notes—not a generic dashboard export.
+                                h3 Who do you work best with?
+                                p SaaS teams scaling past MVP, engineering organizations with rising AWS or AI bills, startups seeing production performance issues, and CTOs adding production AI to legacy or serverless backends.
                         .col-md-6
                             .cg-faq-item.wow.fadeIn.mb-30
-                                h3 Do you work with existing Go codebases?
-                                p Yes. Go is a core language for our performance work. We profile services under load, tighten hot paths, and align concurrency and IO patterns with how your system runs in production.
+                                h3 What is an AWS cost optimization audit?
+                                p A fixed-scope review of how your AWS bill maps to workloads: Lambda, API Gateway, compute, networking, storage, and AI/inference spend when in scope. You get a prioritized list of changes with expected savings and risk notes.
                     .row
                         .col-md-6.col-md-offset-3
                             .cg-faq-item.wow.fadeIn.mb-30
                                 h3 How do engagements begin?
-                                p Most teams start with a backend systems review or a cost and performance audit. We clarify scope, access needs, and success metrics before work starts so expectations stay grounded in measurable infrastructure outcomes.
+                                p Most teams start with a backend systems review or a cost and performance audit. We clarify scope, access needs, AI usage, and success metrics before work starts.
 
             section#quote-request.page-section.p-120-cont.cg-section.grey-light-bg
                 .container
                     .row
                         .col-md-8.col-md-offset-2.text-center
                             h3.cg-section-title Request a backend systems review
-                            p.cg-section-lead Share your stack, symptoms, and AWS context. We reply with next steps for a cost analysis, performance audit, or migration assessment—usually within one business day.
+                            p.cg-section-lead Share your stack, symptoms, AWS context, and any AI features in flight. We reply with next steps for a cost analysis, performance audit, serverless migration, or AI integration assessment—usually within one business day.
                             .quote-form-container
                                 form#quoteForm.quote-form
                                     .row
@@ -113,6 +114,7 @@ body
                                                     option(value='aws-cost') AWS cost optimization audit
                                                     option(value='performance') Backend performance engineering
                                                     option(value='serverless') Serverless migration
+                                                    option(value='ai-integration') AI systems integration
                                                     option(value='combined') Combined / not sure yet
                                         .col-md-6
                                             .form-group
@@ -133,9 +135,9 @@ body
                                                     option(value='100k-plus') $100k+
                                                     option(value='unsure') Prefer not to say / unsure
                                     .form-group
-                                        textarea.form-control(name='project_description', rows='5', placeholder='Describe your architecture (languages, AWS services), what broke or is trending wrong (cost, latency, errors), and what good looks like. *', required)
+                                        textarea.form-control(name='project_description', rows='5', placeholder='Describe your architecture (languages, AWS services, AI/LLM usage), what broke or is trending wrong (cost, latency, errors), and what good looks like. *', required)
                                     .form-group
-                                        textarea.form-control(name='additional_info', rows='3', placeholder='Links to dashboards, postmortems, or constraints (compliance, multi-region, etc.)')
+                                        textarea.form-control(name='additional_info', rows='3', placeholder='Links to dashboards, postmortems, or constraints (compliance, multi-region, model providers, etc.)')
                                     .text-center
                                         button.btn.btn-lg.btn-color(type='submit') Submit review request
                                         p.quote-note

@@ -16584,8 +16584,13 @@ a.btn.btn-white-outline {
   max-width: none;
 }
 
-.mt-20 {
-  margin-top: 20px !important;
+.cg-outcome-card .cg-bullet-list {
+  margin-top: 12px;
+  text-align: left;
+}
+
+.cg-outcome-card .cg-bullet-list li {
+  font-size: 15px;
 }
 
 .cg-section p {

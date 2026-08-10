@@ -2,23 +2,29 @@
     .container
         .row
             .col-md-10.col-md-offset-1.text-center.mb-60
-                h2.cg-section-title Most scaling systems fail in the same 3 ways
+                h2.cg-section-title Most scaling systems fail in the same ways
         .row.cg-problem-grid
-            .col-md-4
+            .col-md-3
                 .cg-feature-card.wow.fadeIn
                     .cg-feature-icon
                         .icon.icon-ecommerce-graph1
                     h3 AWS costs outpace value
-                    p Monthly cloud spend grows with traffic while architecture stays unchanged. Waste hides in Lambda configuration, API Gateway, data transfer, and idle capacity.
-            .col-md-4
-                .cg-feature-card.wow.fadeIn(data-wow-delay='150ms')
+                    p Monthly cloud spend grows with traffic while architecture stays unchanged. Waste hides in Lambda, API Gateway, data transfer—and increasingly in AI/inference usage.
+            .col-md-3
+                .cg-feature-card.wow.fadeIn(data-wow-delay='100ms')
                     .cg-feature-icon
                         .icon.icon-basic-bolt
                     h3 APIs degrade under real load
-                    p Latency spikes, timeouts, and flaky dependencies show up in production—not in demos. Hot paths in Go services, queues, and databases need engineering, not more instances.
-            .col-md-4
-                .cg-feature-card.wow.fadeIn(data-wow-delay='300ms')
+                    p Latency spikes and timeouts show up in production. Hot paths in Go services, queues, databases, and model calls need engineering—not more instances.
+            .col-md-3
+                .cg-feature-card.wow.fadeIn(data-wow-delay='200ms')
                     .cg-feature-icon
                         .icon.icon-basic-lock
                     h3 Legacy architecture slows shipping
-                    p Monoliths and manual ops block safe deploys. Teams want event-driven, serverless boundaries so they can release often without overnight maintenance windows.
+                    p Monoliths and manual ops block safe deploys. Teams need event-driven, serverless boundaries—and AI features that plug into those boundaries cleanly.
+            .col-md-3
+                .cg-feature-card.wow.fadeIn(data-wow-delay='300ms')
+                    .cg-feature-icon
+                        .icon.icon-basic-lightbulb
+                    h3 AI bolted on, not engineered in
+                    p Prototype chatbots and one-off scripts never become reliable product paths. Without queues, budgets, and observability, AI becomes another production liability.
